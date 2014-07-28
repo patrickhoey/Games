@@ -1,0 +1,370 @@
+TCocosDenshion iOS
+v6
+r1
+cCheck dependencies
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c0000000053119F8A0000000000000198
+t1393663882
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c0000000053C15F8400000000000003B4
+t1405181828
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053C15F91000000000000019E
+t1405181841
+s414
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion iOS.a
+t2
+s0
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+t1406573322
+s91460
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+t1406573322
+s14380
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion iOS.LinkFileList
+c0000000053D69B0A0000000000000317
+t1406573322
+s791
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+t1406573322
+s124832
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+t1406573324
+s72196
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+t1406573322
+s36328
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m
+c0000000053BF48A8000000000000787A
+t1405044904
+s30842
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+c0000000053BF48A80000000000002AA4
+t1405044904
+s10916
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m
+c0000000053BF48A8000000000000CE44
+t1405044904
+s52804
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+c0000000053BF7DD60000000000001DF3
+t1405058518
+s7667
+
+N/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+c0000000053BF48A80000000000001663
+t1405044904
+s5731
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies9f72988ad286b941^282c998ad286b941^---0#1#1#--18"Check dependencies36"9D115EB9-0396-410A-AC8A-FE5513ECA989-
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266122.599076
+e428266122.894894
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+x/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m276"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1476998ad286b941^2a1ce58ad286b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m0000000000000000^3561"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/.. -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.dia -c /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.m -o /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o36"64F02321-0F8B-4B4B-854D-065D196BCB34-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266122.600479
+e428266122.796284
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+x/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDConfig.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m278"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler12db998ad286b941^e8dacb8ad286b941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m0000000000000000^3567"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/.. -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.dia -c /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.m -o /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o36"187C6ED9-4359-484C-B150-4F41D994B256-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266122.599310
+e428266122.902744
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+x/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m274"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler768a998ad286b941^091ae78ad286b941^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m0000000000000000^3555"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/.. -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.dia -c /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.m -o /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o36"7FD11E40-30C8-4059-833B-AE3DE2264C71-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266122.599572
+e428266124.380473
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+x/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/Export.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/cocos2d.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRef.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRefPtr.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConsole.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCVector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCNS.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCGeometry.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMath.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMathBase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCValue.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccTypes.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConfiguration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDirector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListener.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEvent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCCommon.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProtocols.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScheduler.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/uthash.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/base64.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ZipUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProfiling.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUTF8.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCUserDefault.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventType.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCVertex.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimation.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionEase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTween.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabel.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransition.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenu.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSprite.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCImage.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCString.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrabber.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccShaders.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCDevice.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCThread.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMesh.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCSet.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCBool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm285"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler55a1998ad286b941^e469618cd286b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm0000000000000000^3657"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/.. -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.dia -c /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm -o /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o36"F4AF5D9E-F088-4226-AE98-AC96639430AE-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266122.600025
+e428266122.898762
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+x/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m292"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8fc2998ad286b941^3c17e68ad286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m0000000000000000^3609"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/.. -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../external -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.dia -c /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m -o /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o36"26A8D434-7940-416B-8EBA-ADC6137A6E50-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+
+CLibtool /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a normal i386
+s428266124.382146
+e428266124.392885
+r1
+xLibtool
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion iOS.a
+xnormal
+xi386
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"[1mLibtool[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a normal i38699"[1mLibtool[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a normal i386f1f1618cd286b941^5796648cd286b941^---0#0#1#--1034"[1mLibtool[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a normal i386    cd /Users/phoey/Projects/2048RPSPort/cocos2d/build    export IPHONEOS_DEPLOYMENT_TARGET=5.1.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/phoey/Projects/2048RPSPort/bin/debug/ios -filelist /Users/phoey/Projects/2048RPSPort/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion\ iOS.LinkFileList -o /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a36"9B0D1B75-850A-4650-834A-C5DCB837B7B8-
+b88781C5B-70CD-4A00-B05A-894D458BF6B5
+

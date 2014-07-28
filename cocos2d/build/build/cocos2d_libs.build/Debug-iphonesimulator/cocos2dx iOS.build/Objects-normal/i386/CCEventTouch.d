@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.cpp \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCEventTouch.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCEvent.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCRef.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/ccConfig.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios/CCPlatformDefine.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCTouch.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/CCGeometry.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/ccMacros.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCConsole.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios/CCStdC.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/CCMath.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec2.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/CCMathBase.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec2.inl \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec3.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec3.inl \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Mat4.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec4.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Vec4.inl \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Mat4.inl \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Quaternion.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/math/Quaternion.inl

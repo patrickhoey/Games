@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.cpp \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCRef.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/ccConfig.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios/CCPlatformDefine.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCBool.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCDataVisitor.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCInteger.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/CCConsole.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/ccMacros.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/ios/CCStdC.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/platform/CCCommon.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCFloat.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCDouble.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCString.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCArray.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/ccCArray.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCDictionary.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/base/uthash.h \
+  /Users/phoey/Projects/2048RPSPort/cocos2d/build/../cocos/deprecated/CCSet.h

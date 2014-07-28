@@ -1,0 +1,1547 @@
+T2048RPSPort iOS
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Info.plist /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist
+cCpResource ios/Icon-120.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-120.png
+cCpResource ios/Icon-76.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-76.png
+cCpResource ios/Default@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default@2x.png
+cCpResource ios/Icon-100.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-100.png
+cCpResource /Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseNormal.png
+cCpResource ios/Icon-152.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-152.png
+cCpResource ios/Default-568h@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default-568h@2x.png
+cCpResource ios/Icon-72.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-72.png
+cCpResource /Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseSelected.png
+cCpResource ios/Icon-50.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-50.png
+cCpResource ios/Icon-114.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-114.png
+cCpResource /Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/HelloWorld.png
+cCpResource ios/Icon-29.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-29.png
+cCpResource ios/Icon-40.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-40.png
+cCpResource ios/Icon-144.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-144.png
+cCpResource ios/Icon-80.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-80.png
+cCpResource ios/Icon-57.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-57.png
+cCpResource ios/Default.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default.png
+cCpResource ios/Icon-58.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-58.png
+cProcessPCH++ /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH++ /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.o /Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.o /Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS normal i386
+cGenerateDSYMFile /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app.dSYM /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS
+cTouch /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+c00000000000000000000000000000000
+t2
+s0
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c0000000053119F8A0000000000000198
+t1393663882
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c0000000053C15F8400000000000003B4
+t1405181828
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053C15F91000000000000019E
+t1405181841
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c0000000053C15F920000000000484210
+t1405181842
+s4735504
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c0000000053C15F930000000000904120
+t1405181843
+s9453856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c0000000053C15F930000000000446820
+t1405181843
+s4483104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000053C15F95000000000088D8C0
+t1405181845
+s8968384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c0000000053C15F96000000000007C0D0
+t1405181846
+s508112
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c0000000053C15F990000000000037680
+t1405181849
+s226944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000053C15F99000000000048F720
+t1405181849
+s4781856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c0000000053C15F9C0000000001F1DE10
+t1405181852
+s32628240
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib
+c0000000053C15FAB000000000002B700
+t1405181867
+s177920
+
+N/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp
+c0000000053D69A340000000000000556
+t1406573108
+s1366
+
+N/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp
+c0000000053D69A340000000000000AAD
+t1406573108
+s2733
+
+N/Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png
+c0000000053D69A3400000000000018A7
+t1406573108
+s6311
+
+N/Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png
+c0000000053D69A34000000000000157B
+t1406573108
+s5499
+
+N/Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png
+c0000000053D69A340000000000021E19
+t1406573108
+s138777
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app
+t1406573331
+s816
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app.dSYM
+t2
+s0
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/2048RPSPort iOS
+t1406573331
+s8895620
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseNormal.png
+t1406573324
+s6311
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseSelected.png
+t1406573324
+s5499
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default-568h@2x.png
+t1406573324
+s193731
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default.png
+t1406573324
+s89508
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default@2x.png
+t1406573324
+s580904
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/HelloWorld.png
+t1406573324
+s138777
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-100.png
+t1406573324
+s17283
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-114.png
+t1406573324
+s16537
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-120.png
+t1406573324
+s23871
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-144.png
+t1406573324
+s26403
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-152.png
+t1406573324
+s33665
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-29.png
+t1406573324
+s4038
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-40.png
+t1406573324
+s5478
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-50.png
+t1406573324
+s7038
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-57.png
+t1406573324
+s8960
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-58.png
+t1406573324
+s8433
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-72.png
+t1406573324
+s11453
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-76.png
+t1406573324
+s13250
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-80.png
+t1406573324
+s12489
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Info.plist
+t1406573324
+s1166
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/PkgInfo
+t1406573324
+s8
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion iOS.a
+c0000000053D69B0C00000000000551C0
+t1406573324
+s348608
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libbox2d iOS.a
+c0000000053D69B0A00000000001CE290
+t1406573322
+s1893008
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libchipmunk iOS.a
+c0000000053D69ABA00000000000BEDE0
+t1406573242
+s781792
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx iOS.a
+c0000000053D69B000000000011929160
+t1406573312
+s294818144
+
+N/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx-extensions iOS.a
+c0000000053D69B080000000001A373B8
+t1406573320
+s27489208
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/2048RPSPort iOS.LinkFileList
+c0000000053D69B0C00000000000002EF
+t1406573324
+s751
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppController.o
+t1406573327
+s1378444
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppDelegate.o
+t1406573327
+s1573992
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/HelloWorldScene.o
+t1406573327
+s1989024
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/RootViewController.o
+t1406573326
+s1608172
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/main.o
+t1406573324
+s4068
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm
+c0000000053D69A34000000000000164C
+t1406573108
+s5708
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default-568h@2x.png
+c0000000053D69A34000000000002F4C3
+t1406573108
+s193731
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default.png
+c0000000053D69A340000000000015DA4
+t1406573108
+s89508
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default@2x.png
+c0000000053D69A34000000000008DD28
+t1406573108
+s580904
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-100.png
+c0000000053D69A340000000000004383
+t1406573108
+s17283
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-114.png
+c0000000053D69A340000000000004099
+t1406573108
+s16537
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-120.png
+c0000000053D69A340000000000005D3F
+t1406573108
+s23871
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-144.png
+c0000000053D69A340000000000006723
+t1406573108
+s26403
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-152.png
+c0000000053D69A340000000000008381
+t1406573108
+s33665
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-29.png
+c0000000053D69A340000000000000FC6
+t1406573108
+s4038
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-40.png
+c0000000053D69A340000000000001566
+t1406573108
+s5478
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-50.png
+c0000000053D69A340000000000001B7E
+t1406573108
+s7038
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-57.png
+c0000000053D69A340000000000002300
+t1406573108
+s8960
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-58.png
+c0000000053D69A3400000000000020F1
+t1406573108
+s8433
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-72.png
+c0000000053D69A340000000000002CBD
+t1406573108
+s11453
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-76.png
+c0000000053D69A3400000000000033C2
+t1406573108
+s13250
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-80.png
+c0000000053D69A3400000000000030C9
+t1406573108
+s12489
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist
+c0000000053D69A3400000000000007B2
+t1406573108
+s1970
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch
+c0000000053D69A3800000000000000B5
+t1406573112
+s181
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm
+c0000000053D69A340000000000000E51
+t1406573108
+s3665
+
+N/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m
+c0000000053D69A3800000000000000F2
+t1406573112
+s242
+
+N/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch
+t1406573324
+s122880
+
+N/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch
+t1406573324
+s6315592
+
+N/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch
+t1406573324
+s5369736
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa1be658cd286b941^40df668cd286b941^---0#1#1#--18"Check dependencies36"93BC0891-909C-449D-804F-AEE7F360D31F-
+
+CCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.925441
+e428266127.091982
+r1
+xCompileC
+xbuild/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppController.o
+x/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCEAGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCESRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/cocos2d.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRef.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRefPtr.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConsole.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCVector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCNS.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCGeometry.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMath.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMathBase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCValue.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccTypes.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConfiguration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDirector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListener.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEvent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCCommon.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProtocols.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScheduler.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/uthash.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/base64.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ZipUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProfiling.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUTF8.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCUserDefault.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventType.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCVertex.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimation.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionEase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTween.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabel.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransition.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenu.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSprite.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCImage.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCString.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrabber.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccShaders.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCDevice.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCThread.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMesh.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/Export.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCSet.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCBool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.h
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm220"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.o [1mios/AppController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler0e13ed8cd286b941^118c178fd286b941^---0#0#1#-19%DVTDocumentLocation2@74"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm0000000000000000^4391"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.o [1mios/AppController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -include /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.dia -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/AppController.mm -o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppController.o36"943C849E-1954-40D1-A544-CE679EB08226-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.o /Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.926246
+e428266127.227115
+r1
+xCompileC
+xbuild/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppDelegate.o
+x/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp
+d/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/cocos2d.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRef.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRefPtr.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConsole.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCVector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCNS.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCGeometry.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMath.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMathBase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCValue.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccTypes.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConfiguration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDirector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListener.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEvent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCCommon.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProtocols.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScheduler.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/uthash.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/base64.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ZipUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProfiling.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUTF8.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCUserDefault.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventType.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCVertex.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimation.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionEase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTween.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabel.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransition.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenu.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSprite.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCImage.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCString.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrabber.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccShaders.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCDevice.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCThread.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMesh.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/Export.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCSet.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCBool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp245"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.o [1m/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler3b52ed8cd286b941^46243a8fd286b941^---0#0#1#-19%DVTDocumentLocation2@64"file:///Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp0000000000000000^4153"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.o [1m/Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -include /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.dia -c /Users/phoey/Projects/2048RPSPort/Classes/AppDelegate.cpp -o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/AppDelegate.o36"49BBD307-6153-42DC-A5E2-808EE1554A96-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.o /Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.927558
+e428266127.489391
+r1
+xCompileC
+xbuild/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/HelloWorldScene.o
+x/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp
+d/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/cocos2d.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRef.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRefPtr.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConsole.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCVector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCNS.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCGeometry.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMath.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMathBase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCValue.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccTypes.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConfiguration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDirector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListener.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEvent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCCommon.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProtocols.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScheduler.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/uthash.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/base64.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ZipUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProfiling.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUTF8.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCUserDefault.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventType.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCVertex.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimation.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionEase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTween.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabel.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransition.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenu.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSprite.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCImage.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCString.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrabber.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccShaders.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCDevice.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCThread.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMesh.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/Export.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCSet.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCBool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp253"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.o [1m/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilerfb96ed8cd286b941^f9497d8fd286b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp0000000000000000^4177"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.o [1m/Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -include /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.dia -c /Users/phoey/Projects/2048RPSPort/Classes/HelloWorldScene.cpp -o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/HelloWorldScene.o36"9B698D9E-20EC-4764-9827-EF37C00A5A72-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.925759
+e428266126.937370
+r1
+xCompileC
+xbuild/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/RootViewController.o
+x/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/cocos2d.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRef.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCRefPtr.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccMacros.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConsole.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCVector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCNS.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCGeometry.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMath.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCMathBase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec2.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec3.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Vec4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Mat4.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/Quaternion.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCValue.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccTypes.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCConfiguration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDirector.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListener.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEvent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCCommon.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProtocols.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCScheduler.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/uthash.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/base64.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ZipUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCProfiling.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUTF8.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCUserDefault.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventType.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventMouse.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/MathUtil.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/math/CCVertex.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimation.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionManager.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionEase.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionTween.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLabel.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFont.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCScene.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransition.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenu.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSprite.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCImage.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCString.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/ccCArray.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrabber.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCGrid.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/ccShaders.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCDevice.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCThread.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponent.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMesh.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/audio/include/Export.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCSet.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCBool.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCEAGLView.h
+d/Users/phoey/Projects/2048RPSPort/cocos2d/cocos/platform/ios/CCESRenderer.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm230"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.o [1mios/RootViewController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler1421ed8cd286b941^a9f8ef8ed286b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm0000000000000000^4421"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.o [1mios/RootViewController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -include /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.dia -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/RootViewController.mm -o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/RootViewController.o36"4B900C4D-39AE-4728-ADDE-FB1D7DE63922-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCompileC build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.927082
+e428266124.952769
+r1
+xCompileC
+xbuild/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/main.o
+x/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m199"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.o [1mios/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4a79ed8cd286b941^10e9f38cd286b941^---0#0#1#-19%DVTDocumentLocation2@64"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m0000000000000000^4206"[1mCompileC[0m build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.o [1mios/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -include /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch -MMD -MT dependencies -MF /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.dia -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/main.m -o /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/main.o36"2F5A3E3E-1C15-4EB9-86F9-8C7A2009FBBB-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource /Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseNormal.png
+s428266124.405764
+e428266124.407014
+r1
+xCpResource
+x/Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseNormal.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseNormal.png171"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseNormal.png[0mc3f2678cd286b941^e562688cd286b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/CloseNormal.png0034149adeffdf42^744"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseNormal.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/Resources/CloseNormal.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"AC5EEB92-A60D-4851-AE35-A16A2E8169E9-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource /Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseSelected.png
+s428266124.406747
+e428266124.407887
+r1
+xCpResource
+x/Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseSelected.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/CloseSelected.png175"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseSelected.png[0m5741688cd286b941^33c5688cd286b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/CloseSelected.png0034149adeffdf42^750"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/CloseSelected.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/Resources/CloseSelected.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"C049CC43-F2C3-4CDD-95C8-8AE987F8C295-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource /Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/HelloWorld.png
+s428266124.408047
+e428266124.409322
+r1
+xCpResource
+x/Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/HelloWorld.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/HelloWorld.png169"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/HelloWorld.png[0m3197688cd286b941^1809698cd286b941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/HelloWorld.png0034149adeffdf42^741"[1mCpResource[0m /Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/HelloWorld.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/Resources/HelloWorld.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"F7CF3AFE-6E9C-44E0-A8CB-A73F902137B9-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Default-568h@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default-568h@2x.png
+s428266124.406199
+e428266124.407684
+r1
+xCpResource
+xios/Default-568h@2x.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default-568h@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default-568h@2x.png139"[1mCpResource[0m ios/Default-568h@2x.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default-568h@2x.png[0me624688cd286b941^6dac688cd286b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Default-568h@2x.png0034149adeffdf42^723"[1mCpResource[0m ios/Default-568h@2x.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default-568h@2x.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default-568h@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"C8301FF5-0A23-4EB2-A861-C997E09A2631-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Default.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default.png
+s428266124.410241
+e428266124.411820
+r1
+xCpResource
+xios/Default.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default.png123"[1mCpResource[0m ios/Default.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default.png[0m821f698cd286b941^d26d698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Default.png0034149adeffdf42^699"[1mCpResource[0m ios/Default.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"0196AC29-0599-4FAD-B8C0-C7A8EC5113E4-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Default@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default@2x.png
+s428266124.405366
+e428266124.407047
+r1
+xCpResource
+xios/Default@2x.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Default@2x.png129"[1mCpResource[0m ios/Default@2x.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default@2x.png[0m84d6678cd286b941^7369688cd286b941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Default@2x.png0034149adeffdf42^708"[1mCpResource[0m ios/Default@2x.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Default@2x.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Default@2x.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"360107B7-8120-41F4-ADC2-B3C1F6DAF11A-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-100.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-100.png
+s428266124.405509
+e428266124.406584
+r1
+xCpResource
+xios/Icon-100.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-100.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-100.png125"[1mCpResource[0m ios/Icon-100.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-100.png[0mb0e3678cd286b941^0454688cd286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-100.png0034149adeffdf42^702"[1mCpResource[0m ios/Icon-100.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-100.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-100.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"84594B2C-8D64-4664-9DC4-A1CDFC04F49D-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-114.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-114.png
+s428266124.407651
+e428266124.408749
+r1
+xCpResource
+xios/Icon-114.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-114.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-114.png125"[1mCpResource[0m ios/Icon-114.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-114.png[0md176688cd286b941^7bfa688cd286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-114.png0034149adeffdf42^702"[1mCpResource[0m ios/Icon-114.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-114.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-114.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"66D94CC0-50BE-4906-B075-7F53FE37D008-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-120.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-120.png
+s428266124.405107
+e428266124.406229
+r1
+xCpResource
+xios/Icon-120.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-120.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-120.png125"[1mCpResource[0m ios/Icon-120.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-120.png[0m86c6678cd286b941^8ffe678cd286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-120.png0034149adeffdf42^702"[1mCpResource[0m ios/Icon-120.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-120.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-120.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"453C1EF9-DC01-42F2-8244-80A0696EBEBF-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-144.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-144.png
+s428266124.409083
+e428266124.410117
+r1
+xCpResource
+xios/Icon-144.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-144.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-144.png125"[1mCpResource[0m ios/Icon-144.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-144.png[0m0bd2688cd286b941^2828698cd286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-144.png0034149adeffdf42^702"[1mCpResource[0m ios/Icon-144.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-144.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-144.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"8A9FAE3B-B079-4AED-A4E7-A8454D55BF11-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-152.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-152.png
+s428266124.406087
+e428266124.407444
+r1
+xCpResource
+xios/Icon-152.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-152.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-152.png125"[1mCpResource[0m ios/Icon-152.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-152.png[0m2712688cd286b941^e38d688cd286b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-152.png0034149adeffdf42^702"[1mCpResource[0m ios/Icon-152.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-152.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-152.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"BED219ED-25EA-4016-A8FF-D21A28340688-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-29.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-29.png
+s428266124.408356
+e428266124.409435
+r1
+xCpResource
+xios/Icon-29.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-29.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-29.png123"[1mCpResource[0m ios/Icon-29.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-29.png[0m9ba9688cd286b941^df15698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-29.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-29.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-29.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-29.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"17665CE3-D543-4C70-9393-68E8F055C37C-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-40.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-40.png
+s428266124.408813
+e428266124.409800
+r1
+xCpResource
+xios/Icon-40.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-40.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-40.png123"[1mCpResource[0m ios/Icon-40.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-40.png[0m40c2688cd286b941^1421698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-40.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-40.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-40.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-40.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"3F4731E2-6512-4BAF-A6A1-1A53993E218E-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-50.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-50.png
+s428266124.407234
+e428266124.408655
+r1
+xCpResource
+xios/Icon-50.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-50.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-50.png123"[1mCpResource[0m ios/Icon-50.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-50.png[0m596b688cd286b941^b3ed688cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-50.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-50.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-50.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-50.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"CAB971AF-CEE4-44B7-8074-F6D2067ECF64-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-57.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-57.png
+s428266124.409898
+e428266124.410988
+r1
+xCpResource
+xios/Icon-57.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-57.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-57.png123"[1mCpResource[0m ios/Icon-57.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-57.png[0m3e08698cd286b941^ff3c698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-57.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-57.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-57.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-57.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"8A99130F-2D8F-431E-AD54-FC549FC1DBD6-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-58.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-58.png
+s428266124.410533
+e428266124.411827
+r1
+xCpResource
+xios/Icon-58.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-58.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-58.png123"[1mCpResource[0m ios/Icon-58.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-58.png[0mb22f698cd286b941^ff76698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-58.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-58.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-58.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-58.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"14ED558F-AB1A-40F3-9CDF-32F46A1A743F-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-72.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-72.png
+s428266124.406531
+e428266124.407989
+r1
+xCpResource
+xios/Icon-72.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-72.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-72.png123"[1mCpResource[0m ios/Icon-72.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-72.png[0mc93e688cd286b941^f1d7688cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-72.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-72.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-72.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-72.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"F692DDC8-4A8E-4459-8A0C-BF1304202BB9-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-76.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-76.png
+s428266124.405217
+e428266124.406234
+r1
+xCpResource
+xios/Icon-76.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-76.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-76.png123"[1mCpResource[0m ios/Icon-76.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-76.png[0m43ca678cd286b941^5c21688cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-76.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-76.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-76.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-76.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"0E9A8956-F051-41A6-8072-C334B332A68D-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CCpResource ios/Icon-80.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-80.png
+s428266124.409609
+e428266124.410660
+r1
+xCpResource
+xios/Icon-80.png
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-80.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Icon-80.png123"[1mCpResource[0m ios/Icon-80.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-80.png[0m6af6688cd286b941^8332698cd286b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app/Icon-80.png0034149adeffdf42^699"[1mCpResource[0m ios/Icon-80.png [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Icon-80.png[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Icon-80.png /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app36"C75DF70D-7347-4F30-AF2D-818C5202C8EE-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CGenerateDSYMFile /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app.dSYM /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS
+s428266131.345320
+e428266137.127240
+r1
+xGenerateDSYMFile
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app.dSYM
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/2048RPSPort iOS
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Generate /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app.dSYM192"[1mGenerateDSYMFile[0m [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app.dSYM[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOSe6795893d286b941^a7932099d286b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort%20iOS.app.dSYM0034149adeffdf42^787"[1mGenerateDSYMFile[0m [1m/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app.dSYM[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS -o /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app.dSYM36"24F07B9C-BAEC-4680-88F5-CD3A35BEB6FA-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CLd /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS normal i386
+s428266127.490511
+e428266131.343999
+r1
+xLd
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/2048RPSPort iOS
+xnormal
+xi386
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/2048RPSPort iOS.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppController.o
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/RootViewController.o
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/AppDelegate.o
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/main.o
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort iOS.build/Objects-normal/i386/HelloWorldScene.o
+d/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libbox2d iOS.a
+d/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libchipmunk iOS.a
+d/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx iOS.a
+d/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx-extensions iOS.a
+d/Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion iOS.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphonesimulator.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Link /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/2048RPSPort iOS108"[1mLd[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS normal i3867ba47d8fd286b941^8c125893d286b941^---0#0#1#--1970"[1mLd[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS normal i386    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/phoey/Projects/2048RPSPort/bin/debug/ios -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios -filelist /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/2048RPSPort\ iOS.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -stdlib=libc++ -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libbox2d\ iOS.a /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libchipmunk\ iOS.a /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx\ iOS.a /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libcocos2dx-extensions\ iOS.a /Users/phoey/Projects/2048RPSPort/bin/debug/ios/libCocosDenshion\ iOS.a -framework CoreMotion -framework Foundation -framework UIKit -framework CoreGraphics -framework OpenGLES -lz -framework QuartzCore -framework OpenAL -framework AVFoundation -framework AudioToolbox -Xlinker -dependency_info -Xlinker /Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/Objects-normal/i386/2048RPSPort\ iOS_dependency_info.dat -o /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/2048RPSPort\ iOS36"CFB43634-8826-4752-974B-37A0829F9152-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CProcessInfoPlistFile /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Info.plist /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist
+s428266124.402609
+e428266124.404774
+r1
+xProcessInfoPlistFile
+x/Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort iOS.app/Info.plist
+x/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Process /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist131"[1mProcessInfoPlistFile[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Info.plist [1mios/Info.plist[0mfa28678cd286b941^a99f678cd286b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist0000000000000000^788"[1mProcessInfoPlistFile[0m /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Info.plist [1mios/Info.plist[0m    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    builtin-infoPlistUtility /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Info.plist -genpkginfo /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app/Info.plist36"6CA5E59D-DAF9-494E-8EF0-1E76D5725524-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CProcessPCH /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.412958
+e428266124.852520
+r1
+xProcessPCH
+x/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch270"[1mProcessPCH[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere5d5698cd286b941^6440da8cd286b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch0000000000000000^4188"[1mProcessPCH[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios --serialize-diagnostics /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.d -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch -o /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-fyoqxxtzgmqldrgaekvdfwhjfqzq/Prefix.pch.pch36"53B2782C-F517-4F29-A606-7CEBD6D93D87-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CProcessPCH++ /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.412700
+e428266124.459086
+r1
+xProcessPCH++
+x/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch264"[1mProcessPCH++[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler5eba698cd286b941^c288758cd286b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch0000000000000000^4062"[1mProcessPCH++[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios --serialize-diagnostics /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.d -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch -o /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-adugrvgubfsdcoecundnsyvobggc/Prefix.pch.pch36"7091B3C4-2B3A-4BA0-9D38-F55E4C72C810-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CProcessPCH++ /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428266124.412460
+e428266124.924235
+r1
+xProcessPCH++
+x/var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch274"[1mProcessPCH++[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compilere2ab698cd286b941^809cec8cd286b941^---0#0#1#-19%DVTDocumentLocation2@68"file:///Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch0000000000000000^4319"[1mProcessPCH++[0m /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/phoey/Projects/2048RPSPort/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/phoey/Projects/libs/cocos2d-x-3.2/tools/cocos2d-console/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++-header -arch i386 -fmessage-length=143 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/2048RPSPort\ iOS.hmap -I/Users/phoey/Projects/2048RPSPort/bin/debug/ios/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/base -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/physics -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/math -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/2d -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/ui -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/network -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/extensions -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources/i386 -I/Users/phoey/Projects/2048RPSPort/proj.ios_mac/build/2048RPSPort.build/Debug-iphonesimulator/2048RPSPort\ iOS.build/DerivedSources -F/Users/phoey/Projects/2048RPSPort/bin/debug/ios --serialize-diagnostics /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.d -c /Users/phoey/Projects/2048RPSPort/proj.ios_mac/ios/Prefix.pch -o /var/folders/kc/nh0bhtp12m1__166qznd4ggm0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-clvaouztyteveveqicbdgdjjhcni/Prefix.pch.pch36"0B1D3F7A-B74E-47FB-B447-11B7871398CA-
+b4B2CDE51-76C3-4B11-AD33-8B69675DA2FE
+
+CTouch /Users/phoey/Projects/2048RPSPort/bin/debug/ios/2048RPSPort\ iOS.app
+r0
+
