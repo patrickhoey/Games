@@ -30,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         glview = GLView::create("Rock Paper Scissors 2048");
         director->setOpenGLView(glview);
     }
-
+    
     // turn on display FPS
     director->setDisplayStats(true);
 
@@ -42,7 +42,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
     //float scaleFactor = size.height / 320.0f;
     //glview->setDesignResolutionSize(size.width / scaleFactor, 320, ResolutionPolicy::SHOW_ALL);
-    //spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
+    //FileUtils::getInstance()->addSearchPath("Published-iOS");
+    //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
+    spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
     
 
     // create a scene. it's an autorelease object
