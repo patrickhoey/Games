@@ -42,7 +42,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
     //float scaleFactor = size.height / 320.0f;
     //glview->setDesignResolutionSize(size.width / scaleFactor, 320, ResolutionPolicy::SHOW_ALL);
-    spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
+    //spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
     
 
     // create a scene. it's an autorelease object
