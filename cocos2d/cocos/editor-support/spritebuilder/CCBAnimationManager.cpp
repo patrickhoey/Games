@@ -6,6 +6,7 @@
 #include "CCNode+CCBRelativePositioning.h"
 #include <string>
 #include <set>
+#include <sstream>
 #include "SimpleAudioEngine.h"
 #include "CCBSelectorResolver.h"
 
@@ -58,7 +59,7 @@ CCBAnimationManager::~CCBAnimationManager()
     
     setRootNode(nullptr);
     setDelegate(nullptr);
-    
+
     for (auto iter = _objects.begin(); iter != _objects.end(); ++iter)
     {
         for (auto iter2 = iter->second.begin(); iter2 != iter->second.end(); ++iter2)
@@ -339,7 +340,7 @@ ActionInterval* CCBAnimationManager::getAction(CCBKeyframe *pKeyframe0, CCBKeyfr
     } 
     else if (propName == "opacity")
     {
-        return FadeTo::create(duration, pKeyframe1->getValue().asByte());
+        return FadeTo::create(duration, pKeyframe1->getValue().asFloat() * 255); //DuongNT fixed
     }
     else if (propName == "color")
     {
@@ -499,7 +500,7 @@ void CCBAnimationManager::setAnimatedProperty(const std::string& propName, Node 
             }
             else if (propName == "opacity")
             {
-                unsigned char opacity = value.asByte();
+                unsigned char opacity = value.asFloat() * 255.0f;//value.asByte();
                 pNode->setOpacity(opacity);
             }
             else if (propName == "displayFrame")
