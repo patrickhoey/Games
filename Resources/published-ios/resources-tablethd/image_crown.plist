@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>image_crown/b1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{583, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 868}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 577}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2038, 1}, {-289, -283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{289, 283}, {-289, -283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 286}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{292, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1747, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1456, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1159}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1165, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+		<key>image_crown/b9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{874, 1}, {289, 283}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {289, 283}}</string>
+			<key>sourceSize</key>
+			<string>{289, 283}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>textureFileName</key>
+		<string>image_crown.png</string>
+	</dict>
+</dict>
+</plist>

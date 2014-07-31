@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>image_crown/b1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{149, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b10.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 295}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b11.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 221}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b12.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{445, 1}, {-72, -70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{72, 70}, {-72, -70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 147}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 73}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{371, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b7.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 369}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b8.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{297, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+		<key>image_crown/b9.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{223, 1}, {72, 70}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {72, 70}}</string>
+			<key>sourceSize</key>
+			<string>{72, 70}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{512, 512}</string>
+		<key>textureFileName</key>
+		<string>image_crown.png</string>
+	</dict>
+</dict>
+</plist>
