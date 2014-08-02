@@ -1,4 +1,9 @@
 #include "TitleMenu.h"
+#include "CCUserDefault.h"
+#include "SimpleAudioEngine.h"
+#include "Setting.h"
+
+using namespace CocosDenshion;
 
 TitleMenu::~TitleMenu()
 {
@@ -16,11 +21,32 @@ Scene* TitleMenu::createScene()
 
 void TitleMenu::setCCBReader(spritebuilder::CCBReader* reader)
 {
-    mReader = reader;
+    reader_ = reader;
 }
 
-void TitleMenu::onNodeLoaded(cocos2d::Node * pNode, spritebuilder::NodeLoader* pNodeLoader)
+void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
+    CCLOG("***Loaded TitleMenu");
+    auto director = Director::getInstance();
+    
+    Size size = director->getWinSize();
+    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
+ 
+    auto userDefaults = UserDefault::getInstance();
+    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
+    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    
+    //If the mode is sound ON, then make sure it is enabled
+    if(true == soundMode){
+        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        
+        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
+        sound->playBackgroundMusic("Castle.mp3", true);
+    }
+
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
+    
 }
 
 bool TitleMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
@@ -58,8 +84,12 @@ void TitleMenu::onPlayClicked(cocos2d::Ref * sender, cocos2d::extension::Control
 void TitleMenu::onSettingClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     CCLOG("*********CLICKED ON SETTING");
+    // create a scene. it's an autorelease object
+    auto scene = Setting::createScene();
+    auto director = Director::getInstance();
+    director->pushScene(scene);
 }
 void TitleMenu::onMoregameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    CCLOG("*********CLICKED ON MOREGAME");
+    CCLOG("Implement more game here");
 }

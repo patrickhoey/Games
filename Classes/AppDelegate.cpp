@@ -5,6 +5,7 @@
 #define PHYSICS_FACTOR 32
 
 USING_NS_CC;
+using namespace CocosDenshion;
 
 AppDelegate::AppDelegate()
 {
@@ -40,9 +41,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //Scale factor info
     Size size = director->getWinSize();
     CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
-    //float scaleFactor = size.height / 320.0f;
-    //glview->setDesignResolutionSize(size.width / scaleFactor, 320, ResolutionPolicy::SHOW_ALL);
-    //FileUtils::getInstance()->addSearchPath("Published-iOS");
+
     //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
     spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
     
@@ -61,7 +60,7 @@ void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
 }
 
 // this function will be called when the app is active again
@@ -69,5 +68,5 @@ void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
