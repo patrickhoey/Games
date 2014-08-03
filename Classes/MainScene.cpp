@@ -1,6 +1,8 @@
 #include "MainScene.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
+#include "Grid.h"
+#include "OptionMenu.h"
 
 using namespace CocosDenshion;
 
@@ -12,10 +14,20 @@ Scene* MainScene::createScene()
 {
     spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
     ccNodeLoaderLibrary->registerNodeLoader("MainScene", MainSceneSceneContentLoader::loader());
+    ccNodeLoaderLibrary->registerNodeLoader("Grid", GridSceneContentLoader::loader());
     
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
     return ccbReader->createSceneWithNodeGraphFromFile("MainScene.ccbi");
+}
+
+void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    CCLOG("***Menu Option Clicked");
+    // create a scene. it's an autorelease object
+    auto scene = OptionMenu::createScene();
+    auto director = Director::getInstance();
+    director->pushScene(scene);
 }
 
 void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
@@ -51,9 +63,7 @@ cocos2d::SEL_CallFuncN MainScene::onResolveCCBCCCallFuncSelector(cocos2d::Ref * 
 
 cocos2d::extension::Control::Handler MainScene::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "MainScene", TitleMenu::onMainSceneClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "menuOption", MainScene::onMenuOptionClicked);
     return NULL;
 }
 

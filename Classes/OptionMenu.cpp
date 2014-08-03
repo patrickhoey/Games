@@ -26,28 +26,6 @@ void OptionMenu::setCCBReader(spritebuilder::CCBReader* reader)
 void OptionMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     CCLOG("***Loaded OptionMenu");
-    /*
-    auto director = Director::getInstance();
-    
-    Size size = director->getWinSize();
-    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
- 
-    auto userDefaults = UserDefault::getInstance();
-    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
-    
-    //If the mode is sound ON, then make sure it is enabled
-    if(true == soundMode){
-        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
-        
-        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-        sound->playBackgroundMusic("Castle.mp3", true);
-    }
-
-    userDefaults->setBoolForKey("openop", true);
-    userDefaults->flush();
-     */
-    
 }
 
 bool OptionMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
@@ -72,9 +50,29 @@ cocos2d::SEL_CallFuncN OptionMenu::onResolveCCBCCCallFuncSelector(cocos2d::Ref *
 
 cocos2d::extension::Control::Handler OptionMenu::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "OptionMenu", TitleMenu::onOptionMenuClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "mainMenu", OptionMenu::onMainMenuClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "restartGame", OptionMenu::onRestartGameClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "resume", OptionMenu::onResumeClicked);
     return NULL;
 }
 
+void OptionMenu::onMainMenuClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
+}
+
+void OptionMenu::onRestartGameClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
+}
+
+void OptionMenu::onResumeClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
+}
