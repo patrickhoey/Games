@@ -84,7 +84,8 @@
 		54BE6F17198DDBAD008E1F67 /* GameEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */; };
 		54BE6F19198DDBBE008E1F67 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F18198DDBBE008E1F67 /* MainScene.cpp */; };
 		54BE6F1B198DDBC6008E1F67 /* OptionMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */; };
-		54BE6F1D198DDBD4008E1F67 /* TileScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */; };
+		54BE6F1D198DDBD4008E1F67 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1C198DDBD4008E1F67 /* Tile.cpp */; };
+		54BE6F2E198E8728008E1F67 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F2D198E8728008E1F67 /* Grid.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -311,12 +312,14 @@
 		54BE6F12198DDB7E008E1F67 /* GameEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEnd.h; path = ../Classes/GameEnd.h; sourceTree = "<group>"; };
 		54BE6F13198DDB88008E1F67 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
 		54BE6F14198DDB96008E1F67 /* OptionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionMenu.h; path = ../Classes/OptionMenu.h; sourceTree = "<group>"; };
-		54BE6F15198DDB9B008E1F67 /* TileScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileScene.h; path = ../Classes/TileScene.h; sourceTree = "<group>"; };
+		54BE6F15198DDB9B008E1F67 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = ../Classes/Tile.h; sourceTree = "<group>"; };
 		54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEnd.cpp; path = ../Classes/GameEnd.cpp; sourceTree = "<group>"; };
 		54BE6F18198DDBBE008E1F67 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionMenu.cpp; path = ../Classes/OptionMenu.cpp; sourceTree = "<group>"; };
-		54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TileScene.cpp; path = ../Classes/TileScene.cpp; sourceTree = "<group>"; };
+		54BE6F1C198DDBD4008E1F67 /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tile.cpp; path = ../Classes/Tile.cpp; sourceTree = "<group>"; };
 		54BE6F24198DE5AC008E1F67 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Classes/Constants.h; sourceTree = "<group>"; };
+		54BE6F2A198E871B008E1F67 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = ../Classes/Grid.h; sourceTree = "<group>"; };
+		54BE6F2D198E8728008E1F67 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Grid.cpp; path = ../Classes/Grid.cpp; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -403,11 +406,13 @@
 				54BE6F14198DDB96008E1F67 /* OptionMenu.h */,
 				5429A434198D45CC00BA24C6 /* Setting.cpp */,
 				5429A433198D45AC00BA24C6 /* Setting.h */,
-				54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */,
-				54BE6F15198DDB9B008E1F67 /* TileScene.h */,
+				54BE6F1C198DDBD4008E1F67 /* Tile.cpp */,
+				54BE6F15198DDB9B008E1F67 /* Tile.h */,
 				5429A270198ADE6200BA24C6 /* TitleMenu.cpp */,
 				5429A271198ADE6200BA24C6 /* TitleMenu.h */,
 				54BE6F24198DE5AC008E1F67 /* Constants.h */,
+				54BE6F2A198E871B008E1F67 /* Grid.h */,
+				54BE6F2D198E8728008E1F67 /* Grid.cpp */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -803,7 +808,8 @@
 				5429A273198ADE6200BA24C6 /* TitleMenu.cpp in Sources */,
 				5429A435198D45CC00BA24C6 /* Setting.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				54BE6F1D198DDBD4008E1F67 /* TileScene.cpp in Sources */,
+				54BE6F1D198DDBD4008E1F67 /* Tile.cpp in Sources */,
+				54BE6F2E198E8728008E1F67 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

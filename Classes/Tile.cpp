@@ -1,31 +1,31 @@
-#include "TileScene.h"
+#include "Tile.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
 
 using namespace CocosDenshion;
 
-TileScene::~TileScene()
+Tile::~Tile()
 {
 }
 
-Scene* TileScene::createScene()
+cocos2d::Scene* Tile::createScene()
 {
     spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
-    ccNodeLoaderLibrary->registerNodeLoader("TileScene", TileSceneSceneContentLoader::loader());
+    ccNodeLoaderLibrary->registerNodeLoader("Tile", TileSceneContentLoader::loader());
     
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
     return ccbReader->createSceneWithNodeGraphFromFile("Tile.ccbi");
 }
 
-void TileScene::setCCBReader(spritebuilder::CCBReader* reader)
+void Tile::setCCBReader(spritebuilder::CCBReader* reader)
 {
     reader_ = reader;
 }
 
-void TileScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
+void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded TileScene");
+    CCLOG("***Loaded Tile");
     /*
     auto director = Director::getInstance();
     
@@ -50,30 +50,30 @@ void TileScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     
 }
 
-bool TileScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
+bool Tile::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
     return false;
 }
 
-bool TileScene::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
+bool Tile::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
 {
     return false;
 }
 
-cocos2d::SEL_MenuHandler TileScene::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+cocos2d::SEL_MenuHandler Tile::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
     return NULL;
 }
 
-cocos2d::SEL_CallFuncN TileScene::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+cocos2d::SEL_CallFuncN Tile::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
     return NULL;
 }
 
-cocos2d::extension::Control::Handler TileScene::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+cocos2d::extension::Control::Handler Tile::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
     //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "TileScene", TitleMenu::onTileSceneClicked);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "Tile", TitleMenu::onTileClicked);
     //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
     return NULL;
 }
