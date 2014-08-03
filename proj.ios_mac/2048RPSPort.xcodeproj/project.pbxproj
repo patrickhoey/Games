@@ -81,6 +81,10 @@
 		5429A429198AF9B300BA24C6 /* effect3-ipad.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5429A420198AF9B300BA24C6 /* effect3-ipad.plist */; };
 		5429A42A198AF9B300BA24C6 /* effect3-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429A421198AF9B300BA24C6 /* effect3-ipad.png */; };
 		5429A435198D45CC00BA24C6 /* Setting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5429A434198D45CC00BA24C6 /* Setting.cpp */; };
+		54BE6F17198DDBAD008E1F67 /* GameEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */; };
+		54BE6F19198DDBBE008E1F67 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F18198DDBBE008E1F67 /* MainScene.cpp */; };
+		54BE6F1B198DDBC6008E1F67 /* OptionMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */; };
+		54BE6F1D198DDBD4008E1F67 /* TileScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -304,6 +308,14 @@
 		5429A421198AF9B300BA24C6 /* effect3-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "effect3-ipad.png"; sourceTree = "<group>"; };
 		5429A433198D45AC00BA24C6 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		5429A434198D45CC00BA24C6 /* Setting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Setting.cpp; path = ../Classes/Setting.cpp; sourceTree = "<group>"; };
+		54BE6F12198DDB7E008E1F67 /* GameEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEnd.h; path = ../Classes/GameEnd.h; sourceTree = "<group>"; };
+		54BE6F13198DDB88008E1F67 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
+		54BE6F14198DDB96008E1F67 /* OptionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionMenu.h; path = ../Classes/OptionMenu.h; sourceTree = "<group>"; };
+		54BE6F15198DDB9B008E1F67 /* TileScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TileScene.h; path = ../Classes/TileScene.h; sourceTree = "<group>"; };
+		54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEnd.cpp; path = ../Classes/GameEnd.cpp; sourceTree = "<group>"; };
+		54BE6F18198DDBBE008E1F67 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
+		54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionMenu.cpp; path = ../Classes/OptionMenu.cpp; sourceTree = "<group>"; };
+		54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TileScene.cpp; path = ../Classes/TileScene.cpp; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -382,8 +394,16 @@
 			children = (
 				5429A26E198ADE6200BA24C6 /* AppDelegate.cpp */,
 				5429A26F198ADE6200BA24C6 /* AppDelegate.h */,
+				54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */,
+				54BE6F12198DDB7E008E1F67 /* GameEnd.h */,
+				54BE6F18198DDBBE008E1F67 /* MainScene.cpp */,
+				54BE6F13198DDB88008E1F67 /* MainScene.h */,
+				54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */,
+				54BE6F14198DDB96008E1F67 /* OptionMenu.h */,
 				5429A434198D45CC00BA24C6 /* Setting.cpp */,
 				5429A433198D45AC00BA24C6 /* Setting.h */,
+				54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */,
+				54BE6F15198DDB9B008E1F67 /* TileScene.h */,
 				5429A270198ADE6200BA24C6 /* TitleMenu.cpp */,
 				5429A271198ADE6200BA24C6 /* TitleMenu.h */,
 			);
@@ -773,11 +793,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5429A272198ADE6200BA24C6 /* AppDelegate.cpp in Sources */,
+				54BE6F1B198DDBC6008E1F67 /* OptionMenu.cpp in Sources */,
+				54BE6F19198DDBBE008E1F67 /* MainScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				54BE6F17198DDBAD008E1F67 /* GameEnd.cpp in Sources */,
 				5429A273198ADE6200BA24C6 /* TitleMenu.cpp in Sources */,
 				5429A435198D45CC00BA24C6 /* Setting.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				54BE6F1D198DDBD4008E1F67 /* TileScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
