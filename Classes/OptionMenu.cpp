@@ -1,6 +1,7 @@
 #include "OptionMenu.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
+#include "TitleMenu.h"
 
 using namespace CocosDenshion;
 
@@ -61,6 +62,9 @@ void OptionMenu::onMainMenuClicked(cocos2d::Ref* sender, cocos2d::extension::Con
     auto userDefaults = UserDefault::getInstance();
     userDefaults->setBoolForKey("openop", true);
     userDefaults->flush();
+    
+    auto director = Director::getInstance();
+    director->popToRootScene();
 }
 
 void OptionMenu::onRestartGameClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
@@ -75,4 +79,7 @@ void OptionMenu::onResumeClicked(cocos2d::Ref* sender, cocos2d::extension::Contr
     auto userDefaults = UserDefault::getInstance();
     userDefaults->setBoolForKey("openop", true);
     userDefaults->flush();
+    
+    auto director = Director::getInstance();
+    director->popScene();
 }
