@@ -17,6 +17,7 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
 
+    Tile();
     virtual ~Tile();
     
     void setCCBReader(spritebuilder::CCBReader* reader);
@@ -27,10 +28,25 @@ public:
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
+
+    void updateValueDisplay();
     
+    int getValue();
+    void setValue(int value);
+    
+    bool isMergedThisRound();
+    void setIsMergedThisRound(bool isMerged);
+    
+    void showAds();
     
 private:
     spritebuilder::CCBReader* reader_;
+    int value_;
+    bool mergedThisRound_;
+    cocos2d::Label* valueLabel_;
+    cocos2d::LayerColor* backgroundNode_;
+    cocos2d::LayerColor* test_;
+    cocos2d::Sprite* im_;
 };
 
 
