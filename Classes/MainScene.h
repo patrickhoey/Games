@@ -8,7 +8,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
-class MainScene :
+class MainScene:
   public cocos2d::Layer
 , public spritebuilder::CCBSelectorResolver
 , public spritebuilder::CCBMemberVariableAssigner
