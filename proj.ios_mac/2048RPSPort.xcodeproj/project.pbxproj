@@ -316,6 +316,7 @@
 		54BE6F18198DDBBE008E1F67 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionMenu.cpp; path = ../Classes/OptionMenu.cpp; sourceTree = "<group>"; };
 		54BE6F1C198DDBD4008E1F67 /* TileScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TileScene.cpp; path = ../Classes/TileScene.cpp; sourceTree = "<group>"; };
+		54BE6F24198DE5AC008E1F67 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Classes/Constants.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -406,6 +407,7 @@
 				54BE6F15198DDB9B008E1F67 /* TileScene.h */,
 				5429A270198ADE6200BA24C6 /* TitleMenu.cpp */,
 				5429A271198ADE6200BA24C6 /* TitleMenu.h */,
+				54BE6F24198DE5AC008E1F67 /* Constants.h */,
 			);
 			name = Classes;
 			path = ../classes;

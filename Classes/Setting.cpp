@@ -1,6 +1,7 @@
 #include "Setting.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
+#include "Constants.h"
 
 using namespace CocosDenshion;
 
@@ -26,28 +27,6 @@ void Setting::setCCBReader(spritebuilder::CCBReader* reader)
 void Setting::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     CCLOG("***Loaded Setting");
-    /*
-    auto director = Director::getInstance();
-    
-    Size size = director->getWinSize();
-    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
- 
-    auto userDefaults = UserDefault::getInstance();
-    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
-    
-    //If the mode is sound ON, then make sure it is enabled
-    if(true == soundMode){
-        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
-        
-        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-        sound->playBackgroundMusic("Castle.mp3", true);
-    }
-
-    userDefaults->setBoolForKey("openop", true);
-    userDefaults->flush();
-     */
-    
 }
 
 bool Setting::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
@@ -72,9 +51,36 @@ cocos2d::SEL_CallFuncN Setting::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pT
 
 cocos2d::extension::Control::Handler Setting::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "setting", TitleMenu::onSettingClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "soundon", Setting::onSoundOnClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "soundoff", Setting::onSoundOffClicked);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "back", Setting::onBackClicked);
     return NULL;
 }
 
+
+void Setting::onSoundOnClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    // if you use SimpleAudioEngine, it must be pause
+    SimpleAudioEngine::getInstance()->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+    
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("soundmode1", true);
+    userDefaults->flush();
+    
+}
+
+void Setting::onSoundOffClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    // if you use SimpleAudioEngine, it must be pause
+    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("soundmode1", false);
+    userDefaults->flush();
+}
+
+void Setting::onBackClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto director = Director::getInstance();
+    director->popScene();
+}

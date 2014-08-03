@@ -2,6 +2,8 @@
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
 #include "Setting.h"
+#include "MainScene.h"
+#include "Constants.h"
 
 using namespace CocosDenshion;
 
@@ -41,7 +43,7 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
         CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
         SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-        sound->playBackgroundMusic("Castle.mp3", true);
+        sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
     }
 
     userDefaults->setBoolForKey("openop", true);
@@ -80,6 +82,10 @@ cocos2d::extension::Control::Handler TitleMenu::onResolveCCBCCControlSelector(co
 void TitleMenu::onPlayClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     CCLOG("*********CLICKED ON PLAY");
+    // create a scene. it's an autorelease object
+    auto scene = MainScene::createScene();
+    auto director = Director::getInstance();
+    director->pushScene(scene);
 }
 void TitleMenu::onSettingClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
