@@ -92,6 +92,7 @@ void Grid::spawnRandomTile()
         bool isPositionFree = gridArray_[index]->isEmpty();
         
         if(true == isPositionFree){
+            addTileAtColumn(randomRow, randomCol);
             spawned = true;
         }
     }
