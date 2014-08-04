@@ -40,6 +40,7 @@ public:
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     
     void setupBackground();
+    void spawnStartTiles();
     
 private:
     spritebuilder::CCBReader* reader_;
@@ -48,6 +49,7 @@ private:
     float tileMarginVertical_;
     float tileMarginHorizontal_;
     cocos2d::Vector<::Tile*> gridArray_;
+    
 };
 
 

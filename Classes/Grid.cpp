@@ -73,6 +73,21 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
 {
     CCLOG("***Loaded Grid");
     setupBackground();
+    
+    //For a matrix, to access: (row * numCol) + col
+    for(int row = 0; row < Constants::GRID_SIZE; row++){
+        for(int col=0; col < Constants::GRID_SIZE; col++){
+            //Get current index
+            //int index = (row * Constants::GRID_SIZE) + col;
+            gridArray_.pushBack(::Tile::create());
+        }
+    }
+    
+}
+
+void Grid::spawnStartTiles()
+{
+    
 }
 
 bool Grid::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
