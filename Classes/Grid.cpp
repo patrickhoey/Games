@@ -9,33 +9,17 @@
 #include "Grid.h"
 
 Grid::Grid() :
- reader_(NULL)
-, columnWidth_(0.0)
+ columnWidth_(0.0)
 , columnHeight_(0.0)
 , tileMarginVertical_(0.0)
 , tileMarginHorizontal_(0.0)
-, gridArray_(Constants::TOTAL_GRID_SIZE)
+, gridArray_(0)
 {
     
 }
 
 Grid::~Grid()
 {
-}
-
-cocos2d::Scene* Grid::createScene()
-{
-    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
-    ccNodeLoaderLibrary->registerNodeLoader("Grid", GridSceneContentLoader::loader());
-    
-    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
-    
-    return ccbReader->createSceneWithNodeGraphFromFile("Grid.ccbi");
-}
-
-void Grid::setCCBReader(spritebuilder::CCBReader* reader)
-{
-    reader_ = reader;
 }
 
 void Grid::setupBackground()
@@ -83,6 +67,7 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
         }
     }
     
+    spawnStartTiles();
 }
 
 void Grid::spawnStartTiles()
@@ -142,32 +127,4 @@ cocos2d::Vec2 Grid::positionForColumn(int row, int column)
 void Grid::showAds()
 {
     
-}
-
-bool Grid::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
-{
-    return false;
-}
-
-bool Grid::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
-{
-    return false;
-}
-
-cocos2d::SEL_MenuHandler Grid::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
-{
-    return NULL;
-}
-
-cocos2d::SEL_CallFuncN Grid::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
-{
-    return NULL;
-}
-
-cocos2d::extension::Control::Handler Grid::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
-{
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "Grid", TitleMenu::onGridClicked);
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
-    return NULL;
 }

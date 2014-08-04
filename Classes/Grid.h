@@ -16,28 +16,16 @@
 #include "Constants.h"
 
 class Grid:
-public cocos2d::LayerColor
-, public spritebuilder::CCBSelectorResolver
-, public spritebuilder::CCBMemberVariableAssigner
+  public cocos2d::LayerColor
 , public spritebuilder::NodeLoaderListener
 {
 public:
     SB_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(Grid, create);
     
-    // there's no 'id' in cpp, so we recommend returning the class instance pointer
-    static cocos2d::Scene* createScene();
-    
     Grid();
     virtual ~Grid();
     
-    void setCCBReader(spritebuilder::CCBReader* reader);
-    
     virtual void onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader);
-    virtual bool onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode);
-    virtual bool onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value);
-    virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
-    virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
-    virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     
     void setupBackground();
     void spawnStartTiles();
@@ -49,7 +37,6 @@ public:
     void showAds();
     
 private:
-    spritebuilder::CCBReader* reader_;
     float columnWidth_;
     float columnHeight_;
     float tileMarginVertical_;

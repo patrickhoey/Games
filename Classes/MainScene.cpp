@@ -40,10 +40,10 @@ void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Co
     auto userDefaults = UserDefault::getInstance();
     bool openOp = userDefaults->getBoolForKey("openop", true);
     
-    if( true == openOp)
+    if(true == openOp)
     {
         //dynamic cast is expensive, must be nicer way of accessing base class
-        OptionMenu* optionMenu = dynamic_cast<OptionMenu*>(OptionMenu::load());
+        OptionMenu* optionMenu = static_cast<OptionMenu*>(OptionMenu::load());
         optionMenu->setPosition(0.5f, 0.5f);
         optionMenu->setLocalZOrder(INT_MAX);
         
