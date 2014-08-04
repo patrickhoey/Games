@@ -18,6 +18,7 @@ public:
 
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
+    static cocos2d::Node* load();
 
     virtual ~OptionMenu();
     

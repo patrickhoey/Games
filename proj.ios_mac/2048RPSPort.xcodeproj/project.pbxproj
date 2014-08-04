@@ -398,8 +398,11 @@
 			children = (
 				5429A26E198ADE6200BA24C6 /* AppDelegate.cpp */,
 				5429A26F198ADE6200BA24C6 /* AppDelegate.h */,
+				54BE6F24198DE5AC008E1F67 /* Constants.h */,
 				54BE6F16198DDBAD008E1F67 /* GameEnd.cpp */,
 				54BE6F12198DDB7E008E1F67 /* GameEnd.h */,
+				54BE6F2D198E8728008E1F67 /* Grid.cpp */,
+				54BE6F2A198E871B008E1F67 /* Grid.h */,
 				54BE6F18198DDBBE008E1F67 /* MainScene.cpp */,
 				54BE6F13198DDB88008E1F67 /* MainScene.h */,
 				54BE6F1A198DDBC6008E1F67 /* OptionMenu.cpp */,
@@ -410,9 +413,6 @@
 				54BE6F15198DDB9B008E1F67 /* Tile.h */,
 				5429A270198ADE6200BA24C6 /* TitleMenu.cpp */,
 				5429A271198ADE6200BA24C6 /* TitleMenu.h */,
-				54BE6F24198DE5AC008E1F67 /* Constants.h */,
-				54BE6F2A198E871B008E1F67 /* Grid.h */,
-				54BE6F2D198E8728008E1F67 /* Grid.cpp */,
 			);
 			name = Classes;
 			path = ../classes;

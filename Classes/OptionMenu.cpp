@@ -19,6 +19,16 @@ Scene* OptionMenu::createScene()
     return ccbReader->createSceneWithNodeGraphFromFile("OptionMenu.ccbi");
 }
 
+Node* OptionMenu::load()
+{
+    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
+    ccNodeLoaderLibrary->registerNodeLoader("OptionMenu", OptionMenuSceneContentLoader::loader());
+    
+    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
+
+    return ccbReader->readNodeGraphFromFile("OptionMenu.ccbi");
+}
+
 void OptionMenu::setCCBReader(spritebuilder::CCBReader* reader)
 {
     reader_ = reader;

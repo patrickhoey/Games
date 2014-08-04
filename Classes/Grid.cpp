@@ -30,28 +30,6 @@ void Grid::setCCBReader(spritebuilder::CCBReader* reader)
 void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     CCLOG("***Loaded Grid");
-    /*
-     auto director = Director::getInstance();
-     
-     Size size = director->getWinSize();
-     CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
-     
-     auto userDefaults = UserDefault::getInstance();
-     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-     CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
-     
-     //If the mode is sound ON, then make sure it is enabled
-     if(true == soundMode){
-     CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
-     
-     SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-     sound->playBackgroundMusic("Castle.mp3", true);
-     }
-     
-     userDefaults->setBoolForKey("openop", true);
-     userDefaults->flush();
-     */
-    
 }
 
 bool Grid::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

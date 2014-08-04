@@ -11,6 +11,7 @@
 
 namespace Constants {
     static const char* BACKGROUND_MUSIC = "Castle.mp3";
+    static const char* BACKGROUND_MUSIC2 = "Castle2.mp3";
 }
 
 

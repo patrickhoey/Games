@@ -1,8 +1,18 @@
 #include "GameEnd.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
+#include "MainScene.h"
 
 using namespace CocosDenshion;
+
+GameEnd::GameEnd() :
+ reader_(NULL)
+, messageLabel_(NULL)
+, scoreLabel_(NULL)
+{
+    messageLabel_ = cocos2d::Label::create();
+    scoreLabel_ = cocos2d::Label::create();
+}
 
 GameEnd::~GameEnd()
 {
@@ -16,6 +26,28 @@ Scene* GameEnd::createScene()
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
     return ccbReader->createSceneWithNodeGraphFromFile("GameEnd.ccbi");
+}
+
+void GameEnd::setMessage(std::string& message, int score)
+{
+    messageLabel_->setString(message);
+    scoreLabel_->setString(std::to_string(score));
+    
+    auto userDefaults = UserDefault::getInstance();
+    int highScore = userDefaults->getIntegerForKey("highscore2", 0);
+
+    if( score > highScore){
+        userDefaults->setIntegerForKey("highscore2", score);
+        userDefaults->flush();
+    }
+}
+
+void GameEnd::newGame()
+{
+    // create a scene. it's an autorelease object
+    auto scene = MainScene::createScene();
+    auto director = Director::getInstance();
+    director->pushScene(scene);
 }
 
 void GameEnd::setCCBReader(spritebuilder::CCBReader* reader)

@@ -8,6 +8,8 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 
+class Grid;
+
 class MainScene:
   public cocos2d::Layer
 , public spritebuilder::CCBSelectorResolver
@@ -19,6 +21,7 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
 
+    MainScene();
     virtual ~MainScene();
     
     void setCCBReader(spritebuilder::CCBReader* reader);
@@ -32,8 +35,14 @@ public:
     
     void onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     
+    void updateHighScore();
+    
 private:
     spritebuilder::CCBReader* reader_;
+    Grid* grid_;
+    cocos2d::Label* scoreLabel_;
+    cocos2d::Label* highscoreLabel_;
+    cocos2d::Sprite* imbg_;
 };
 
 
