@@ -12,6 +12,7 @@ reader_(NULL)
 , backgroundNode_(NULL)
 , test_(NULL)
 , im_(NULL)
+, isEmpty_(true)
 {
     //value seeded with time at startup
     value_ = (rand() % 2 + 1) * 2;
@@ -47,6 +48,16 @@ cocos2d::Node* Tile::load()
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
     return ccbReader->readNodeGraphFromFile("Tile.ccbi");
+}
+
+bool Tile::isEmpty()
+{
+    return isEmpty_;
+}
+
+void Tile::setIsEmpty(bool isEmpty)
+{
+    isEmpty_ = isEmpty;
 }
 
 void Tile::setCCBReader(spritebuilder::CCBReader* reader)

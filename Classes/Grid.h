@@ -41,6 +41,12 @@ public:
     
     void setupBackground();
     void spawnStartTiles();
+    void spawnRandomTile();
+    
+    void addTileAtColumn(int row, int column);
+    cocos2d::Vec2 positionForColumn(int row, int column);
+    
+    void showAds();
     
 private:
     spritebuilder::CCBReader* reader_;
@@ -48,7 +54,7 @@ private:
     float columnHeight_;
     float tileMarginVertical_;
     float tileMarginHorizontal_;
-    cocos2d::Vector<::Tile*> gridArray_;
+    std::vector<::Tile*> gridArray_;
     
 };
 

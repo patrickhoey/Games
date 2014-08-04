@@ -37,6 +37,9 @@ public:
     bool isMergedThisRound();
     void setIsMergedThisRound(bool isMerged);
     
+    bool isEmpty();
+    void setIsEmpty(bool isEmpty);
+    
     static cocos2d::Node* load();
     void showAds();
     
@@ -48,6 +51,7 @@ private:
     cocos2d::LayerColor* backgroundNode_;
     cocos2d::LayerColor* test_;
     cocos2d::Sprite* im_;
+    bool isEmpty_;
 };
 
 
