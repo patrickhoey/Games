@@ -35,7 +35,7 @@ Scene* MainScene::createScene()
 
 void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    CCLOG("***Menu Option Clicked");
+    //CCLOG("***Menu Option Clicked");
     
     auto userDefaults = UserDefault::getInstance();
     bool openOp = userDefaults->getBoolForKey("openop", true);
@@ -72,24 +72,24 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded MainScene");
+    //CCLOG("***Loaded MainScene");
     
     updateHighScore();
     
     auto userDefaults = UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    CCLOG("SOUNDMODE: %s", soundMode ? "true" : "false");
     
     //If the mode is sound ON, then make sure it is enabled
     if(true == soundMode){
-        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        CCLOG("Sound ON: %s", soundMode ? "true" : "false");
         
         SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
         sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC2, true);
     }
     
     highscoreLabel_->setPosition((highscoreLabel_->getPosition().x)+0.05, highscoreLabel_->getPosition().y);
-    CCLOG("***Highest Score Position X: %f", highscoreLabel_->getPosition().x);
+    CCLOG("Highest Score Position X: %f", highscoreLabel_->getPosition().x);
 }
 
 bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

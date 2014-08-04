@@ -28,19 +28,19 @@ void TitleMenu::setCCBReader(spritebuilder::CCBReader* reader)
 
 void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded TitleMenu");
+    //CCLOG("***Loaded TitleMenu");
     auto director = Director::getInstance();
     
     Size size = director->getWinSize();
-    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
+    //CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
  
     auto userDefaults = UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
     
     //If the mode is sound ON, then make sure it is enabled
     if(true == soundMode){
-        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
         SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
         sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
@@ -81,7 +81,7 @@ cocos2d::extension::Control::Handler TitleMenu::onResolveCCBCCControlSelector(co
 
 void TitleMenu::onPlayClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    CCLOG("*********CLICKED ON PLAY");
+    //CCLOG("CLICKED ON PLAY");
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
     auto director = Director::getInstance();
@@ -89,7 +89,7 @@ void TitleMenu::onPlayClicked(cocos2d::Ref * sender, cocos2d::extension::Control
 }
 void TitleMenu::onSettingClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    CCLOG("*********CLICKED ON SETTING");
+    //CCLOG("CLICKED ON SETTING");
     // create a scene. it's an autorelease object
     auto scene = Setting::createScene();
     auto director = Director::getInstance();

@@ -28,6 +28,8 @@ void Grid::setupBackground()
     columnWidth_ = (tile->getContentSize()).width;
     columnHeight_ = (tile->getContentSize()).height;
     
+    CCLOG("GRID: The tile dimensions are width %f and height %f", columnWidth_, columnHeight_);
+    
     tileMarginHorizontal_ = ((this->getContentSize()).width - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
     tileMarginVertical_ = ((this->getContentSize()).height - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
 

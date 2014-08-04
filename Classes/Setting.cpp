@@ -26,7 +26,7 @@ void Setting::setCCBReader(spritebuilder::CCBReader* reader)
 
 void Setting::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded Setting");
+    //CCLOG("***Loaded Setting");
 }
 
 bool Setting::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

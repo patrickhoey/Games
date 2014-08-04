@@ -36,7 +36,7 @@ void OptionMenu::setCCBReader(spritebuilder::CCBReader* reader)
 
 void OptionMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded OptionMenu");
+    //CCLOG("***Loaded OptionMenu");
 }
 
 bool OptionMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

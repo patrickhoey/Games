@@ -67,7 +67,7 @@ void Tile::setCCBReader(spritebuilder::CCBReader* reader)
 
 void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded Tile");
+    //CCLOG("***Loaded Tile");
     updateValueDisplay();
 }
 
