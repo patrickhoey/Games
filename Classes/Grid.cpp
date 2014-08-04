@@ -45,7 +45,7 @@ void Grid::setupBackground()
             LayerColor* backgroundTile = LayerColor::create(cocos2d::Color4B::GRAY);
             backgroundTile->setContentSize(cocos2d::Size(columnWidth_, columnHeight_));
             backgroundTile->setPosition(x, y);
-            backgroundTile->setOpacity(0.2);
+            //backgroundTile->setOpacity(0.2);
             this->addChild(backgroundTile);
             
             x += columnWidth_ + tileMarginHorizontal_;
