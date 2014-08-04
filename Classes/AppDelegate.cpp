@@ -47,9 +47,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
 
     //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
-    spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
+    spritebuilder::CCBReader::setupSpriteBuilder("resources-phone", PHYSICS_FACTOR);
+    //FileUtils::getInstance()->loadFilenameLookupDictionaryFromFile("configCocos2d.plist");
+    //FileUtils::getInstance()->loadFilenameLookupDictionaryFromFile("image_crown.plist");
+    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone/image_crown");
+    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone");
+    //std::string fullpath = FileUtils::getInstance()->fullPathForFilename("b1.png");
+    //if (fullpath.size() == 0)
+    //{
+    //    CCLOG("Could not find file!");
+    //}
     
-
+    
     // create a scene. it's an autorelease object
     auto scene = TitleMenu::createScene();
 

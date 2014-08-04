@@ -137,6 +137,7 @@ void Tile::updateValueDisplay()
     backgroundNode_->setColor(backgroundColor);
     
     std::string frameName = "image_crown/b" + std::to_string(tt) + ".png";
+    //std::string frameName = "b" + std::to_string(tt) + ".png";
     cocos2d::SpriteFrame* frame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName);
     
     test_->setColor(backgroundColor);

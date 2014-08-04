@@ -163,6 +163,8 @@
 	</dict>
 	<key>metadata</key>
 	<dict>
+		<key>version</key>
+		<integer>1</integer>
 		<key>format</key>
 		<integer>2</integer>
 		<key>size</key>
