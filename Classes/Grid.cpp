@@ -104,6 +104,7 @@ void Grid::addTileAtColumn(int row, int column)
     
     int index = (row * Constants::GRID_SIZE) + column;
     gridArray_[index] = tile;
+    tile->setIsEmpty(false);
     tile->setScale(0.0f);
     this->addChild(tile);
     
