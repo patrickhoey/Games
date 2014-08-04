@@ -8,6 +8,17 @@
 
 #include "Grid.h"
 
+Grid::Grid() :
+ reader_(NULL)
+, columnWidth_(0.0)
+, columnHeight_(0.0)
+, tileMarginVertical_(0.0)
+, tileMarginHorizontal_(0.0)
+, gridArray_(Constants::TOTAL_GRID_SIZE)
+{
+    
+}
+
 Grid::~Grid()
 {
 }
@@ -27,9 +38,41 @@ void Grid::setCCBReader(spritebuilder::CCBReader* reader)
     reader_ = reader;
 }
 
+void Grid::setupBackground()
+{
+    Node* tile = Tile::load();
+    columnWidth_ = (tile->getContentSize()).width;
+    columnHeight_ = (tile->getContentSize()).height;
+    
+    tileMarginHorizontal_ = ((this->getContentSize()).width - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
+    tileMarginVertical_ = ((this->getContentSize()).height - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
+
+    float x = tileMarginHorizontal_;
+    float y = tileMarginVertical_;
+    
+    for( int i = 0; i < Constants::GRID_SIZE; i++ )
+    {
+        x = tileMarginHorizontal_;
+        
+        for(int j=0; j < Constants::GRID_SIZE; j++ )
+        {
+            LayerColor* backgroundTile = LayerColor::create(cocos2d::Color4B::GRAY);
+            backgroundTile->setContentSize(cocos2d::Size(columnWidth_, columnHeight_));
+            backgroundTile->setPosition(x, y);
+            backgroundTile->setOpacity(0.2);
+            this->addChild(backgroundTile);
+            
+            x += columnWidth_ + tileMarginHorizontal_;
+        }
+        
+        y += columnHeight_ + tileMarginVertical_;
+    }
+}
+
 void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     CCLOG("***Loaded Grid");
+    setupBackground();
 }
 
 bool Grid::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

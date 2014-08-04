@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "editor-support/spritebuilder/SpriteBuilder.h"
 #include "extensions/cocos-ext.h"
+#include "Tile.h"
+#include "Constants.h"
 
 class Grid:
 public cocos2d::LayerColor
@@ -25,6 +27,7 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
     
+    Grid();
     virtual ~Grid();
     
     void setCCBReader(spritebuilder::CCBReader* reader);
@@ -36,9 +39,15 @@ public:
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     
+    void setupBackground();
     
 private:
     spritebuilder::CCBReader* reader_;
+    float columnWidth_;
+    float columnHeight_;
+    float tileMarginVertical_;
+    float tileMarginHorizontal_;
+    cocos2d::Vector<::Tile*> gridArray_;
 };
 
 

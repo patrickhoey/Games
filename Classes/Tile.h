@@ -37,6 +37,7 @@ public:
     bool isMergedThisRound();
     void setIsMergedThisRound(bool isMerged);
     
+    static cocos2d::Node* load();
     void showAds();
     
 private:
@@ -55,7 +56,7 @@ public:
     SB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(TileSceneContentLoader, loader);
     
 protected:
-    SB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(Tile);
+    SB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(::Tile);
     
 };
 

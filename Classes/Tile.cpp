@@ -18,6 +18,11 @@ reader_(NULL)
     CCLOG("Tile value: %d", value_);
     
     valueLabel_ = cocos2d::Label::create();
+    
+    backgroundNode_ = cocos2d::LayerColor::create();
+    test_ = cocos2d::LayerColor::create();
+    
+    im_ = cocos2d::Sprite::create();
 }
 
 Tile::~Tile()
@@ -32,6 +37,16 @@ cocos2d::Scene* Tile::createScene()
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
     return ccbReader->createSceneWithNodeGraphFromFile("Tile.ccbi");
+}
+
+cocos2d::Node* Tile::load()
+{
+    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
+    ccNodeLoaderLibrary->registerNodeLoader("Tile", TileSceneContentLoader::loader());
+    
+    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
+    
+    return ccbReader->readNodeGraphFromFile("Tile.ccbi");
 }
 
 void Tile::setCCBReader(spritebuilder::CCBReader* reader)
