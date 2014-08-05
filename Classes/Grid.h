@@ -33,12 +33,20 @@ public:
     
     void addTileAtColumn(int row, int column);
     ::Tile* tileForIndex(int x, int y);
-    bool isIndexValid(int x, int y);
+    
+    bool isIndexValid(const int& x, const int& y);
+    bool isIndexValidAndUnoccupied(const int& x, const int& y);
+    
     void nextRound();
     void lose();
     void win();
+    
+    void move(cocos2d::Vec2 direction);
+    
     void endGameWithMessage(const std::string& message);
     cocos2d::Vec2 positionForColumn(int row, int column);
+    
+    void mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, const int& toY);
     
     bool movePossible();
     

@@ -188,6 +188,165 @@ void Grid::endGameWithMessage(const std::string& message)
     this->addChild(gameEndPopover);
 }
 
+void Grid::move(cocos2d::Vec2 direction)
+{
+    //Apply negative vector until reaching boundary, this way we get the tile that is furthest away
+    int currentX = 0;
+    int currentY = 0;
+    
+    //bottom left corner
+    bool movedTilesThisRound = false;
+    
+    //1) Move to relevant edge by applying direction until reaching border
+    while( true == isIndexValid(direction.x, direction.y))
+    {
+        float nextX = currentX + direction.x;
+        float nextY = currentY + direction.y;
+        
+        if( true == isIndexValid(nextX, nextY) ){
+            currentX = nextX;
+            currentY = nextY;
+        }else{
+            break;
+        }
+    }
+    
+    //store initial row value to reset after completing each column
+    int initialY = currentY;
+    
+    //define changing of x and y value (moving left, up, down, or right)
+    int xChange = -direction.x;
+    int yChange = -direction.y;
+    
+    if(0 == xChange){
+        xChange = 1;
+    }
+    
+    if( 0 == yChange){
+        yChange = 1;
+    }
+    
+    //Visit column for column
+    while( true == isIndexValid(currentX, currentY))
+    {
+        while(true == isIndexValid(currentX, currentY))
+        {
+            //Get tile at current index
+            int index = (currentX * Constants::GRID_SIZE) + currentY;
+            ::Tile* tile = gridArray_[index];
+            
+            if( true == tile->isEmpty()){
+                //If there is no tile at this index then skip
+                currentY += yChange;
+                continue;
+            }
+            
+            //store index in temp variables to change them and store new location of this tile
+            int newX = currentX;
+            int newY = currentY;
+            
+            //Find the furthest position by iterating in direction of the vector until we reach border of grid or an occupid cell
+            
+            while( isIndexValidAndUnoccupied(newX+direction.x, newY+direction.y))
+            {
+                newX += direction.x;
+                newY += direction.y;
+            }
+            
+            bool performMove = false;
+            
+            //If we stopped moving in vector direction, but next index in vector direction is valid,
+            //this means the cell is occupied
+            
+            if( true == isIndexValid(newX + direction.x, newY + direction.y)){
+                //get the other tile
+                int otherTileX = newX + direction.x;
+                int otherTileY = newY + direction.y;
+                int index = (otherTileX * Constants::GRID_SIZE) + otherTileY;
+                ::Tile* otherTile = gridArray_[index];
+                
+                //compare value of other tile and also check if the other tile has been merged this round
+                if( tile->getValue() == otherTile->getValue() &&
+                   (false == otherTile->isMergedThisRound()) )
+                {
+                    //merge tiles
+                    
+                }
+            }
+        
+        }
+    }
+    
+}
+
+void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, const int& toY)
+{
+    auto userDefaults = cocos2d::UserDefault::getInstance();
+    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
+    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    
+    //If the mode is sound ON, then make sure it is enabled
+    if(true == soundMode){
+        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        
+        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+        sound->playEffect(Constants::MERGE_SOUND);
+    }
+    
+    int fromIndex = (fromX * Constants::GRID_SIZE) + fromY;
+    ::Tile* mergedTile = gridArray_[fromIndex];
+    
+    int toIndex = (toX * Constants::GRID_SIZE) + toY;
+    ::Tile* otherTile = gridArray_[toIndex];
+    
+    score_ += mergedTile->getValue() + otherTile->getValue();
+    
+    otherTile->setValue(otherTile->getValue()*2);
+    otherTile->setIsMergedThisRound(true);
+    
+    if( otherTile->getValue() == Constants::WIN_TILE)
+    {
+        win();
+    }
+    
+    gridArray_[fromIndex]->setIsEmpty(true);
+    
+    cocos2d::Vec2 otherTilePosition(toX, toY);
+    
+    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
+    cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
+    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
+    
+    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, remove, callSelectorAction, NULL);
+    
+    mergedTile->runAction(sequence);
+    
+    //@TODO add scale logic here
+    
+    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
+    
+    cocos2d::Sprite* explosionSprite = cocos2d::Sprite::create("explosion_001.png");
+    explosionSprite->setPosition(otherTilePosition.x+30, otherTilePosition.y+30);
+    
+    this->addChild(explosionSprite);
+    
+    cocos2d::Vector<cocos2d::SpriteFrame*> spriteFrames;
+    
+    for(int i=0; i <= 6; ++i)
+    {
+        std::string frameName = "explosion_00" + std::to_string(i) + ".png";
+        cocos2d::SpriteFrame* spriteFrame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName);
+        spriteFrames.pushBack(spriteFrame);
+    }
+    
+    cocos2d::Animation* animation = cocos2d::Animation::createWithSpriteFrames(spriteFrames);
+    cocos2d::Animate* animate = cocos2d::Animate::create(animation);
+    cocos2d::Sequence* movingSequeceAndOtherStuffAfter = cocos2d::Sequence::create(animate, remove, NULL);
+
+    explosionSprite->runAction(movingSequeceAndOtherStuffAfter);
+}
+
+
 ::Tile* Grid::tileForIndex(int x, int y)
 {
     bool validIndex = isIndexValid(x,y);
@@ -200,7 +359,24 @@ void Grid::endGameWithMessage(const std::string& message)
     }
 }
 
-bool Grid::isIndexValid(int x, int y)
+bool Grid::isIndexValidAndUnoccupied(const int& x, const int& y)
+{
+    if( false == isIndexValid(x,y) )
+    {
+        return false;
+    }
+    
+    int index = (x * Constants::GRID_SIZE) + y;
+    
+    if( false == gridArray_[index]->isEmpty() )
+    {
+        return false;
+    }
+    
+    return true;
+}
+
+bool Grid::isIndexValid(const int& x, const int& y)
 {
     //Check bounds
     if( x < 0 || x >= Constants::GRID_SIZE ){
