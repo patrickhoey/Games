@@ -51,6 +51,18 @@ public:
     
     bool movePossible();
     
+    //gestures/Touch interface
+    bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
+    void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
+    
+    void swipeLeft();
+    void swipeRight();
+    void swipeDown();
+    void swipeUp();
+    
+    
+    
     void showAds();
     
 private:
@@ -60,6 +72,8 @@ private:
     float tileMarginVertical_;
     float tileMarginHorizontal_;
     std::vector<::Tile*> gridArray_;
+    cocos2d::Vec2 startSwipe_;
+    cocos2d::Vec2 endSwipe_;
     
 };
 

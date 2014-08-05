@@ -19,8 +19,10 @@ Grid::Grid() :
 , tileMarginVertical_(0.0)
 , tileMarginHorizontal_(0.0)
 , gridArray_(0)
+, startSwipe_(0,0)
+, endSwipe_(0,0)
 {
-    
+
 }
 
 Grid::~Grid()
@@ -77,8 +79,91 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     spawnStartTiles();
 
     //@TODO Add touch gestures here using EventListener
+    auto listener = EventListenerTouchOneByOne::create();
+    
+    listener->onTouchBegan =  CC_CALLBACK_2(Grid::onTouchBegan, this);
+    listener->onTouchMoved =  CC_CALLBACK_2(Grid::onTouchMoved, this);
+    listener->onTouchEnded =  CC_CALLBACK_2(Grid::onTouchEnded, this);
+    
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+}
+
+bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+    auto target = static_cast<Sprite*>(event->getCurrentTarget());
+    startSwipe_ = target->getPosition();
+    return true;
+}
+
+void Grid::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+
+}
+
+void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+    auto target = static_cast<Sprite*>(event->getCurrentTarget());
+    endSwipe_ = target->getPosition();
+    
+    
+    
+    cocos2d::Vec2 originVec(startSwipe_);
+    cocos2d::Vec2 destVec(endSwipe_);
+    
+    cocos2d::Vec2 distance(0,0);
+    
+    cocos2d::Vec2::subtract(destVec, originVec, &distance );
+    
+    //Remove any negative values
+    distance.x *= distance.x;
+    distance.y *= distance.y;
+    
+    if( distance.x > distance.y )
+    {
+        if( originVec.x > destVec.x )
+        {
+            CCLOG("Swipe LEFT");
+        }
+        else
+        {
+            CCLOG("Swipe RIGHT");
+        }
+    }
+    else
+    {
+        if( originVec.y > destVec.y )
+        {
+            CCLOG("Swipe UP");
+        }
+        else
+        {
+            CCLOG("Swipe DOWN");
+        }
+        
+    }
     
 }
+
+void Grid::swipeLeft()
+{
+    move(cocos2d::Vec2(-1,0));
+}
+
+void Grid::swipeRight()
+{
+    move(cocos2d::Vec2(1,0));
+}
+
+void Grid::swipeDown()
+{
+    move(cocos2d::Vec2(0,1));
+}
+
+void Grid::swipeUp()
+{
+    move(cocos2d::Vec2(0,-1));
+}
+
 
 bool Grid::movePossible()
 {
