@@ -81,6 +81,9 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     //@TODO Add touch gestures here using EventListener
     auto listener = EventListenerTouchOneByOne::create();
     
+    // When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
+    listener->setSwallowTouches(true);
+    
     listener->onTouchBegan =  CC_CALLBACK_2(Grid::onTouchBegan, this);
     listener->onTouchMoved =  CC_CALLBACK_2(Grid::onTouchMoved, this);
     listener->onTouchEnded =  CC_CALLBACK_2(Grid::onTouchEnded, this);
@@ -97,14 +100,15 @@ bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 
 void Grid::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-
+    auto target = static_cast<Sprite*>(event->getCurrentTarget());
+    endSwipe_ = target->getPosition();
 }
 
 void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     auto target = static_cast<Sprite*>(event->getCurrentTarget());
     endSwipe_ = target->getPosition();
-    
+
     
     
     cocos2d::Vec2 originVec(startSwipe_);
@@ -118,15 +122,17 @@ void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     distance.x *= distance.x;
     distance.y *= distance.y;
     
-    if( distance.x > distance.y )
+    if( distance.x >= distance.y )
     {
         if( originVec.x > destVec.x )
         {
             CCLOG("Swipe LEFT");
+            swipeLeft();
         }
         else
         {
             CCLOG("Swipe RIGHT");
+            swipeRight();
         }
     }
     else
@@ -134,10 +140,12 @@ void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
         if( originVec.y > destVec.y )
         {
             CCLOG("Swipe UP");
+            swipeUp();
         }
         else
         {
             CCLOG("Swipe DOWN");
+            swipeDown();
         }
         
     }
@@ -156,12 +164,12 @@ void Grid::swipeRight()
 
 void Grid::swipeDown()
 {
-    move(cocos2d::Vec2(0,1));
+    move(cocos2d::Vec2(0,-1));
 }
 
 void Grid::swipeUp()
 {
-    move(cocos2d::Vec2(0,-1));
+    move(cocos2d::Vec2(0,1));
 }
 
 
