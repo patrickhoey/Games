@@ -12,6 +12,8 @@
 namespace Constants {
     static const char* BACKGROUND_MUSIC = "Castle.mp3";
     static const char* BACKGROUND_MUSIC2 = "Castle2.mp3";
+    static const char* LOSE_SOUND = "ME_defeat.mp3";
+    static const char* WIN_SOUND = "ME_victory.mp3";
     
     static const int GRID_SIZE = 4;
     static const int TOTAL_GRID_SIZE = 16;

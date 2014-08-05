@@ -18,7 +18,8 @@ public:
 
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
-
+    static cocos2d::Node* load();
+    
     GameEnd();
     virtual ~GameEnd();
     
@@ -32,7 +33,7 @@ public:
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     
     void newGame();
-    void setMessage(std::string& message, int score);
+    void setMessage(const std::string& message, int score);
     
 private:
     spritebuilder::CCBReader* reader_;

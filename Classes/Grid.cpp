@@ -7,9 +7,14 @@
 //
 
 #include "Grid.h"
+#include <array>
+#include "SimpleAudioEngine.h"
+#include "CCUserDefault.h"
+#include "GameEnd.h"
 
 Grid::Grid() :
- columnWidth_(0.0)
+  score_(0)
+, columnWidth_(0.0)
 , columnHeight_(0.0)
 , tileMarginVertical_(0.0)
 , tileMarginHorizontal_(0.0)
@@ -24,7 +29,7 @@ Grid::~Grid()
 
 void Grid::setupBackground()
 {
-    Node* tile = Tile::load();
+    Node* tile = ::Tile::load();
     columnWidth_ = (tile->getContentSize()).width;
     columnHeight_ = (tile->getContentSize()).height;
     
@@ -70,7 +75,145 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     }
     
     spawnStartTiles();
+
+    //@TODO Add touch gestures here using EventListener
+    
 }
+
+bool Grid::movePossible()
+{
+    for( int row = 0; row < Constants::GRID_SIZE; row++)
+    {
+        for(int col = 0; col < Constants::GRID_SIZE; col++)
+        {
+            int index = (row * Constants::GRID_SIZE) + col;
+            ::Tile* tile = gridArray_[index];
+            
+            if( true == tile->isEmpty() ){
+                //No tile at this position
+                //Move possible, we have a free field
+                return true;
+            }
+            else{
+                //There is a tile at this position, check immediately surrounding neighbors
+                ::Tile* topNeighbor = tileForIndex(row+1, col);
+                ::Tile* bottomNeighbor = tileForIndex(row-1, col);
+                ::Tile* leftNeighbor = tileForIndex(row, col-1);
+                ::Tile* rightNeighbor = tileForIndex(row, col+1);
+                
+                std::array<::Tile*, 4> neighbors = {topNeighbor,bottomNeighbor,leftNeighbor, rightNeighbor};
+                
+                for(const auto& neighbor: neighbors){
+                    if( NULL != neighbor){
+                        if( neighbor->getValue() == tile->getValue() ){
+                            //We found a neighbor that has the same value as current tile, possible move
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return false;
+}
+
+void Grid::nextRound()
+{
+    spawnRandomTile();
+    for(int row = 0; row < Constants::GRID_SIZE; row++)
+    {
+        for(int col = 0; col < Constants::GRID_SIZE; col++)
+        {
+            int index = (row * Constants::GRID_SIZE) + col;
+            ::Tile* tile = gridArray_[index];
+            
+            if( false == tile->isEmpty() ){
+                tile->setIsMergedThisRound(false);
+            }
+        }
+    }
+    
+    bool isMovePossible = movePossible();
+    
+    if( false == isMovePossible){
+        lose();
+    }
+    
+}
+
+void Grid::win()
+{
+    auto userDefaults = cocos2d::UserDefault::getInstance();
+    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
+    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    
+    //If the mode is sound ON, then make sure it is enabled
+    if(true == soundMode){
+        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        
+        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+        sound->playEffect(Constants::WIN_SOUND);
+    }
+    
+    endGameWithMessage("You win! Congratulations!");
+}
+
+void Grid::lose()
+{
+    auto userDefaults = cocos2d::UserDefault::getInstance();
+    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
+    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    
+    //If the mode is sound ON, then make sure it is enabled
+    if(true == soundMode){
+        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        
+        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+        sound->playEffect(Constants::LOSE_SOUND);
+    }
+    
+    endGameWithMessage("You didn't win. Please play Again!");
+}
+
+void Grid::endGameWithMessage(const std::string& message)
+{
+    GameEnd* gameEndPopover = static_cast<GameEnd*>(GameEnd::load());
+    
+    gameEndPopover->setPosition(0.5f, 0.5f);
+    gameEndPopover->setLocalZOrder(INT_MAX);
+    
+    gameEndPopover->setMessage(message, score_);
+    
+    this->addChild(gameEndPopover);
+}
+
+::Tile* Grid::tileForIndex(int x, int y)
+{
+    bool validIndex = isIndexValid(x,y);
+    
+    if( false == validIndex ){
+        return NULL;
+    }else{
+        int index = (x * Constants::GRID_SIZE) + y;
+        return gridArray_[index];
+    }
+}
+
+bool Grid::isIndexValid(int x, int y)
+{
+    //Check bounds
+    if( x < 0 || x >= Constants::GRID_SIZE ){
+        return false;
+    }
+    
+    if( y < 0 || y >= Constants::GRID_SIZE ){
+        return false;
+    }
+    
+    return true;
+}
+
 
 void Grid::spawnStartTiles()
 {
@@ -100,7 +243,7 @@ void Grid::spawnRandomTile()
 
 void Grid::addTileAtColumn(int row, int column)
 {
-    Tile* tile = static_cast<Tile*>(Tile::load());
+    ::Tile* tile = static_cast<::Tile*>(::Tile::load());
     
     int index = (row * Constants::GRID_SIZE) + column;
     gridArray_[index] = tile;

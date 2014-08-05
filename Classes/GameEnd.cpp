@@ -28,7 +28,17 @@ Scene* GameEnd::createScene()
     return ccbReader->createSceneWithNodeGraphFromFile("GameEnd.ccbi");
 }
 
-void GameEnd::setMessage(std::string& message, int score)
+Node* GameEnd::load()
+{
+    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
+    ccNodeLoaderLibrary->registerNodeLoader("GameEnd", GameEndSceneContentLoader::loader());
+    
+    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
+    
+    return ccbReader->readNodeGraphFromFile("GameEnd.ccbi");
+}
+
+void GameEnd::setMessage(const std::string& message, int score)
 {
     messageLabel_->setString(message);
     scoreLabel_->setString(std::to_string(score));
@@ -58,28 +68,6 @@ void GameEnd::setCCBReader(spritebuilder::CCBReader* reader)
 void GameEnd::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     CCLOG("***Loaded GameEnd");
-    /*
-    auto director = Director::getInstance();
-    
-    Size size = director->getWinSize();
-    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
- 
-    auto userDefaults = UserDefault::getInstance();
-    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
-    
-    //If the mode is sound ON, then make sure it is enabled
-    if(true == soundMode){
-        CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
-        
-        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-        sound->playBackgroundMusic("Castle.mp3", true);
-    }
-
-    userDefaults->setBoolForKey("openop", true);
-    userDefaults->flush();
-     */
-    
 }
 
 bool GameEnd::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

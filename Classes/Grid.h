@@ -32,11 +32,20 @@ public:
     void spawnRandomTile();
     
     void addTileAtColumn(int row, int column);
+    ::Tile* tileForIndex(int x, int y);
+    bool isIndexValid(int x, int y);
+    void nextRound();
+    void lose();
+    void win();
+    void endGameWithMessage(const std::string& message);
     cocos2d::Vec2 positionForColumn(int row, int column);
+    
+    bool movePossible();
     
     void showAds();
     
 private:
+    int score_;
     float columnWidth_;
     float columnHeight_;
     float tileMarginVertical_;
