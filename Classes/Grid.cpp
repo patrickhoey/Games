@@ -258,7 +258,8 @@ void Grid::move(cocos2d::Vec2 direction)
             //If we stopped moving in vector direction, but next index in vector direction is valid,
             //this means the cell is occupied
             
-            if( true == isIndexValid(newX + direction.x, newY + direction.y)){
+            if( true == isIndexValid(newX + direction.x, newY + direction.y))
+            {
                 //get the other tile
                 int otherTileX = newX + direction.x;
                 int otherTileY = newY + direction.y;
@@ -270,13 +271,62 @@ void Grid::move(cocos2d::Vec2 direction)
                    (false == otherTile->isMergedThisRound()) )
                 {
                     //merge tiles
-                    
+                    mergeTileAtIndex(currentX, currentY, otherTileX, otherTileY);
+                    movedTilesThisRound = true;
+                }
+                else
+                {
+                    //We cannot merge so we want to perform a move
+                    performMove = true;
                 }
             }
+            else
+            {
+                //we cannot merge so we want ot perform a move
+                performMove = true;
+            }
+            
+            if( true == performMove)
+            {
+                //Move tile to furthest position
+                if( newX != currentX || newY != currentY)
+                {
+                    //Only move tile if position changed
+                    moveTile(tile, currentX, currentY, newX, newY);
+                    movedTilesThisRound = true;
+                }
+            }
+            
+            //Move further in this column
+            currentY += yChange;
         
         }
+        
+        //Move to the next column, start at the initial row
+        currentX += xChange;
+        currentY += initialY;
     }
     
+    if( true == movedTilesThisRound )
+    {
+        nextRound();
+    }
+}
+
+void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY)
+{
+    
+    int fromIndex = (fromX * Constants::GRID_SIZE) + fromY;
+    int toIndex = (toX * Constants::GRID_SIZE) + toY;
+    
+    gridArray_[toIndex] = gridArray_[fromIndex];
+    gridArray_[fromIndex]->setIsEmpty(true);
+    
+    cocos2d::Vec2 newPosition = positionForColumn(toX, toY);
+    
+    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, newPosition);
+
+    tile->runAction(moveTo);
 }
 
 void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, const int& toY)

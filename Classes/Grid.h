@@ -42,6 +42,7 @@ public:
     void win();
     
     void move(cocos2d::Vec2 direction);
+    void moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY);
     
     void endGameWithMessage(const std::string& message);
     cocos2d::Vec2 positionForColumn(int row, int column);
