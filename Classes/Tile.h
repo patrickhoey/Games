@@ -37,9 +37,6 @@ public:
     bool isMergedThisRound();
     void setIsMergedThisRound(bool isMerged);
     
-    bool isEmpty();
-    void setIsEmpty(bool isEmpty);
-    
     static cocos2d::Node* load();
     void showAds();
     

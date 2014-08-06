@@ -18,7 +18,7 @@ Grid::Grid() :
 , columnHeight_(0.0)
 , tileMarginVertical_(0.0)
 , tileMarginHorizontal_(0.0)
-, gridArray_(0)
+, gridArray_(Constants::TOTAL_GRID_SIZE)
 , startSwipe_(0,0)
 , endSwipe_(0,0)
 {
@@ -71,8 +71,8 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     for(int row = 0; row < Constants::GRID_SIZE; row++){
         for(int col=0; col < Constants::GRID_SIZE; col++){
             //Get current index
-            //int index = (row * Constants::GRID_SIZE) + col;
-            gridArray_.push_back(::Tile::create());
+            int index = (row * Constants::GRID_SIZE) + col;
+            gridArray_[index] = NULL;
         }
     }
     
@@ -176,7 +176,7 @@ bool Grid::movePossible()
             int index = (row * Constants::GRID_SIZE) + col;
             ::Tile* tile = gridArray_[index];
             
-            if( true == tile->isEmpty() ){
+            if( NULL == tile){
                 //No tile at this position
                 //Move possible, we have a free field
                 return true;
@@ -215,7 +215,7 @@ void Grid::nextRound()
             int index = (row * Constants::GRID_SIZE) + col;
             ::Tile* tile = gridArray_[index];
             
-            if( false == tile->isEmpty() ){
+            if( NULL != tile){
                 tile->setIsMergedThisRound(false);
             }
         }
@@ -322,7 +322,7 @@ void Grid::move(cocos2d::Vec2 direction)
             int index = (currentX * Constants::GRID_SIZE) + currentY;
             ::Tile* tile = gridArray_[index];
             
-            if( true == tile->isEmpty()){
+            if(NULL == tile){
                 //If there is no tile at this index then skip
                 currentY += yChange;
                 continue;
@@ -407,7 +407,7 @@ void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int&
     int toIndex = (toX * Constants::GRID_SIZE) + toY;
     
     gridArray_[toIndex] = gridArray_[fromIndex];
-    gridArray_[fromIndex]->setIsEmpty(true);
+    gridArray_[fromIndex] = NULL;
     
     cocos2d::Vec2 newPosition = positionForColumn(toX, toY);
     
@@ -446,7 +446,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
         win();
     }
     
-    gridArray_[fromIndex]->setIsEmpty(true);
+    gridArray_[fromIndex] = NULL;
     
     cocos2d::Vec2 otherTilePosition(toX, toY);
     
@@ -505,7 +505,7 @@ bool Grid::isIndexValidAndUnoccupied(const int& x, const int& y)
     
     int index = (x * Constants::GRID_SIZE) + y;
     
-    if( false == gridArray_[index]->isEmpty() )
+    if( NULL != gridArray_[index] )
     {
         return false;
     }
@@ -545,7 +545,7 @@ void Grid::spawnRandomTile()
         int randomCol = rand() % Constants::GRID_SIZE;
         
         int index = (randomRow * Constants::GRID_SIZE) + randomCol;
-        bool isPositionFree = gridArray_[index]->isEmpty();
+        bool isPositionFree = (gridArray_[index] == NULL) ? true : false;
         
         if(true == isPositionFree){
             addTileAtColumn(randomRow, randomCol);
@@ -560,7 +560,6 @@ void Grid::addTileAtColumn(int row, int column)
     
     int index = (row * Constants::GRID_SIZE) + column;
     gridArray_[index] = tile;
-    tile->setIsEmpty(false);
     tile->setScale(0.0f);
     this->addChild(tile);
     

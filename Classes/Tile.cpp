@@ -50,27 +50,6 @@ cocos2d::Node* Tile::load()
     return ccbReader->readNodeGraphFromFile("Tile.ccbi");
 }
 
-bool Tile::isEmpty()
-{
-    return isEmpty_;
-}
-
-void Tile::setIsEmpty(bool isEmpty)
-{
-    isEmpty_ = isEmpty;
-    
-    if( true == isEmpty)
-    {
-        value_ = 0;
-        mergedThisRound_ = false;
-        //valueLabel_ = NULL;
-        //backgroundNode_ = NULL;
-        //test_ = NULL;
-        //im_ = NULL;
-    }
-
-}
-
 void Tile::setCCBReader(spritebuilder::CCBReader* reader)
 {
     reader_ = reader;
