@@ -44,7 +44,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     //Scale factor info
     Size size = director->getWinSize();
-    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
+    //CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
 
     //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
     spritebuilder::CCBReader::setupSpriteBuilder("resources-phone", PHYSICS_FACTOR);
@@ -57,6 +57,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //{
     //    CCLOG("Could not find file!");
     //}
+    
+    //!!TEMPORARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("soundmode1", false);
+    userDefaults->flush();
     
     
     // create a scene. it's an autorelease object

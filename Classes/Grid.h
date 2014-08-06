@@ -14,6 +14,7 @@
 #include "extensions/cocos-ext.h"
 #include "Tile.h"
 #include "Constants.h"
+#include <array>
 
 class Grid:
   public cocos2d::LayerColor
@@ -71,7 +72,7 @@ private:
     float columnHeight_;
     float tileMarginVertical_;
     float tileMarginHorizontal_;
-    std::vector<::Tile*> gridArray_;
+    std::array<::Tile*, Constants::TOTAL_GRID_SIZE> gridArray_;
     cocos2d::Vec2 startSwipe_;
     cocos2d::Vec2 endSwipe_;
     

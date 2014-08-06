@@ -59,7 +59,7 @@ void MainScene::updateHighScore()
 {
     auto userDefaults = UserDefault::getInstance();
     int highScore = userDefaults->getIntegerForKey("highscore2", 0);
-    CCLOG("**updateHighScore: %s", std::to_string(highScore).c_str());
+    //CCLOG("**updateHighScore: %s", std::to_string(highScore).c_str());
 
     highscoreLabel_->setString(std::to_string(highScore));
     
@@ -89,7 +89,7 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     }
     
     highscoreLabel_->setPosition((highscoreLabel_->getPosition().x)+0.05, highscoreLabel_->getPosition().y);
-    CCLOG("Highest Score Position X: %f", highscoreLabel_->getPosition().x);
+    //CCLOG("Highest Score Position X: %f", highscoreLabel_->getPosition().x);
 }
 
 bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
