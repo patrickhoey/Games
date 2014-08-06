@@ -93,24 +93,18 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
 
 bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    auto target = static_cast<Sprite*>(event->getCurrentTarget());
-    startSwipe_ = target->getPosition();
+    startSwipe_ = touch->getLocationInView();
     return true;
 }
 
 void Grid::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    auto target = static_cast<Sprite*>(event->getCurrentTarget());
-    endSwipe_ = target->getPosition();
 }
 
 void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    auto target = static_cast<Sprite*>(event->getCurrentTarget());
-    endSwipe_ = target->getPosition();
-
-    
-    
+    endSwipe_ = touch->getLocationInView();
+   
     cocos2d::Vec2 originVec(startSwipe_);
     cocos2d::Vec2 destVec(endSwipe_);
     
