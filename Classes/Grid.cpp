@@ -394,7 +394,7 @@ void Grid::move(cocos2d::Vec2 direction)
         
         //Move to the next column, start at the initial row
         currentX += xChange;
-        currentY += initialY;
+        currentY = initialY;
     }
     
     if( true == movedTilesThisRound )
@@ -471,7 +471,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
-    cocos2d::CallFunc* callSelectorAction = cocos2d::CallFunc::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
+    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
     
     cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, remove, callSelectorAction, NULL);
 
@@ -545,13 +545,16 @@ bool Grid::isIndexValid(const int& x, const int& y)
 {
     //Check bounds
     if( x < 0 || x >= Constants::GRID_SIZE ){
+        CCLOG("BAD X isIndexValid X %d Y %d", x,y );
         return false;
     }
     
     if( y < 0 || y >= Constants::GRID_SIZE ){
+        CCLOG("BAD Y isIndexValid X %d Y %d", x,y );
         return false;
     }
-    
+ 
+    CCLOG("isIndexValid X %d Y %d", x,y );
     return true;
 }
 
