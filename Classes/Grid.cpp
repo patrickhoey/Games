@@ -481,7 +481,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     //CCLOG("AFTER:  MergedTile: %p: ", mergedTile);
     
     //@TODO
-    //gridArray_[fromIndex] = NULL;
+    gridArray_[fromIndex] = NULL;
     
     
     //@TODO add scale logic here
