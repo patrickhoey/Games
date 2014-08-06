@@ -473,14 +473,15 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
     cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
     
-    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, remove, callSelectorAction, NULL);
+    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, remove, NULL);
 
     //CCLOG("BEFORE: MergedTile: %p: ", mergedTile);
     mergedTile->runAction(sequence);
 
     //CCLOG("AFTER:  MergedTile: %p: ", mergedTile);
     
-    gridArray_[fromIndex] = NULL;
+    //@TODO
+    //gridArray_[fromIndex] = NULL;
     
     
     //@TODO add scale logic here
