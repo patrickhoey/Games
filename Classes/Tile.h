@@ -7,6 +7,7 @@
 
 class Tile:
   public cocos2d::Layer
+, public spritebuilder::NodeLoaderListener
 {
 public:
     SB_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(Tile, create);
@@ -18,6 +19,8 @@ public:
     virtual ~Tile();
     
     virtual bool init();
+    
+    virtual void onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader);
 
     void updateValueDisplay();
     void updateValueDisplayCB(Node* sender);
@@ -38,6 +41,16 @@ private:
     cocos2d::LayerColor* backgroundNode_;
     cocos2d::LayerColor* test_;
     cocos2d::Sprite* im_;
+};
+
+
+class TileSceneContentLoader : public spritebuilder::LayerLoader {
+public:
+    SB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(TileSceneContentLoader, loader);
+    
+protected:
+    SB_VIRTUAL_NEW_AUTORELEASE_CREATECCNODE_METHOD(::Tile);
+    
 };
 
 #endif // __Tile_SCENE_H__

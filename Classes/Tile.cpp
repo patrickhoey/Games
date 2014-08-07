@@ -41,6 +41,22 @@ bool Tile::init()
     return true;
 }
 
+cocos2d::Node* Tile::load()
+{
+    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
+    ccNodeLoaderLibrary->registerNodeLoader("Tile", TileSceneContentLoader::loader());
+    
+    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
+    
+    return ccbReader->readNodeGraphFromFile("Tile.ccbi");
+}
+
+void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
+{
+    //CCLOG("onNodeLoaded callback called...");
+    updateValueDisplay();
+}
+
 void Tile::updateValueDisplay()
 {
     //CCLOG("Updating valueDisplay with %p", this);
@@ -165,8 +181,8 @@ void Tile::updateValueDisplay()
      */
     
     
-    CCLOG("Setting frame %s for %p", frameName.c_str(), this);
-    CCLOG("Number of children %ld for %p", this->getChildrenCount(), this);
+    //CCLOG("Setting frame %s for %p", frameName.c_str(), this);
+    //CCLOG("Number of children %ld for %p", this->getChildrenCount(), this);
     CCLOG("Current tile position with UpdateValueDisplay: x%f, y%f, z%f", this->getPositionX(), this->getPositionY(), this->getPositionZ());
 }
 
