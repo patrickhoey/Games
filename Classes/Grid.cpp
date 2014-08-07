@@ -495,20 +495,23 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     //cocos2d::SpriteFrame* explosionSprite = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName("explosion_001.png");
     cocos2d::Sprite* explosionSprite = cocos2d::Sprite::createWithSpriteFrameName("explosion_001.png");
-    explosionSprite->setPosition(otherTilePosition.x+30, otherTilePosition.y+30);
+    explosionSprite->setPosition(otherTilePosition.x, otherTilePosition.y);
+    
+    CCLOG("Explosion position %f, %f", otherTilePosition.x, otherTilePosition.y);
     
     this->addChild(explosionSprite);
     
     cocos2d::Vector<cocos2d::SpriteFrame*> spriteFrames;
     
-    for(int i=1; i <= 6; ++i)
+    for(int i=1; i <= 6; i++)
     {
         std::string frameName = "explosion_00" + std::to_string(i) + ".png";
+        CCLOG("Explosion frames %d of 6 named %s", i,frameName.c_str());
         cocos2d::SpriteFrame* spriteFrame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName);
         spriteFrames.pushBack(spriteFrame);
     }
     
-    cocos2d::Animation* animation = cocos2d::Animation::createWithSpriteFrames(spriteFrames);
+    cocos2d::Animation* animation = cocos2d::Animation::createWithSpriteFrames(spriteFrames,0.05f);
     cocos2d::Animate* animate = cocos2d::Animate::create(animation);
     cocos2d::RemoveSelf* removeAnim = cocos2d::RemoveSelf::create();
     cocos2d::Sequence* movingSequenceAndOtherStuffAfter = cocos2d::Sequence::create(animate, removeAnim, NULL);

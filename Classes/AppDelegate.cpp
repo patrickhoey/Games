@@ -3,6 +3,7 @@
 
 //#include "TitleMenu.h"
 #define PHYSICS_FACTOR 32
+//#define CC_SPRITE_DEBUG_DRAW 1
 
 USING_NS_CC;
 using namespace CocosDenshion;
