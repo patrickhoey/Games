@@ -470,6 +470,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
         win();
     }
 
+    CCLOG("Merge Tile to position %d, %d", toX, toY);
     
     cocos2d::Vec2 otherTilePosition(toX, toY);
     

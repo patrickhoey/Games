@@ -47,7 +47,7 @@ cocos2d::Node* Tile::load()
 void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     //CCLOG("onNodeLoaded callback called...");
-    //updateValueDisplay();
+    updateValueDisplay();
 }
 
 void Tile::updateValueDisplayCB(Node* sender)

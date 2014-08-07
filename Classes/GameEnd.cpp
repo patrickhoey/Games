@@ -12,6 +12,9 @@ GameEnd::GameEnd() :
 {
     messageLabel_ = cocos2d::Label::create();
     scoreLabel_ = cocos2d::Label::create();
+    
+    this->addChild(messageLabel_);
+    this->addChild(scoreLabel_);
 }
 
 GameEnd::~GameEnd()

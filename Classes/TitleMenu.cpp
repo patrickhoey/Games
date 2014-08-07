@@ -12,6 +12,8 @@ TitleMenu::TitleMenu() :
 , bg11_(NULL)
 {
     bg11_ = cocos2d::Sprite::create();
+    
+    this->addChild(bg11_);
 }
 
 TitleMenu::~TitleMenu()

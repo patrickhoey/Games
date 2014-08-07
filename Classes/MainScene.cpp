@@ -16,6 +16,9 @@ MainScene::MainScene() :
 {
     highscoreLabel_ = cocos2d::Label::create();
     scoreLabel_ = cocos2d::Label::create();
+    
+    this->addChild(highscoreLabel_);
+    this->addChild(scoreLabel_);
 }
 
 MainScene::~MainScene()
