@@ -38,13 +38,11 @@ public:
     void onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     
     void updateHighScore();
+    void updateScore(EventCustom* event);
     
 private:
     spritebuilder::CCBReader* reader_;
     Grid* grid_;
-    cocos2d::Label* scoreLabel_;
-    cocos2d::Label* highscoreLabel_;
-    cocos2d::Sprite* imbg_;
 };
 
 

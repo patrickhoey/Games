@@ -17,6 +17,8 @@ namespace Constants {
     static const char* MERGE_SOUND = "pop.mp3";
     
     
+    static const char* UPDATE_SCORE = "Update_Score_Event";
+    
     static const int GRID_SIZE = 4;
     static const int TOTAL_GRID_SIZE = 16;
     static const int START_TILES = 2;

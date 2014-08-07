@@ -461,6 +461,14 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     score_ += mergedTile->getValue() + otherTile->getValue();
     
+    //Sending message that the score has been updated
+    EventCustom event(Constants::UPDATE_SCORE);
+    int* scoreUpdated = new int(score_);
+    event.setUserData(scoreUpdated);
+    _eventDispatcher->dispatchEvent(&event);
+    CC_SAFE_DELETE(scoreUpdated);
+    //
+    
     int newValue = 2*(otherTile->getValue());
     
     //CCLOG("MergedTile: %p OtherTile %p", mergedTile, otherTile);

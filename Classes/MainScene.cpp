@@ -10,15 +10,7 @@ using namespace CocosDenshion;
 MainScene::MainScene() :
   reader_(NULL)
 , grid_(NULL)
-, scoreLabel_(NULL)
-, highscoreLabel_(NULL)
-, imbg_(NULL)
 {
-    highscoreLabel_ = cocos2d::Label::create();
-    scoreLabel_ = cocos2d::Label::create();
-    
-    this->addChild(highscoreLabel_);
-    this->addChild(scoreLabel_);
 }
 
 MainScene::~MainScene()
@@ -40,7 +32,25 @@ Scene* MainScene::createScene()
 
 bool MainScene::init()
 {
+    //Initializing and binding
+    auto listener = EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
+    _eventDispatcher->addEventListenerWithFixedPriority(listener, 1);
+    
+    cocos2d::Vector<Node*> children = this->getChildren();
+    
     return true;
+}
+
+void MainScene::updateScore(EventCustom* event)
+{
+    int* score = static_cast<int*>(event->getUserData());
+    if( NULL != score )
+    {
+        CCLOG("*******Got update for score! %d", *score);
+        //scoreLabel_->setString(std::to_string(*score));
+    }else{
+        CCLOG("*******SCORE IS NULL");
+    }
 }
 
 void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
@@ -71,7 +81,7 @@ void MainScene::updateHighScore()
     int highScore = userDefaults->getIntegerForKey("highscore2", 0);
     //CCLOG("**updateHighScore: %s", std::to_string(highScore).c_str());
 
-    highscoreLabel_->setString(std::to_string(highScore));
+    //highscoreLabel_->setString(std::to_string(highScore));
     
 }
 
@@ -98,7 +108,7 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
         sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC2, true);
     }
     
-    highscoreLabel_->setPosition((highscoreLabel_->getPosition().x)+0.05, highscoreLabel_->getPosition().y);
+    //highscoreLabel_->setPosition((highscoreLabel_->getPosition().x)+0.05, highscoreLabel_->getPosition().y);
     //CCLOG("Highest Score Position X: %f", highscoreLabel_->getPosition().x);
 }
 
