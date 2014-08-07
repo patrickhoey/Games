@@ -40,12 +40,14 @@ void Grid::setupBackground()
     columnHeight_ = (tile->getContentSize()).height;
     
     //CCLOG("GRID: The tile dimensions are width %f and height %f", columnWidth_, columnHeight_);
-    
+
     tileMarginHorizontal_ = ((this->getContentSize()).width - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
     tileMarginVertical_ = ((this->getContentSize()).height - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
 
     float x = tileMarginHorizontal_;
     float y = tileMarginVertical_;
+    
+    CCLOG("Tile margin horiz %f and vertical %f", tileMarginHorizontal_, tileMarginVertical_ );
     
     for( int i = 0; i < Constants::GRID_SIZE; i++ )
     {

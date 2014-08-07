@@ -62,8 +62,6 @@ public:
     void swipeDown();
     void swipeUp();
     
-    
-    
     void showAds();
     
     const std::array<::Tile*, Constants::TOTAL_GRID_SIZE>& getGridArray();

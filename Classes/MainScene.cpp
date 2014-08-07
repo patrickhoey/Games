@@ -33,7 +33,14 @@ Scene* MainScene::createScene()
     
     spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
     
-    return ccbReader->createSceneWithNodeGraphFromFile("MainScene.ccbi");
+    Scene* scene = ccbReader->createSceneWithNodeGraphFromFile("MainScene.ccbi");
+    
+    return scene;
+}
+
+bool MainScene::init()
+{
+    return true;
 }
 
 void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
