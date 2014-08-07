@@ -7,6 +7,13 @@
 
 using namespace CocosDenshion;
 
+TitleMenu::TitleMenu() :
+ reader_(NULL)
+, bg11_(NULL)
+{
+    bg11_ = cocos2d::Sprite::create();
+}
+
 TitleMenu::~TitleMenu()
 {
 }
@@ -32,7 +39,12 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     auto director = Director::getInstance();
     
     Size size = director->getWinSize();
-    //CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
+    CCLOG("WIDTH: %f and HEIGHT: %f", size.width, size.height);
+    
+    if( 512 == size.height )
+    {
+        bg11_->setScale(1,1);
+    }
  
     auto userDefaults = UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);

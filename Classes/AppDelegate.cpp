@@ -48,15 +48,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
     spritebuilder::CCBReader::setupSpriteBuilder("resources-phone", PHYSICS_FACTOR);
-    //FileUtils::getInstance()->loadFilenameLookupDictionaryFromFile("configCocos2d.plist");
-    //FileUtils::getInstance()->loadFilenameLookupDictionaryFromFile("image_crown.plist");
+    //cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Published-iOS/resources-phone/image_crown.plist");
+    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone/image_crown");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone");
-    //std::string fullpath = FileUtils::getInstance()->fullPathForFilename("b1.png");
-    //if (fullpath.size() == 0)
-    //{
-    //    CCLOG("Could not find file!");
-    //}
+    
     
     //!!TEMPORARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     auto userDefaults = UserDefault::getInstance();

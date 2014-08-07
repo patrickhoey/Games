@@ -18,7 +18,6 @@ Grid::Grid() :
 , columnHeight_(0.0)
 , tileMarginVertical_(0.0)
 , tileMarginHorizontal_(0.0)
-//, gridArray_(Constants::TOTAL_GRID_SIZE)
 , startSwipe_(0,0)
 , endSwipe_(0,0)
 {
@@ -27,6 +26,11 @@ Grid::Grid() :
 
 Grid::~Grid()
 {
+}
+
+const std::array<::Tile*, Constants::TOTAL_GRID_SIZE>& Grid::getGridArray()
+{
+    return gridArray_;
 }
 
 void Grid::setupBackground()
@@ -183,10 +187,10 @@ bool Grid::movePossible()
             }
             else{
                 //There is a tile at this position, check immediately surrounding neighbors
-                ::Tile* topNeighbor = tileForIndex(row+1, col);
-                ::Tile* bottomNeighbor = tileForIndex(row-1, col);
-                ::Tile* leftNeighbor = tileForIndex(row, col-1);
-                ::Tile* rightNeighbor = tileForIndex(row, col+1);
+                ::Tile* topNeighbor = tileForIndex(row, col+1);
+                ::Tile* bottomNeighbor = tileForIndex(row, col-1);
+                ::Tile* leftNeighbor = tileForIndex(row-1, col);
+                ::Tile* rightNeighbor = tileForIndex(row+1, col);
                 
                 std::array<::Tile*, 4> neighbors = {topNeighbor,bottomNeighbor,leftNeighbor, rightNeighbor};
                 
@@ -470,9 +474,10 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     cocos2d::Vec2 otherTilePosition(toX, toY);
     
     cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
+    //cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
+    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_1(::Tile::updateValueDisplayCB,otherTile));
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
-    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
-    
+
     cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, remove, NULL);
 
     //CCLOG("BEFORE: MergedTile: %p: ", mergedTile);
@@ -486,7 +491,6 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     //@TODO add scale logic here
     CCLOG("Explosion effects");
-    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
     
     //cocos2d::SpriteFrame* explosionSprite = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName("explosion_001.png");
     cocos2d::Sprite* explosionSprite = cocos2d::Sprite::createWithSpriteFrameName("explosion_001.png");
@@ -546,16 +550,16 @@ bool Grid::isIndexValid(const int& x, const int& y)
 {
     //Check bounds
     if( x < 0 || x >= Constants::GRID_SIZE ){
-        CCLOG("BAD X isIndexValid X %d Y %d", x,y );
+        //CCLOG("BAD X isIndexValid X %d Y %d", x,y );
         return false;
     }
     
     if( y < 0 || y >= Constants::GRID_SIZE ){
-        CCLOG("BAD Y isIndexValid X %d Y %d", x,y );
+        //CCLOG("BAD Y isIndexValid X %d Y %d", x,y );
         return false;
     }
  
-    CCLOG("isIndexValid X %d Y %d", x,y );
+    //CCLOG("isIndexValid X %d Y %d", x,y );
     return true;
 }
 
@@ -602,6 +606,18 @@ void Grid::addTileAtColumn(int row, int column)
     
     tile->runAction(sequence);
     this->addChild(tile);
+    
+    /*
+    CCLOG("Number of Grid's Children: %ld", this->getChildrenCount());
+    
+    for(int i=0; i < Constants::TOTAL_GRID_SIZE; i++)
+    {
+        if( NULL != gridArray_[i])
+        {
+            CCLOG("Tile child number %d with an address of %p", i, gridArray_[i]);
+        }
+    }
+     */
 }
 
 cocos2d::Vec2 Grid::positionForColumn(int row, int column)

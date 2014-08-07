@@ -1,6 +1,8 @@
 #include "Tile.h"
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
+#include "Constants.h"
+#include "Grid.h"
 
 using namespace CocosDenshion;
 
@@ -17,11 +19,14 @@ Tile::Tile() :
     //CCLOG("Tile value: %d", value_);
     
     valueLabel_ = cocos2d::Label::create();
-    
     backgroundNode_ = cocos2d::LayerColor::create();
     test_ = cocos2d::LayerColor::create();
-    
     im_ = cocos2d::Sprite::create();
+    
+    this->addChild(valueLabel_);
+    this->addChild(backgroundNode_);
+    this->addChild(test_);
+    this->addChild(im_);
 }
 
 Tile::~Tile()
@@ -42,12 +47,33 @@ cocos2d::Node* Tile::load()
 void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     //CCLOG("onNodeLoaded callback called...");
-    updateValueDisplay();
+    //updateValueDisplay();
+}
+
+void Tile::updateValueDisplayCB(Node* sender)
+{
+    static_cast<::Tile*>(sender)->updateValueDisplay();
 }
 
 void Tile::updateValueDisplay()
 {
     //CCLOG("Updating valueDisplay with %p", this);
+    /*
+    if( NULL != this->getParent() )
+    {
+      CCLOG("updateValueDisplay:: Number of Grid's Children: %ld", this->getParent()->getChildrenCount());
+        
+        for(int i=0; i < Constants::TOTAL_GRID_SIZE; i++)
+        {
+            if( NULL != static_cast<Grid*>(this->getParent())->getGridArray()[i])
+            {
+                CCLOG("Tile child number %d with an address of %p", i, static_cast<Grid*>(this->getParent())->getGridArray()[i]);
+            }
+        }
+    }else{
+       CCLOG("updateValueDisplay:: No parent %p", this);
+    }
+    */
 
     valueLabel_->setString(std::to_string(value_));
     
@@ -123,6 +149,7 @@ void Tile::updateValueDisplay()
 
    
     std::string frameName = "image_crown/b" + std::to_string(tt) + ".png";
+    //std::string frameName = "b" + std::to_string(tt) + ".png";
     cocos2d::SpriteFrame* frame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName);
     
     if( NULL == frame)
@@ -135,6 +162,7 @@ void Tile::updateValueDisplay()
     backgroundNode_->setColor(backgroundColor);
     test_->setColor(backgroundColor);
     im_->setSpriteFrame(frame);
+    CCLOG("Setting frame %s for %p", frameName.c_str(), this);
 }
 
 void Tile::showAds()

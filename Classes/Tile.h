@@ -21,6 +21,7 @@ public:
     virtual void onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader);
 
     void updateValueDisplay();
+    void updateValueDisplayCB(Node* sender);
     
     int getValue();
     void setValue(int value);
