@@ -35,7 +35,8 @@ const std::array<::Tile*, Constants::TOTAL_GRID_SIZE>& Grid::getGridArray()
 
 void Grid::setupBackground()
 {
-    Node* tile = ::Tile::load();
+    //@TODO FIX ME
+    Node* tile = ::Tile::create();
     columnWidth_ = (tile->getContentSize()).width;
     columnHeight_ = (tile->getContentSize()).height;
     
@@ -386,6 +387,7 @@ void Grid::move(cocos2d::Vec2 direction)
                 if( newX != currentX || newY != currentY)
                 {
                     //Only move tile if position changed
+                    CCLOG("Moving Tile %p from %d,%d to %d,%d", tile, currentX, currentY, newX, newY);
                     moveTile(tile, currentX, currentY, newX, newY);
                     movedTilesThisRound = true;
                 }
@@ -469,14 +471,15 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     {
         win();
     }
-
-    CCLOG("Merge Tile to position %d, %d", toX, toY);
     
-    cocos2d::Vec2 otherTilePosition(toX, toY);
+    gridArray_[fromIndex] = NULL;
+    
+    cocos2d::Vec2 otherTilePosition = positionForColumn(toX, toY);
+    CCLOG("Merge Tile to position %f, %f", otherTilePosition.x, otherTilePosition.y);
     
     cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
-    //cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
-    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_1(::Tile::updateValueDisplayCB,otherTile));
+    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
+    //cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_1(::Tile::updateValueDisplayCB,otherTile));
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
 
     cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, remove, NULL);
@@ -485,17 +488,14 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     mergedTile->runAction(sequence);
 
     //CCLOG("AFTER:  MergedTile: %p: ", mergedTile);
-    
-    //@TODO
-    gridArray_[fromIndex] = NULL;
-    
-    
+
     //@TODO add scale logic here
-    CCLOG("Explosion effects");
+    //CCLOG("Explosion effects");
     
     //cocos2d::SpriteFrame* explosionSprite = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName("explosion_001.png");
     cocos2d::Sprite* explosionSprite = cocos2d::Sprite::createWithSpriteFrameName("explosion_001.png");
-    explosionSprite->setPosition(otherTilePosition.x, otherTilePosition.y);
+    float centerOffset = 30.0f;
+    explosionSprite->setPosition(otherTilePosition.x+centerOffset, otherTilePosition.y+centerOffset);
     
     CCLOG("Explosion position %f, %f", otherTilePosition.x, otherTilePosition.y);
     
@@ -506,11 +506,12 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     for(int i=1; i <= 6; i++)
     {
         std::string frameName = "explosion_00" + std::to_string(i) + ".png";
-        CCLOG("Explosion frames %d of 6 named %s", i,frameName.c_str());
+        //CCLOG("Explosion frames %d of 6 named %s", i,frameName.c_str());
         cocos2d::SpriteFrame* spriteFrame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(frameName);
         spriteFrames.pushBack(spriteFrame);
     }
     
+    //cocos2d::MoveTo* moveAnimTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
     cocos2d::Animation* animation = cocos2d::Animation::createWithSpriteFrames(spriteFrames,0.05f);
     cocos2d::Animate* animate = cocos2d::Animate::create(animation);
     cocos2d::RemoveSelf* removeAnim = cocos2d::RemoveSelf::create();
@@ -571,6 +572,7 @@ bool Grid::isIndexValid(const int& x, const int& y)
 void Grid::spawnStartTiles()
 {
     for(int i = 0; i < Constants::START_TILES; i++){
+        CCLOG("Spawning tile %d of %d", i, Constants::START_TILES-1);
         spawnRandomTile();
     }
 }
@@ -588,6 +590,7 @@ void Grid::spawnRandomTile()
         bool isPositionFree = (gridArray_[index] == NULL) ? true : false;
         
         if(true == isPositionFree){
+            CCLOG("Adding tile at location %d,%d", randomRow, randomCol);
             addTileAtColumn(randomRow, randomCol);
             spawned = true;
         }
@@ -596,13 +599,19 @@ void Grid::spawnRandomTile()
 
 void Grid::addTileAtColumn(int row, int column)
 {
-    ::Tile* tile = static_cast<::Tile*>(::Tile::load());
+    //::Tile* tile = static_cast<::Tile*>(::Tile::load());
+    ::Tile* tile = static_cast<::Tile*>(::Tile::create());
     
     int index = (row * Constants::GRID_SIZE) + column;
-    gridArray_[index] = tile;
-    tile->setScale(0.0f);
     
+    gridArray_[index] = tile;
+    
+    CCLOG("addtileatcolumn: Fresh tile position is x%f, y%f, z%f", tile->getPositionX(), tile->getPositionY(), tile->getPositionZ());
+    
+    tile->setScale(0.0f);
     tile->setPosition(positionForColumn(row, column));
+    
+    CCLOG("addtileatcolumn: After set position is x%f, y%f, z%f", tile->getPositionX(), tile->getPositionY(), tile->getPositionZ());
     
     cocos2d::DelayTime* delay = cocos2d::DelayTime::create(0.3f);
     cocos2d::ScaleTo* scaleTo = cocos2d::ScaleTo::create(0.2f, 1.0f);
@@ -626,9 +635,12 @@ void Grid::addTileAtColumn(int row, int column)
 
 cocos2d::Vec2 Grid::positionForColumn(int row, int column)
 {
+    CCLOG("Position for incoming row %d col %d", row, column);
 
     int newRow = tileMarginHorizontal_ + row * (tileMarginHorizontal_ + columnWidth_);
     int newColumn = tileMarginVertical_ + column * (tileMarginVertical_ + columnHeight_);
+    
+    CCLOG("Position for new row %d col %d", newRow, newColumn);
     
     return cocos2d::Vec2(newRow, newColumn);
 }

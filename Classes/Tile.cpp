@@ -34,25 +34,11 @@ Tile::~Tile()
     
 }
 
-cocos2d::Node* Tile::load()
+bool Tile::init()
 {
-    spritebuilder::NodeLoaderLibrary* ccNodeLoaderLibrary = spritebuilder::NodeLoaderLibrary::getInstance();
-    ccNodeLoaderLibrary->registerNodeLoader("Tile", TileSceneContentLoader::loader());
-    
-    spritebuilder::CCBReader* ccbReader = new spritebuilder::CCBReader(ccNodeLoaderLibrary);
-    
-    return ccbReader->readNodeGraphFromFile("Tile.ccbi");
-}
-
-void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
-{
-    //CCLOG("onNodeLoaded callback called...");
+    //CCLOG("Tile init() called...");
     updateValueDisplay();
-}
-
-void Tile::updateValueDisplayCB(Node* sender)
-{
-    static_cast<::Tile*>(sender)->updateValueDisplay();
+    return true;
 }
 
 void Tile::updateValueDisplay()
@@ -74,8 +60,8 @@ void Tile::updateValueDisplay()
        CCLOG("updateValueDisplay:: No parent %p", this);
     }
     */
-
-    valueLabel_->setString(std::to_string(value_));
+    //@TODO REMOVE ME
+    //value_ = 8;
     
     cocos2d::Color3B backgroundColor;
     int tt = 0;
@@ -158,11 +144,30 @@ void Tile::updateValueDisplay()
     }
     
     //CCLOG("Tile: %s with value %s", frameName.c_str(), std::to_string(value_).c_str());
+    im_->setSpriteFrame(frame);
+    im_->setOrderOfArrival(1);
 
     backgroundNode_->setColor(backgroundColor);
+    backgroundNode_->setOrderOfArrival(3);
+   
     test_->setColor(backgroundColor);
-    im_->setSpriteFrame(frame);
+    test_->setOrderOfArrival(2);
+    
+    valueLabel_->setString(std::to_string(value_));
+    valueLabel_->setOrderOfArrival(4);
+    
+    /*
+    cocos2d::Vector<Node*> children = this->getChildren();
+    for( const auto& child : children)
+    {
+        child->setOpacity(1);
+    }
+     */
+    
+    
     CCLOG("Setting frame %s for %p", frameName.c_str(), this);
+    CCLOG("Number of children %ld for %p", this->getChildrenCount(), this);
+    CCLOG("Current tile position with UpdateValueDisplay: x%f, y%f, z%f", this->getPositionX(), this->getPositionY(), this->getPositionZ());
 }
 
 void Tile::showAds()
