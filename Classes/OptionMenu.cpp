@@ -41,26 +41,31 @@ void OptionMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* p
 
 bool OptionMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
-    return false;
+    //CCLOG("OptionMenu::onAssignCCBMemberVariable: %s", pMemberVariableName);
+    return true;
 }
 
 bool OptionMenu::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
 {
+    //CCLOG("OptionMenu::onAssignCCBCustomProperty: %s", memberVariableName);
     return false;
 }
 
 cocos2d::SEL_MenuHandler OptionMenu::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("OptionMenu::onResolveCCBCCMenuItemSelector: %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::SEL_CallFuncN OptionMenu::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("OptionMenu::onResolveCCBCCCallFuncSelector: %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::extension::Control::Handler OptionMenu::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("OptionMenu::onResolveCCBCCControlSelector: %s", pSelectorName);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "mainMenu", OptionMenu::onMainMenuClicked);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "restartGame", OptionMenu::onRestartGameClicked);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "resume", OptionMenu::onResumeClicked);
