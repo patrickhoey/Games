@@ -32,7 +32,7 @@ public:
     virtual cocos2d::SEL_CallFuncN onResolveCCBCCCallFuncSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref* pTarget, const char* pSelectorName);
     
-    void newGame();
+    void onNewGameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void setMessage(const std::string& message, int score);
     
 private:

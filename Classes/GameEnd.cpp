@@ -10,11 +10,6 @@ GameEnd::GameEnd() :
 , messageLabel_(NULL)
 , scoreLabel_(NULL)
 {
-    messageLabel_ = cocos2d::Label::create();
-    scoreLabel_ = cocos2d::Label::create();
-    
-    this->addChild(messageLabel_);
-    this->addChild(scoreLabel_);
 }
 
 GameEnd::~GameEnd()
@@ -55,14 +50,6 @@ void GameEnd::setMessage(const std::string& message, int score)
     }
 }
 
-void GameEnd::newGame()
-{
-    // create a scene. it's an autorelease object
-    auto scene = MainScene::createScene();
-    auto director = Director::getInstance();
-    director->pushScene(scene);
-}
-
 void GameEnd::setCCBReader(spritebuilder::CCBReader* reader)
 {
     reader_ = reader;
@@ -70,32 +57,47 @@ void GameEnd::setCCBReader(spritebuilder::CCBReader* reader)
 
 void GameEnd::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    CCLOG("***Loaded GameEnd");
+    //CCLOG("***Loaded GameEnd");
 }
 
 bool GameEnd::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
-    return false;
+    //CCLOG("GameEnd::onAssignCCBMemberVariable %s", pMemberVariableName);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_messageLabel", Label*, this->messageLabel_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_scoreLabel", Label*, this->scoreLabel_);
+    return true;
 }
 
 bool GameEnd::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
 {
+    //CCLOG("GameEnd::onAssignCCBCustomProperty %s", memberVariableName);
     return false;
 }
 
 cocos2d::SEL_MenuHandler GameEnd::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("GameEnd::onResolveCCBCCMenuItemSelector %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::SEL_CallFuncN GameEnd::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("GameEnd::onResolveCCBCCCallFuncSelector %s", pSelectorName);
     return NULL;
+}
+
+void GameEnd::onNewGameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    // create a scene. it's an autorelease object
+    auto scene = MainScene::createScene();
+    auto director = Director::getInstance();
+    director->pushScene(scene);
 }
 
 cocos2d::extension::Control::Handler GameEnd::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
-    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
+    //CCLOG("GameEnd::onResolveCCBCCControlSelector %s", pSelectorName);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "newGame", GameEnd::onNewGameClicked);
     //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "GameEnd", TitleMenu::onGameEndClicked);
     //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
     return NULL;
