@@ -11,22 +11,11 @@ Tile::Tile() :
 , mergedThisRound_(false)
 , valueLabel_(NULL)
 , backgroundNode_(NULL)
-, test_(NULL)
 , im_(NULL)
 {
     //value seeded with time at startup
     value_ = (rand() % 2 + 1) * 2;
     //CCLOG("Tile value: %d", value_);
-    
-    valueLabel_ = cocos2d::Label::create();
-    backgroundNode_ = cocos2d::LayerColor::create();
-    test_ = cocos2d::LayerColor::create();
-    im_ = cocos2d::Sprite::create();
-    
-    this->addChild(valueLabel_);
-    this->addChild(backgroundNode_);
-    this->addChild(test_);
-    this->addChild(im_);
 }
 
 Tile::~Tile()
@@ -37,7 +26,6 @@ Tile::~Tile()
 bool Tile::init()
 {
     //CCLOG("Tile init() called...");
-    updateValueDisplay();
     return true;
 }
 
@@ -53,7 +41,7 @@ cocos2d::Node* Tile::load()
 
 void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    //CCLOG("onNodeLoaded callback called...");
+    CCLOG("onNodeLoaded callback called...");
     updateValueDisplay();
 }
 
@@ -161,25 +149,8 @@ void Tile::updateValueDisplay()
     
     //CCLOG("Tile: %s with value %s", frameName.c_str(), std::to_string(value_).c_str());
     im_->setSpriteFrame(frame);
-    im_->setOrderOfArrival(1);
-
     backgroundNode_->setColor(backgroundColor);
-    backgroundNode_->setOrderOfArrival(3);
-   
-    test_->setColor(backgroundColor);
-    test_->setOrderOfArrival(2);
-    
     valueLabel_->setString(std::to_string(value_));
-    valueLabel_->setOrderOfArrival(4);
-    
-    /*
-    cocos2d::Vector<Node*> children = this->getChildren();
-    for( const auto& child : children)
-    {
-        child->setOpacity(1);
-    }
-     */
-    
     
     //CCLOG("Setting frame %s for %p", frameName.c_str(), this);
     //CCLOG("Number of children %ld for %p", this->getChildrenCount(), this);
@@ -210,5 +181,43 @@ bool Tile::isMergedThisRound()
 void Tile::setIsMergedThisRound(bool isMerged)
 {
     mergedThisRound_ = isMerged;
+}
+
+bool Tile::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
+{
+    //CCLOG("Tile::onAssignCCBMemberVariable: %s", pMemberVariableName);
+    
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_backgroundNode", cocos2d::LayerColor*, this->backgroundNode_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_im", cocos2d::Sprite*, this->im_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_valueLabel", cocos2d::Label*, this->valueLabel_);
+    
+    return true;
+}
+
+bool Tile::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
+{
+    //CCLOG("Tile::onAssignCCBCustomProperty: %s", memberVariableName);
+    return false;
+}
+
+cocos2d::SEL_MenuHandler Tile::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Tile::onResolveCCBCCMenuItemSelector: %s", pSelectorName);
+    return NULL;
+}
+
+cocos2d::SEL_CallFuncN Tile::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Tile::onResolveCCBCCCallFuncSelector: %s", pSelectorName);
+    return NULL;
+}
+
+cocos2d::extension::Control::Handler Tile::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Tile::onResolveCCBCCControlSelector: %s", pSelectorName);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "Tile", TitleMenu::onTileClicked);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
+    return NULL;
 }
 

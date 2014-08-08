@@ -608,8 +608,7 @@ void Grid::spawnRandomTile()
 
 void Grid::addTileAtColumn(int row, int column)
 {
-    //::Tile* tile = static_cast<::Tile*>(::Tile::load());
-    ::Tile* tile = static_cast<::Tile*>(::Tile::create());
+    ::Tile* tile = static_cast<::Tile*>(::Tile::load());
     
     int index = (row * Constants::GRID_SIZE) + column;
     
