@@ -658,3 +658,36 @@ void Grid::showAds()
 {
     
 }
+
+bool Grid::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
+{
+    //CCLOG("Grid::onAssignCCBMemberVariable: %s ", pMemberVariableName);
+    return false;
+}
+
+bool Grid::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
+{
+    //CCLOG("Grid::onAssignCCBCustomProperty: %s ", memberVariableName);
+    return false;
+}
+
+cocos2d::SEL_MenuHandler Grid::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Grid::onResolveCCBCCMenuItemSelector: %s ", pSelectorName);
+    return NULL;
+}
+
+cocos2d::SEL_CallFuncN Grid::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Grid::onResolveCCBCCCallFuncSelector: %s ", pSelectorName);
+    return NULL;
+}
+
+cocos2d::extension::Control::Handler Grid::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
+{
+    //CCLOG("Grid::onResolveCCBCCControlSelector: %s ", pSelectorName);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "play", TitleMenu::onPlayClicked);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "Grid", TitleMenu::onGridClicked);
+    //CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "moregame", TitleMenu::onMoregameClicked);
+    return NULL;
+}
