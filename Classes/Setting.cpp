@@ -31,26 +31,31 @@ void Setting::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNod
 
 bool Setting::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
-    return false;
+    //CCLOG("Setting::onAssignCCBMemberVariable: %s", pMemberVariableName);
+    return true;
 }
 
 bool Setting::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
 {
+    //CCLOG("Setting::onAssignCCBCustomProperty: %s", memberVariableName);
     return false;
 }
 
 cocos2d::SEL_MenuHandler Setting::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("Setting::onResolveCCBCCMenuItemSelector: %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::SEL_CallFuncN Setting::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("Setting::onResolveCCBCCCallFuncSelector: %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::extension::Control::Handler Setting::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    //CCLOG("Setting::onResolveCCBCCControlSelector: %s", pSelectorName);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "soundon", Setting::onSoundOnClicked);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "soundoff", Setting::onSoundOffClicked);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "back", Setting::onBackClicked);
