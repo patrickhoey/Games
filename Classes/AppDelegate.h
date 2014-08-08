@@ -48,14 +48,6 @@ public:
     */
     virtual void applicationWillEnterForeground();
 };
-
-/*
-typedef struct tagResource
-{
-    cocos2d::Size size;
-    char directory[100];
-}Resource;
-*/
  
 #endif // _APP_DELEGATE_H_
 

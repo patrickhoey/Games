@@ -42,7 +42,7 @@ bool MainScene::init()
     auto listener = EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
     _eventDispatcher->addEventListenerWithFixedPriority(listener, 1);
     
-    cocos2d::Vector<Node*> children = this->getChildren();
+    //cocos2d::Vector<Node*> children = this->getChildren();
     
     return true;
 }

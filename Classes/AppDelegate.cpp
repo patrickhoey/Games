@@ -7,12 +7,6 @@
 
 USING_NS_CC;
 using namespace CocosDenshion;
-/*
-static Resource smallResource  =  { cocos2d::Size(480, 320),   "iphone" };
-static Resource mediumResource =  { cocos2d::Size(1024, 768),  "ipad"   };
-static Resource largeResource  =  { cocos2d::Size(2048, 1536), "ipadhd" };
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
-*/
  
 AppDelegate::AppDelegate()
 {
@@ -43,39 +37,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
     
-    /*
-    glview->setDesignResolutionSize(size.width, size.height, ResolutionPolicy::NO_BORDER);
-    Size frameSize = glview->getFrameSize();
-    // In this demo, we select resource according to the frame's height.
-    // If the resource size is different from design resolution size, you need to set contentScaleFactor.
-    // We use the ratio of resource's height to the height of design resolution,
-    // this can make sure that the resource's height could fit for the height of design resolution.
-    
-    // if the frame's height is larger than the height of medium resource size, select large resource.
-    if (frameSize.height > mediumResource.size.height)
-    {
-        //searchPath.push_back(largeResource.directory);
-        director->setContentScaleFactor(largeResource.size.height/designResolutionSize.height);
-    }
-    // if the frame's height is larger than the height of small resource size, select medium resource.
-    else if (frameSize.height > smallResource.size.height)
-    {
-        //searchPath.push_back(mediumResource.directory);
-        director->setContentScaleFactor(mediumResource.size.height/designResolutionSize.height);
-    }
-    // if the frame's height is smaller than the height of medium resource size, select small resource.
-    else
-    {
-        //searchPath.push_back(smallResource.directory);
-        director->setContentScaleFactor(smallResource.size.height/designResolutionSize.height);
-    }
-    */
-    
     //Scale factor info
     Size size = director->getWinSize();
-    float scaleFactor = size.height / 320.0f;
-    glview->setDesignResolutionSize(size.width / scaleFactor, 320, ResolutionPolicy::SHOW_ALL);
-    director->setContentScaleFactor(scaleFactor / (size.height / 640)); //because the current resource is phonehd's
+    float scaleFactor = size.height / size.width;
+    
+    glview->setDesignResolutionSize(size.width / scaleFactor, size.width, ResolutionPolicy::SHOW_ALL);
+    director->setContentScaleFactor(scaleFactor);
     
     // turn on display FPS
     director->setDisplayStats(true);
