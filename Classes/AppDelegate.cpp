@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "TitleMenu.h"
+#include "Constants.h"
 
 //#include "TitleMenu.h"
 #define PHYSICS_FACTOR 32
@@ -59,11 +60,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd/image_crown");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd");
     
+    SimpleAudioEngine::getInstance()->preloadBackgroundMusic(Constants::BACKGROUND_MUSIC);
     
     //!!TEMPORARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    auto userDefaults = UserDefault::getInstance();
-    userDefaults->setBoolForKey("soundmode1", false);
-    userDefaults->flush();
+    //auto userDefaults = UserDefault::getInstance();
+    //userDefaults->setBoolForKey("soundmode1", false);
+    //userDefaults->flush();
     
     
     // create a scene. it's an autorelease object
