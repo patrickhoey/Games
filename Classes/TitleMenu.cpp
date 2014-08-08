@@ -11,9 +11,6 @@ TitleMenu::TitleMenu() :
  reader_(NULL)
 , bg11_(NULL)
 {
-    bg11_ = cocos2d::Sprite::create();
-    
-    this->addChild(bg11_);
 }
 
 TitleMenu::~TitleMenu()
@@ -67,21 +64,26 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
 
 bool TitleMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
-    return false;
+    CCLOG("TitleMenu::onAssignCCBMemberVariable: %s", pMemberVariableName);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_bg11", Sprite*, this->bg11_);
+    return true;
 }
 
 bool TitleMenu::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)
 {
+    CCLOG("TitleMenu::onAssignCCBCustomProperty: %s", memberVariableName);
     return false;
 }
 
 cocos2d::SEL_MenuHandler TitleMenu::onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    CCLOG("TitleMenu::onResolveCCBCCMenuItemSelector: %s", pSelectorName);
     return NULL;
 }
 
 cocos2d::SEL_CallFuncN TitleMenu::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
 {
+    CCLOG("TitleMenu::onResolveCCBCCCallFuncSelector: %s", pSelectorName);
     return NULL;
 }
 
