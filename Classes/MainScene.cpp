@@ -39,6 +39,7 @@ Scene* MainScene::createScene()
 bool MainScene::init()
 {
     //Initializing and binding
+    //CCLOG("MainScene::init()");
     auto listener = EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
     _eventDispatcher->addEventListenerWithFixedPriority(listener, 1);
     
@@ -49,7 +50,7 @@ bool MainScene::init()
 
 bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
-    //CCLOG("Member Variable name: %s", pMemberVariableName);
+    //CCLOG("MainScene::onAssignCCBMemberVariable: %s", pMemberVariableName);
     SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_imbg", Sprite*, this->imbg_);
     SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_grid", Grid*, this->grid_);
     SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_txtscore", Label*, this->txtscore_);
@@ -62,13 +63,19 @@ bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMe
 
 void MainScene::updateScore(EventCustom* event)
 {
+    if( NULL == scoreLabel_ || false == scoreLabel_->isRunning())
+    {
+        //CCLOG("MainScene::updateScore:: Score label is NULL");
+        return;
+    }
+    
     int* score = static_cast<int*>(event->getUserData());
-    if( NULL != score )
+    if( NULL != score)
     {
         //CCLOG("*******Got update for score! %d", *score);
         scoreLabel_->setString(std::to_string(*score));
     }else{
-        CCLOG("*******SCORE IS NULL");
+        //CCLOG("*******SCORE IS NULL");
     }
 }
 

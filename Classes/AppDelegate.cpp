@@ -56,8 +56,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
     //cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Published-iOS/resources-phone/image_crown.plist");
     cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
-    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone/image_crown");
-    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phone");
+    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd/image_crown");
+    FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd");
     
     
     //!!TEMPORARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
