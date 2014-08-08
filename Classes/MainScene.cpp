@@ -9,7 +9,13 @@ using namespace CocosDenshion;
 
 MainScene::MainScene() :
   reader_(NULL)
+, imbg_(NULL)
 , grid_(NULL)
+, txtscore_(NULL)
+, scoreLabel_(NULL)
+, txthighscore_(NULL)
+, highscoreLabel_(NULL)
+, btoption_(NULL)
 {
 }
 
@@ -41,13 +47,26 @@ bool MainScene::init()
     return true;
 }
 
+bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
+{
+    //CCLOG("Member Variable name: %s", pMemberVariableName);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_imbg", Sprite*, this->imbg_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_grid", Grid*, this->grid_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_txtscore", Label*, this->txtscore_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_scoreLabel", Label*, this->scoreLabel_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_txthighscore", Label*, this->txthighscore_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_highscoreLabel", Label*, this->highscoreLabel_);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_btoption", ControlButton*, this->btoption_);
+    return true;
+}
+
 void MainScene::updateScore(EventCustom* event)
 {
     int* score = static_cast<int*>(event->getUserData());
     if( NULL != score )
     {
-        CCLOG("*******Got update for score! %d", *score);
-        //scoreLabel_->setString(std::to_string(*score));
+        //CCLOG("*******Got update for score! %d", *score);
+        scoreLabel_->setString(std::to_string(*score));
     }else{
         CCLOG("*******SCORE IS NULL");
     }
@@ -81,7 +100,7 @@ void MainScene::updateHighScore()
     int highScore = userDefaults->getIntegerForKey("highscore2", 0);
     //CCLOG("**updateHighScore: %s", std::to_string(highScore).c_str());
 
-    //highscoreLabel_->setString(std::to_string(highScore));
+    highscoreLabel_->setString(std::to_string(highScore));
     
 }
 
@@ -110,11 +129,6 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     
     //highscoreLabel_->setPosition((highscoreLabel_->getPosition().x)+0.05, highscoreLabel_->getPosition().y);
     //CCLOG("Highest Score Position X: %f", highscoreLabel_->getPosition().x);
-}
-
-bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
-{
-    return false;
 }
 
 bool MainScene::onAssignCCBCustomProperty(cocos2d::Ref* target, const char* memberVariableName, const cocos2d::Value& value)

@@ -183,7 +183,7 @@ void Tile::updateValueDisplay()
     
     //CCLOG("Setting frame %s for %p", frameName.c_str(), this);
     //CCLOG("Number of children %ld for %p", this->getChildrenCount(), this);
-    CCLOG("Current tile position with UpdateValueDisplay: x%f, y%f, z%f", this->getPositionX(), this->getPositionY(), this->getPositionZ());
+    //CCLOG("Current tile position with UpdateValueDisplay: x%f, y%f, z%f", this->getPositionX(), this->getPositionY(), this->getPositionZ());
 }
 
 void Tile::showAds()

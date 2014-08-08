@@ -47,7 +47,7 @@ void Grid::setupBackground()
     float x = tileMarginHorizontal_;
     float y = tileMarginVertical_;
     
-    CCLOG("Tile margin horiz %f and vertical %f", tileMarginHorizontal_, tileMarginVertical_ );
+    //CCLOG("Tile margin horiz %f and vertical %f", tileMarginHorizontal_, tileMarginVertical_ );
     
     for( int i = 0; i < Constants::GRID_SIZE; i++ )
     {
@@ -57,10 +57,8 @@ void Grid::setupBackground()
         {
             LayerColor* backgroundTile = LayerColor::create(cocos2d::Color4B::GRAY);
             backgroundTile->setContentSize(cocos2d::Size(columnWidth_, columnHeight_));
-            CCLOG("BackgroundTile position x%f, y%f", x,y);
+            //CCLOG("BackgroundTile position x%f, y%f", x,y);
             backgroundTile->setPosition(x, y);
-            //backgroundTile->setLocalZOrder(INT_MAX);
-            //backgroundTile->setOrderOfArrival(5);
             //backgroundTile->setOpacity(0.2);
             this->addChild(backgroundTile);
             

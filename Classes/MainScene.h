@@ -42,7 +42,13 @@ public:
     
 private:
     spritebuilder::CCBReader* reader_;
+    Sprite* imbg_;
     Grid* grid_;
+    Label* txtscore_;
+    Label* scoreLabel_;
+    Label* txthighscore_;
+    Label* highscoreLabel_;
+    ControlButton* btoption_;
 };
 
 
