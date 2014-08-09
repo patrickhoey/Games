@@ -120,7 +120,7 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
 {
     //@TODO Try to find nicer way of setting this position
     imbg_->setScale(1.0,1.0); //Fixes the scaling issues
-    grid_->setPosition(10.0f,50.0f);
+    grid_->setPosition(10.0f,55.0f);
     
     //CCLOG("***Loaded MainScene");
     updateHighScore();
