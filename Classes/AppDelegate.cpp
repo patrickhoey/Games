@@ -39,11 +39,17 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
     
     //Scale factor info
+    
+    //Scale factor info
+    /*
     Size size = director->getWinSize();
     float scaleFactor = size.height / size.width;
-    
     glview->setDesignResolutionSize(size.width / scaleFactor, size.width, ResolutionPolicy::SHOW_ALL);
     director->setContentScaleFactor(scaleFactor);
+    */
+    Size size = director->getWinSize();
+    glview->setDesignResolutionSize(320, 480, ResolutionPolicy::SHOW_ALL);
+    director->setContentScaleFactor(2);
     
     // turn on display FPS
     director->setDisplayStats(true);

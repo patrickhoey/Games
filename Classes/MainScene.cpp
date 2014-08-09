@@ -90,7 +90,7 @@ void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Co
     {
         //dynamic cast is expensive, must be nicer way of accessing base class
         OptionMenu* optionMenu = static_cast<OptionMenu*>(OptionMenu::load());
-        optionMenu->setPosition(0.5f, 0.5f);
+        optionMenu->setNormalizedPosition(cocos2d::Vec2(0.5f, 0.5f));
         optionMenu->setLocalZOrder(INT_MAX);
         
         this->addChild(optionMenu);
@@ -118,8 +118,9 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    //CCLOG("***Loaded MainScene");
+    this->grid_->setNormalizedPosition(cocos2d::Vec2(0,0));
     
+    //CCLOG("***Loaded MainScene");
     updateHighScore();
     
     auto userDefaults = UserDefault::getInstance();
