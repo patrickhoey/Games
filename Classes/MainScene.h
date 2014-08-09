@@ -2,7 +2,7 @@
 #define __MainScene_SCENE_H__
 
 #include "cocos2d.h"
-#include "editor-support/spritebuilder/SpriteBuilder.h"
+#include "editor-support/SpriteBuilder.h"
 #include "extensions/cocos-ext.h"
 
 USING_NS_CC;
