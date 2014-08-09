@@ -1832,6 +1832,7 @@
 		54299FE6198AD4B500BA24C6 /* CCSpriteLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 54299FA0198AD4B500BA24C6 /* CCSpriteLoader.h */; };
 		54299FE7198AD4B500BA24C6 /* CCTextFieldLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54299FA1198AD4B500BA24C6 /* CCTextFieldLoader.cpp */; };
 		54299FE8198AD4B500BA24C6 /* CCTextFieldLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 54299FA2198AD4B500BA24C6 /* CCTextFieldLoader.h */; };
+		54299FE9198AD4B500BA24C6 /* SpriteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 54299FA4198AD4B500BA24C6 /* SpriteBuilder.h */; };
 		A07A4CAF1783777C0073F6A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1551A342158F2AB200E66CFE /* Foundation.framework */; };
 		B24AA985195A675C007B4522 /* CCFastTMXLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B24AA981195A675C007B4522 /* CCFastTMXLayer.cpp */; };
 		B24AA986195A675C007B4522 /* CCFastTMXLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B24AA981195A675C007B4522 /* CCFastTMXLayer.cpp */; };
@@ -3002,7 +3003,7 @@
 		54299FA1198AD4B500BA24C6 /* CCTextFieldLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCTextFieldLoader.cpp; sourceTree = "<group>"; };
 		54299FA2198AD4B500BA24C6 /* CCTextFieldLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTextFieldLoader.h; sourceTree = "<group>"; };
 		54299FA3198AD4B500BA24C6 /* LICENSE_SpriteBuilder.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_SpriteBuilder.txt; sourceTree = "<group>"; };
-		54C8ACD51996798A007B9B8C /* SpriteBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteBuilder.h; sourceTree = "<group>"; };
+		54299FA4198AD4B500BA24C6 /* SpriteBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteBuilder.h; sourceTree = "<group>"; };
 		A03F2CB81780BD04006731B9 /* libchipmunk Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libchipmunk Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03F2D9B1780BDF7006731B9 /* libbox2d Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libbox2d Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03F2ED617814268006731B9 /* libCocosDenshion Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCocosDenshion Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4032,7 +4033,6 @@
 		1AD71CF7180E26E600808F54 /* editor-support */ = {
 			isa = PBXGroup;
 			children = (
-				54C8ACD51996798A007B9B8C /* SpriteBuilder.h */,
 				54299F5D198AD4B500BA24C6 /* spritebuilder */,
 				1AD71CF8180E26E600808F54 /* cocosbuilder */,
 				1A8C5946180E930E00EF57C3 /* cocostudio */,
@@ -5169,6 +5169,7 @@
 				54299FA1198AD4B500BA24C6 /* CCTextFieldLoader.cpp */,
 				54299FA2198AD4B500BA24C6 /* CCTextFieldLoader.h */,
 				54299FA3198AD4B500BA24C6 /* LICENSE_SpriteBuilder.txt */,
+				54299FA4198AD4B500BA24C6 /* SpriteBuilder.h */,
 			);
 			path = spritebuilder;
 			sourceTree = "<group>";
@@ -5764,6 +5765,7 @@
 				1A570070180BC5A10088DEC7 /* CCActionEase.h in Headers */,
 				1A570074180BC5A10088DEC7 /* CCActionGrid.h in Headers */,
 				B37510841823ACA100B3BA6A /* CCPhysicsShapeInfo_chipmunk.h in Headers */,
+				54299FE9198AD4B500BA24C6 /* SpriteBuilder.h in Headers */,
 				5034CA46191D591100CE6051 /* ccShader_Label_outline.frag in Headers */,
 				54299FD5198AD4B500BA24C6 /* CCNodeLoader.h in Headers */,
 				1A570078180BC5A10088DEC7 /* CCActionGrid3D.h in Headers */,
