@@ -273,7 +273,7 @@ void Grid::endGameWithMessage(const std::string& message)
 {
     GameEnd* gameEndPopover = static_cast<GameEnd*>(GameEnd::load());
     
-    gameEndPopover->setNormalizedPosition(cocos2d::Vec2(0.5f, 0.5f));
+    //gameEndPopover->setPosition(cocos2d::Vec2(0, 0));
     gameEndPopover->setLocalZOrder(INT_MAX);
     
     gameEndPopover->setMessage(message, score_);
@@ -475,6 +475,8 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     otherTile->setIsMergedThisRound(true);
     
     //CCLOG("MergedTile: %p OtherTile %p", mergedTile, otherTile);
+    
+    lose();
     
     if( otherTile->getValue() == Constants::WIN_TILE)
     {

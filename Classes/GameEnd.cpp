@@ -39,6 +39,7 @@ Node* GameEnd::load()
 void GameEnd::setMessage(const std::string& message, int score)
 {
     messageLabel_->setString(message);
+    messageLabel_->setScale(.75);
     scoreLabel_->setString(std::to_string(score));
     
     auto userDefaults = UserDefault::getInstance();
