@@ -118,7 +118,8 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    this->grid_->setNormalizedPosition(cocos2d::Vec2(0,0));
+    //@TODO Try to find nicer way of setting this position
+    grid_->setPosition(10.0f,50.0f);
     
     //CCLOG("***Loaded MainScene");
     updateHighScore();
