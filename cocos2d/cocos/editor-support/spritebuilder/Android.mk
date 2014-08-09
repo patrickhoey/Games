@@ -1,11 +1,11 @@
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH += $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := spritebuilder_static
+LOCAL_MODULE += spritebuilder_static
 
-LOCAL_MODULE_FILENAME := libspritebuilder
+LOCAL_MODULE_FILENAME += libspritebuilder
 
-LOCAL_SRC_FILES := CCBAnimationManager.cpp \
+LOCAL_SRC_FILES += CCBAnimationManager.cpp \
 CCBFileLoader.cpp \
 CCBKeyframe.cpp \
 CCBLocalizationManager.cpp \
@@ -38,18 +38,25 @@ CCTextFieldLoader.cpp \
 CCBPhysicsBody.cpp \
 CCBPhysicsWorld.cpp
 
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/.. \
+LOCAL_EXPORT_C_INCLUDES += $(LOCAL_PATH)/.. \
+$(LOCAL_PATH)/../../2d \
+$(LOCAL_PATH)/../../base \
+$(LOCAL_PATH)/../../renderer \
+$(LOCAL_PATH)/../../physics/chipmunk \
+$(LOCAL_PATH) \
 $(LOCAL_PATH)/../../..
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../2d \
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../physics/chipmunk \
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../2d \
+$(LOCAL_PATH)/../../base \
+$(LOCAL_PATH)/../../renderer \
+$(LOCAL_PATH)/../../physics/chipmunk \
 $(LOCAL_PATH) \
 $(LOCAL_PATH)/../../.. 
 
-LOCAL_CFLAGS += -Wno-psabi
-LOCAL_EXPORT_CFLAGS += -Wno-psabi
+#LOCAL_CFLAGS += -Wno-psabi
+#LOCAL_EXPORT_CFLAGS += -Wno-psabi
 
-LOCAL_WHOLE_STATIC_LIBRARIES := cocos_extension_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_extension_static
 
 
 include $(BUILD_STATIC_LIBRARY)

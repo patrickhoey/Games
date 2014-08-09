@@ -2,8 +2,8 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
-#include "editor-support/spritebuilder/SpriteBuilder.h"
-#include "editor-support/cocosbuilder/CCBReader.h"
+#include "editor-support/SpriteBuilder.h"
+
 
 //String constants for the ad network session/API keys
 #define ChartBoostID "53ce8f2b89b0bb212c41a197"

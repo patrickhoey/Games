@@ -64,6 +64,9 @@ def select_toolchain_version():
     elif os.path.isdir(os.path.join(ndk_root,"toolchains/arm-linux-androideabi-4.7")):
         os.environ['NDK_TOOLCHAIN_VERSION'] = '4.7'
         print "The Selected NDK toolchain version was 4.7 !"
+    elif os.path.isdir(os.path.join(ndk_root,"toolchains/arm-linux-androideabi-4.9")):
+        os.environ['NDK_TOOLCHAIN_VERSION'] = '4.9'
+        print "The Selected NDK toolchain version was 4.9 !"
     else:
         print "Couldn't find the gcc toolchain."
         exit(1)
@@ -76,8 +79,10 @@ def do_build(cocos_root, ndk_root, app_android_root,ndk_build_param,sdk_root,and
 	
     if ndk_build_param == None:
         command = '%s -j%d -C %s NDK_DEBUG=%d' % (ndk_path, num_of_cpu, app_android_root, build_mode=='debug')
+        print command
     else:
         command = '%s -j%d -C %s NDK_DEBUG=%d %s' % (ndk_path, num_of_cpu, app_android_root, build_mode=='debug', ' '.join(str(e) for e in ndk_build_param))
+        print command
     if os.system(command) != 0:
         raise Exception("Build dynamic library for project [ " + app_android_root + " ] fails!")
     elif android_platform is not None:

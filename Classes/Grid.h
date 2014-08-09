@@ -10,7 +10,7 @@
 #define _048RPSPort_Grid_h
 
 #include "cocos2d.h"
-#include "editor-support/spritebuilder/SpriteBuilder.h"
+#include "editor-support/SpriteBuilder.h"
 #include "extensions/cocos-ext.h"
 #include "Tile.h"
 #include "Constants.h"
