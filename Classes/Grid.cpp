@@ -39,7 +39,7 @@ void Grid::setupBackground()
     columnWidth_ = (tile->getContentSize()).width;
     columnHeight_ = (tile->getContentSize()).height;
     
-    CCLOG("GRID: The tile dimensions are width %f and height %f", columnWidth_, columnHeight_);
+    //CCLOG("GRID: The tile dimensions are width %f and height %f", columnWidth_, columnHeight_);
 
     tileMarginHorizontal_ = ((this->getContentSize()).width - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
     tileMarginVertical_ = ((this->getContentSize()).height - (Constants::GRID_SIZE * columnWidth_)) / (Constants::GRID_SIZE + 1);
@@ -57,7 +57,7 @@ void Grid::setupBackground()
         {
             LayerColor* backgroundTile = LayerColor::create(cocos2d::Color4B::GRAY);
             backgroundTile->setContentSize(cocos2d::Size(columnWidth_, columnHeight_));
-            CCLOG("BackgroundTile position x%f, y%f", x,y);
+            //CCLOG("BackgroundTile position x%f, y%f", x,y);
             backgroundTile->setPosition(x, y);
             //backgroundTile->setOpacity(0.2);
             this->addChild(backgroundTile);
@@ -475,8 +475,6 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     otherTile->setIsMergedThisRound(true);
     
     //CCLOG("MergedTile: %p OtherTile %p", mergedTile, otherTile);
-    
-    lose();
     
     if( otherTile->getValue() == Constants::WIN_TILE)
     {

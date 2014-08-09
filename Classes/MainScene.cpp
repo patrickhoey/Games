@@ -119,6 +119,7 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
     //@TODO Try to find nicer way of setting this position
+    imbg_->setScale(1.0,1.0); //Fixes the scaling issues
     grid_->setPosition(10.0f,50.0f);
     
     //CCLOG("***Loaded MainScene");
@@ -126,11 +127,11 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     
     auto userDefaults = UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    CCLOG("SOUNDMODE: %s", soundMode ? "true" : "false");
+    //CCLOG("SOUNDMODE: %s", soundMode ? "true" : "false");
     
     //If the mode is sound ON, then make sure it is enabled
     if(true == soundMode){
-        CCLOG("Sound ON: %s", soundMode ? "true" : "false");
+        //CCLOG("Sound ON: %s", soundMode ? "true" : "false");
         
         SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
         sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC2, true);
