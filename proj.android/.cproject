@@ -185,9 +185,9 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="2048RPSPort.null.31159645" name="2048RPSPort"/>
+		<project id="RPSPort.null.31159645" name="RPSPort"/>
 	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="1">
-		<resource resourceType="PROJECT" workspacePath="/2048RPSPort"/>
+		<resource resourceType="PROJECT" workspacePath="/RPSPort"/>
 	</storageModule>
 </cproject>
