@@ -21,6 +21,7 @@
 							<builder arguments="${ProjDirPath}/build_native.py -b release" buildPath="${ProjDirPath}" command="python" id="org.eclipse.cdt.build.core.settings.default.builder.1038735572" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
+									<entry flags="VALUE_WORKSPACE_PATH" kind="outputPath" name="output/release"/>
 								</outputEntries>
 							</builder>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.547532631" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
@@ -179,6 +180,7 @@
 							<builder arguments="${ProjDirPath}/build_native.py -b debug" buildPath="${ProjDirPath}" command="python" id="org.eclipse.cdt.build.core.settings.default.builder.1949248716" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name=""/>
+									<entry flags="VALUE_WORKSPACE_PATH" kind="outputPath" name="output/debug"/>
 								</outputEntries>
 							</builder>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.813839891" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
@@ -250,6 +252,9 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="0.1230402123">
 			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile"/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="0.1230402123.1377291156">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>

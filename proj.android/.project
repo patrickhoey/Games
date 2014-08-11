@@ -27,7 +27,7 @@
 			<arguments>
 				<dictionary>
 					<key>?children?</key>
-					<value>?name?=outputEntries\|?children?=?name?=entry\\\\\\\|\\\|\||</value>
+					<value>?name?=outputEntries\|?children?=?name?=entry\\\\\\\|\\\|?name?=entry\\\\\\\|\\\|\||</value>
 				</dictionary>
 				<dictionary>
 					<key>?name?</key>
@@ -127,6 +127,16 @@
 			<name>libcocos2d</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/cocos2d/cocos/platform/android/java/src</locationURI>
+		</link>
+		<link>
+			<name>output/debug</name>
+			<type>2</type>
+			<location>/Users/phoey/Projects/Port_Work/2048RPSPort/bin/debug/android</location>
+		</link>
+		<link>
+			<name>output/release</name>
+			<type>2</type>
+			<location>/Users/phoey/Projects/Port_Work/2048RPSPort/bin/release/android</location>
 		</link>
 	</linkedResources>
 </projectDescription>
