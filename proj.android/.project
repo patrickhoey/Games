@@ -116,7 +116,7 @@
 		<link>
 			<name>android</name>
 			<type>2</type>
-			<location>/Users/phoey/Projects/Port_Work/RPSPort/cocos2d/cocos/platform/android</location>
+			<location>/Users/phoey/Projects/Port_Work/2048RPSPort/cocos2d/cocos/platform/android</location>
 		</link>
 		<link>
 			<name>cocos2d</name>
@@ -126,7 +126,7 @@
 		<link>
 			<name>libcocos2d</name>
 			<type>2</type>
-			<location>/Users/phoey/Projects/Port_Work/RPSPort/cocos2d/cocos/platform/android/java/src</location>
+			<location>/Users/phoey/Projects/Port_Work/2048RPSPort/cocos2d/cocos/platform/android/java/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
