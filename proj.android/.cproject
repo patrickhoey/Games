@@ -46,7 +46,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/physics"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/base"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/math/kazmath"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/ui"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/network"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/audio/include"/>
@@ -178,5 +177,8 @@
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/RPSPort"/>
 		</configuration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="RPSPort.null.127093493" name="RPSPort"/>
 	</storageModule>
 </cproject>
