@@ -53,8 +53,11 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     if(true == soundMode){
         //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
-        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-        sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+        if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+        {
+            SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
+            sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+        }
     }
 
     userDefaults->setBoolForKey("openop", true);

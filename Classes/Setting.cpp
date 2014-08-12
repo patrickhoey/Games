@@ -66,7 +66,10 @@ cocos2d::extension::Control::Handler Setting::onResolveCCBCCControlSelector(coco
 void Setting::onSoundOnClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     // if you use SimpleAudioEngine, it must be pause
-    SimpleAudioEngine::getInstance()->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+    if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+    {
+        SimpleAudioEngine::getInstance()->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+    }
     
     auto userDefaults = UserDefault::getInstance();
     userDefaults->setBoolForKey("soundmode1", true);
@@ -77,7 +80,10 @@ void Setting::onSoundOnClicked(cocos2d::Ref* sender, cocos2d::extension::Control
 void Setting::onSoundOffClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     // if you use SimpleAudioEngine, it must be pause
-    SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+    {
+        SimpleAudioEngine::getInstance()->stopBackgroundMusic();
+    }
     
     auto userDefaults = UserDefault::getInstance();
     userDefaults->setBoolForKey("soundmode1", false);

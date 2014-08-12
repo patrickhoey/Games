@@ -66,7 +66,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd/image_crown");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd");
     
-    SimpleAudioEngine::getInstance()->preloadBackgroundMusic(Constants::BACKGROUND_MUSIC);
+    if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+    {
+      SimpleAudioEngine::getInstance()->preloadBackgroundMusic(Constants::BACKGROUND_MUSIC);
+    }
+ 
     
     //!!TEMPORARY!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //auto userDefaults = UserDefault::getInstance();
@@ -88,7 +92,10 @@ void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
-    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+    {
+        SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    }
 }
 
 // this function will be called when the app is active again
@@ -96,5 +103,8 @@ void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here
-    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+    {
+        SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    }
 }

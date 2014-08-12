@@ -245,8 +245,11 @@ void Grid::win()
     if(true == soundMode){
         //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
-        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
-        sound->playEffect(Constants::WIN_SOUND);
+        if( true == FileUtils::getInstance()->isFileExist(Constants::WIN_SOUND) )
+        {
+            CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+            sound->playEffect(Constants::WIN_SOUND);
+        }
     }
     
     endGameWithMessage("You win! Congratulations!");
@@ -262,8 +265,11 @@ void Grid::lose()
     if(true == soundMode){
         //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
-        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
-        sound->playEffect(Constants::LOSE_SOUND);
+        if( true == FileUtils::getInstance()->isFileExist(Constants::LOSE_SOUND) )
+        {
+            CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+            sound->playEffect(Constants::LOSE_SOUND);
+        }
     }
     
     endGameWithMessage("You didn't win. Please play Again!");
@@ -445,8 +451,11 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     if(true == soundMode){
         //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
         
-        CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
-        sound->playEffect(Constants::MERGE_SOUND);
+        if( true == FileUtils::getInstance()->isFileExist(Constants::MERGE_SOUND) )
+        {
+            CocosDenshion::SimpleAudioEngine* sound = CocosDenshion::SimpleAudioEngine::getInstance();
+            sound->playEffect(Constants::MERGE_SOUND);
+        }
     }
     
     int fromIndex = (fromX * Constants::GRID_SIZE) + fromY;
