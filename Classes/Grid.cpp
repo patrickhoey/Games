@@ -510,8 +510,25 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     //@TODO add scale logic here
     //CCLOG("Explosion effects");
     
+    cocos2d::Size size = Director::getInstance()->getWinSize();
+    if( size.height > 568)
+    {
+        cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-ipad.plist");
+    }
+    else
+    {
+        cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
+    }    
+
     //cocos2d::SpriteFrame* explosionSprite = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName("explosion_001.png");
     cocos2d::Sprite* explosionSprite = cocos2d::Sprite::createWithSpriteFrameName("explosion_001.png");
+    
+    if( NULL == explosionSprite )
+    {
+        CCLOG("Explosion sprite is NULL!");
+        return;
+    }
+    
     float centerOffset = 30.0f;
     explosionSprite->setPosition(otherTilePosition.x+centerOffset, otherTilePosition.y+centerOffset);
     

@@ -47,9 +47,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     glview->setDesignResolutionSize(size.width / scaleFactor, size.width, ResolutionPolicy::SHOW_ALL);
     director->setContentScaleFactor(scaleFactor);
     */
-    Size size = director->getWinSize();
+    cocos2d::Size size = director->getWinSize();
+    //CCLOG("Win Size: x %f, y %f", size.width, size.height);
     glview->setDesignResolutionSize(320, 480, ResolutionPolicy::SHOW_ALL);
     director->setContentScaleFactor(2);
+    //CCLOG("Win Size: x %f, y %f", size.width, size.height);
     
     // turn on display FPS
     director->setDisplayStats(true);
@@ -62,7 +64,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //This sets up the singleton FileUtils configuration for the directory heirarchy to parse
     spritebuilder::CCBReader::setupSpriteBuilder("resources-phonehd", PHYSICS_FACTOR);
     //cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Published-iOS/resources-phone/image_crown.plist");
-    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("effect3-hd.plist");
+    FileUtils::getInstance()->addSearchPath("Icons");
+    FileUtils::getInstance()->addSearchPath("sound");
+    FileUtils::getInstance()->addSearchPath("fonts");
+    FileUtils::getInstance()->addSearchPath("Published-iOS");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd/image_crown");
     FileUtils::getInstance()->addSearchPath("Published-iOS/resources-phonehd");
     

@@ -118,8 +118,19 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
+    Size viewSize = Director::getInstance()->getVisibleSize();
+    
+    if( viewSize.height <= 480)
+    {
+        imbg_->setScale(0.9,0.95); //Fixes the scaling issues
+    }
+    else
+    {
+        imbg_->setScale(1.0,1.0); //Fixes the scaling issues
+    }
+    
     //@TODO Try to find nicer way of setting this position
-    imbg_->setScale(1.0,1.0); //Fixes the scaling issues
+
     grid_->setPosition(10.0f,55.0f);
     
     //CCLOG("***Loaded MainScene");

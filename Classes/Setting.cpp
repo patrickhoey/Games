@@ -5,6 +5,12 @@
 
 using namespace CocosDenshion;
 
+Setting::Setting() :
+reader_(NULL)
+, bg11_(NULL)
+{
+}
+
 Setting::~Setting()
 {
 }
@@ -26,12 +32,24 @@ void Setting::setCCBReader(spritebuilder::CCBReader* reader)
 
 void Setting::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
+    /*
+    Size viewSize = Director::getInstance()->getVisibleSize();
+    
+    if( viewSize.height >= 512)
+    {
+        bg11_->setScale(1.0,1.0); //Fixes the scaling issues
+    }
+    else
+    {
+        bg11_->setScale(0.9,0.95); //Fixes the scaling issues
+    }*/
     //CCLOG("***Loaded Setting");
 }
 
 bool Setting::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
 {
     //CCLOG("Setting::onAssignCCBMemberVariable: %s", pMemberVariableName);
+    SB_MEMBERVARIABLEASSIGNER_GLUE(this, "_bg11", Sprite*, this->bg11_);
     return true;
 }
 

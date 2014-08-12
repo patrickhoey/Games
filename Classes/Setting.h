@@ -19,6 +19,7 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
 
+    Setting();
     virtual ~Setting();
     
     void setCCBReader(spritebuilder::CCBReader* reader);
@@ -36,6 +37,7 @@ public:
     
 private:
     spritebuilder::CCBReader* reader_;
+    cocos2d::Sprite* bg11_;
 };
 
 
