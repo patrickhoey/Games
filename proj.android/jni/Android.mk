@@ -14,6 +14,7 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
            ../../Classes/AppDelegate.cpp \
+           ../../Classes/AdHelper.cpp \
            ../../Classes/GameEnd.cpp \
            ../../Classes/Grid.cpp \
            ../../Classes/MainScene.cpp \

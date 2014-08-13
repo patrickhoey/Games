@@ -4,6 +4,7 @@
 #include "Setting.h"
 #include "MainScene.h"
 #include "Constants.h"
+#include "AdHelper.h"
 
 using namespace CocosDenshion;
 
@@ -34,6 +35,8 @@ void TitleMenu::setCCBReader(spritebuilder::CCBReader* reader)
 
 void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
+    AdHelper::hideAd();
+    
     //CCLOG("***Loaded TitleMenu");
     auto director = Director::getInstance();
     
