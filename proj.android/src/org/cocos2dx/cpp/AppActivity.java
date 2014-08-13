@@ -3,7 +3,7 @@ Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
 Copyright (c) 2013-2014 Chukong Technologies Inc.
- 
+
 http://www.cocos2d-x.org
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,169 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-****************************************************************************/
+ ****************************************************************************/
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import android.annotation.TargetApi;
+import android.graphics.Color;
+import android.graphics.Point;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.Display;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+
 public class AppActivity extends Cocos2dxActivity {
+
+	private static AppActivity _appActivity;
+	private AdView adView;
+	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
+	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
+
+	// Helper get display screen to avoid deprecated function use
+	private Point getDisplaySize(Display d) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+			return getDisplaySizeGE11(d);
+		}
+		return getDisplaySizeLT11(d);
+	}
+
+	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+	private Point getDisplaySizeGE11(Display d)
+	{
+		Point p = new Point(0, 0);
+		d.getSize(p);
+		return p;
+	}
+	private Point getDisplaySizeLT11(Display d)
+	{
+		try
+		{
+			Method getWidth = Display.class.getMethod("getWidth", new Class[] {});
+			Method getHeight = Display.class.getMethod("getHeight", new Class[] {});
+			return new Point(((Integer) getWidth.invoke(d, (Object[]) null)).intValue(), ((Integer) getHeight.invoke(d, (Object[]) null)).intValue());
+		}
+		catch (NoSuchMethodException e2) // None of these exceptions should ever occur.
+		{
+			return new Point(-1, -1);
+		}
+		catch (IllegalArgumentException e2)
+		{
+			return new Point(-2, -2);
+		}
+		catch (IllegalAccessException e2)
+		{
+			return new Point(-3, -3);
+		}
+		catch (InvocationTargetException e2)
+		{
+			return new Point(-4, -4);
+		}
+	}
+
+
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+
+		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+		int width = getDisplaySize(getWindowManager().getDefaultDisplay()).x;
+
+
+		LinearLayout.LayoutParams adParams = new LinearLayout.LayoutParams(
+				width,
+				LinearLayout.LayoutParams.WRAP_CONTENT);
+
+
+		adView = new AdView(this);
+		adView.setAdSize(AdSize.BANNER);
+		adView.setAdUnitId(AD_UNIT_ID_BANNER);
+
+
+		AdRequest adRequest = new AdRequest.Builder()
+		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		.addTestDevice("HASH_DEVICE_ID")
+		.build();
+
+		adView.loadAd(adRequest);
+		adView.setBackgroundColor(Color.BLACK);
+		adView.setBackgroundColor(0);
+		addContentView(adView,adParams);
+
+		_appActivity = this;
+
+	}
+
+
+	public static void hideAd()
+	{
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if (_appActivity.adView.isEnabled())
+					_appActivity.adView.setEnabled(false);
+				if (_appActivity.adView.getVisibility() != 4 )
+					_appActivity.adView.setVisibility(View.INVISIBLE);
+			}
+		});
+
+	}
+
+
+	public static void showAd()
+	{
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{	
+				if (!_appActivity.adView.isEnabled())
+					_appActivity.adView.setEnabled(true);
+				if (_appActivity.adView.getVisibility() == 4 )
+					_appActivity.adView.setVisibility(View.VISIBLE);	
+			}
+		});
+
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (adView != null) {
+			adView.resume();
+		}
+	}
+
+	@Override
+	protected void onPause() {
+		if (adView != null) {
+			adView.pause();
+		}
+		super.onPause();
+	}
+
+	@Override
+	protected void onDestroy() {
+		adView.destroy();
+		super.onDestroy();
+	}
+
 }
+
