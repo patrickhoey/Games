@@ -28,22 +28,15 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import android.annotation.TargetApi;
 import android.graphics.Color;
-import android.graphics.Point;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -52,78 +45,33 @@ public class AppActivity extends Cocos2dxActivity {
 	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
 	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
 
-	// Helper get display screen to avoid deprecated function use
-	private Point getDisplaySize(Display d) {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			return getDisplaySizeGE11(d);
-		}
-		return getDisplaySizeLT11(d);
-	}
-
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-	private Point getDisplaySizeGE11(Display d)
-	{
-		Point p = new Point(0, 0);
-		d.getSize(p);
-		return p;
-	}
-	private Point getDisplaySizeLT11(Display d)
-	{
-		try
-		{
-			Method getWidth = Display.class.getMethod("getWidth", new Class[] {});
-			Method getHeight = Display.class.getMethod("getHeight", new Class[] {});
-			return new Point(((Integer) getWidth.invoke(d, (Object[]) null)).intValue(), ((Integer) getHeight.invoke(d, (Object[]) null)).intValue());
-		}
-		catch (NoSuchMethodException e2) // None of these exceptions should ever occur.
-		{
-			return new Point(-1, -1);
-		}
-		catch (IllegalArgumentException e2)
-		{
-			return new Point(-2, -2);
-		}
-		catch (IllegalAccessException e2)
-		{
-			return new Point(-3, -3);
-		}
-		catch (InvocationTargetException e2)
-		{
-			return new Point(-4, -4);
-		}
-	}
-
-
-
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-
-		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-		int width = getDisplaySize(getWindowManager().getDefaultDisplay()).x;
-
-
-		LinearLayout.LayoutParams adParams = new LinearLayout.LayoutParams(
-				width,
-				LinearLayout.LayoutParams.WRAP_CONTENT);
-
-
+		
 		adView = new AdView(this);
-		adView.setAdSize(AdSize.BANNER);
-		adView.setAdUnitId(AD_UNIT_ID_BANNER);
 
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 
 		AdRequest adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
 		.build();
 
-		adView.loadAd(adRequest);
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+              adView.setVisibility(View.VISIBLE);
+            }
+          });
+
+		adView.setAdSize(AdSize.BANNER);
+		adView.setAdUnitId(AD_UNIT_ID_BANNER);
 		adView.setBackgroundColor(Color.BLACK);
 		adView.setBackgroundColor(0);
-		addContentView(adView,adParams);
+		adView.loadAd(adRequest);
+		addContentView(adView,params);
 
 		_appActivity = this;
 
