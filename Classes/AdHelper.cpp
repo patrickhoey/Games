@@ -20,11 +20,13 @@ const char* AppActivityClassName = "org/cocos2dx/cpp/AppActivity";
 void AdHelper::hideAd()
 {
     cocos2d::JniMethodInfo t;
+    CCLOG("hideAd() called");
     
     if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "hideAd", "()V"))
     {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
+        CCLOG("hideAd() JNI called");
         isAdShowing = false;
     }
 }
@@ -32,11 +34,13 @@ void AdHelper::hideAd()
 void AdHelper::showAd()
 {
     cocos2d::JniMethodInfo t;
+    CCLOG("showAd() called");
     
     if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "showAd", "()V"))
     {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
+        CCLOG("showAd() JNI called");
         isAdShowing = true;
     }
 }

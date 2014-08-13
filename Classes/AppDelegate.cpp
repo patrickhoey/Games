@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "TitleMenu.h"
 #include "Constants.h"
+#include "AdHelper.h"
 
 //#include "TitleMenu.h"
 #define PHYSICS_FACTOR 32
@@ -26,6 +27,8 @@ void AppDelegate::setSoundMode(int soundMode){
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+    AdHelper::hideAd();
+    
     //Investigate a better random generator (Cocos2DX has no Math library)
     //Seeding the random number generator
     srand((unsigned)time(0));

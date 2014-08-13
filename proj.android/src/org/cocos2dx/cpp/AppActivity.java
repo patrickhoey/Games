@@ -28,7 +28,6 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -58,13 +57,6 @@ public class AppActivity extends Cocos2dxActivity {
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
 		.build();
-
-        adView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-              adView.setVisibility(View.VISIBLE);
-            }
-          });
 
 		adView.setAdSize(AdSize.BANNER);
 		adView.setAdUnitId(AD_UNIT_ID_BANNER);
