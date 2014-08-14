@@ -30,10 +30,10 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.taptapdone.Port2048.R;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -46,29 +46,15 @@ public class AppActivity extends Cocos2dxActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
-		setContentView(com.taptapdone.Port2048.R.id.mainLayout);
-		
-		//RelativeLayout layout = (RelativeLayout) findViewById(R.id.mainLayout);
-		//addContentView(layout, null);
-		
-		admobBannerAdView = (AdView) findViewById(com.taptapdone.Port2048.R.id.admobBannerAdView);
-		
+		setContentView(R.layout.main_layout);
+				
+		admobBannerAdView = (AdView) findViewById(R.id.admobBannerAdView);
 		//admobInterstitialAdView = new AdView(this);
-		
-         /*
-		//RelativeLayout layout = new RelativeLayout(this);
-		//RelativeLayout rootView = (RelativeLayout)getWindow().getDecorView().findViewById(android.R.id.content);
-
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        */
         
 		AdRequest adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
-		.build();
-        
+		.build();        
 		
 		//Interstitial
 		/*
@@ -77,7 +63,6 @@ public class AppActivity extends Cocos2dxActivity {
 		admobInterstitialAdView.setBackgroundColor(Color.BLACK);
 		admobInterstitialAdView.setPadding(0, 0, 0, 0);
 		admobInterstitialAdView.loadAd(adRequest);
-		addContentView(admobInterstitialAdView,params);
 		*/
 		
 		//Banner
@@ -87,7 +72,6 @@ public class AppActivity extends Cocos2dxActivity {
         admobBannerAdView.setBackgroundColor(Color.BLACK);
         admobBannerAdView.setPadding(0, 0, 0, 0);
         */
-		//addContentView(admobBannerAdView,params);
 		
         admobBannerAdView.loadAd(adRequest);
 		
