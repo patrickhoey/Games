@@ -5,7 +5,14 @@
     android:layout_height="wrap_content"
     android:background="#000000"
     android:orientation="vertical">
-
+    
+    <org.cocos2dx.lib.Cocos2dxGLSurfaceView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/admobBannerAdView"
+        android:layout_alignParentTop="true" />
+    
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/admobBannerAdView"
