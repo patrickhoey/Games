@@ -27,7 +27,8 @@ void AppDelegate::setSoundMode(int soundMode){
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
-    AdHelper::hideAd();
+    AdHelper::hideAdmobBannerAd();
+    AdHelper::hideAdmobInterstitialAd();
     
     //Investigate a better random generator (Cocos2DX has no Math library)
     //Seeding the random number generator

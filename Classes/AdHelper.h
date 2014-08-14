@@ -13,9 +13,14 @@ class AdHelper
 {
 public:
     
-    static void hideAd();
-    static void showAd();
-    static bool isAdShowing;
+    static void hideAdmobInterstitialAd();
+    static void hideAdmobBannerAd();
+    
+    static void showAdmobInterstitialAd();
+    static void showAdmobBannerAd();
+    
+    static bool isAdmobInterstitialShowing;
+    static bool isAdmobBannerShowing;
 };
 
 #endif

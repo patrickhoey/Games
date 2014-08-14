@@ -4,6 +4,7 @@
 #include "Setting.h"
 #include "MainScene.h"
 #include "Constants.h"
+#include "AdHelper.h"
 
 using namespace CocosDenshion;
 
@@ -63,6 +64,7 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     userDefaults->setBoolForKey("openop", true);
     userDefaults->flush();
     
+    AdHelper::showAdmobBannerAd();    
 }
 
 bool TitleMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

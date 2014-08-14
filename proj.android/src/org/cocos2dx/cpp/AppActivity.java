@@ -28,11 +28,9 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -40,37 +38,65 @@ import android.widget.RelativeLayout;
 public class AppActivity extends Cocos2dxActivity {
 
 	private static AppActivity _appActivity;
-	private AdView adView;
-	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
-	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
+	private AdView admobBannerAdView;
+	private AdView admobInterstitialAdView;
+	//private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
+	//private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);	
+		setContentView(com.taptapdone.Port2048.R.id.mainLayout);
 		
-		adView = new AdView(this);
+		//RelativeLayout layout = (RelativeLayout) findViewById(R.id.mainLayout);
+		//addContentView(layout, null);
+		
+		admobBannerAdView = (AdView) findViewById(com.taptapdone.Port2048.R.id.admobBannerAdView);
+		
+		//admobInterstitialAdView = new AdView(this);
+		
+         /*
+		//RelativeLayout layout = new RelativeLayout(this);
+		//RelativeLayout rootView = (RelativeLayout)getWindow().getDecorView().findViewById(android.R.id.content);
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-        RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        params.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        */
+        
 		AdRequest adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
 		.build();
-
-		adView.setAdSize(AdSize.BANNER);
-		adView.setAdUnitId(AD_UNIT_ID_BANNER);
-		adView.setBackgroundColor(Color.BLACK);
-		adView.setBackgroundColor(0);
-		adView.loadAd(adRequest);
-		addContentView(adView,params);
-
+        
+		
+		//Interstitial
+		/*
+		admobInterstitialAdView.setAdSize(AdSize.FULL_BANNER);
+		admobInterstitialAdView.setAdUnitId(AD_UNIT_ID_INTERSTITIAL);		
+		admobInterstitialAdView.setBackgroundColor(Color.BLACK);
+		admobInterstitialAdView.setPadding(0, 0, 0, 0);
+		admobInterstitialAdView.loadAd(adRequest);
+		addContentView(admobInterstitialAdView,params);
+		*/
+		
+		//Banner
+		/*
+		admobBannerAdView.setAdSize(AdSize.BANNER);
+		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);		
+        admobBannerAdView.setBackgroundColor(Color.BLACK);
+        admobBannerAdView.setPadding(0, 0, 0, 0);
+        */
+		//addContentView(admobBannerAdView,params);
+		
+        admobBannerAdView.loadAd(adRequest);
+		
 		_appActivity = this;
 
 	}
 
 
-	public static void hideAd()
+	public static void hideAdmobInterstitialAd()
 	{
 		_appActivity.runOnUiThread(new Runnable()
 		{
@@ -78,17 +104,66 @@ public class AppActivity extends Cocos2dxActivity {
 			@Override
 			public void run()
 			{
-				if (_appActivity.adView.isEnabled())
-					_appActivity.adView.setEnabled(false);
-				if (_appActivity.adView.getVisibility() != 4 )
-					_appActivity.adView.setVisibility(View.INVISIBLE);
+				if( null == _appActivity.admobInterstitialAdView )
+				{
+					return;
+				}
+				
+				if (_appActivity.admobInterstitialAdView.isEnabled())
+					_appActivity.admobInterstitialAdView.setEnabled(false);
+				if (_appActivity.admobInterstitialAdView.getVisibility() != 4 )
+					_appActivity.admobInterstitialAdView.setVisibility(View.INVISIBLE);
+			}
+		});
+
+	}
+	
+	public static void hideAdmobBannerAd()
+	{
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if( null == _appActivity.admobBannerAdView )
+				{
+					return;
+				}
+				
+				if (_appActivity.admobBannerAdView.isEnabled())
+					_appActivity.admobBannerAdView.setEnabled(false);
+				if (_appActivity.admobBannerAdView.getVisibility() != 4 )
+					_appActivity.admobBannerAdView.setVisibility(View.INVISIBLE);
 			}
 		});
 
 	}
 
 
-	public static void showAd()
+	public static void showAdmobInterstitialAd()
+	{
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if( null == _appActivity.admobInterstitialAdView )
+				{
+					return;
+				}
+				
+				if (!_appActivity.admobInterstitialAdView.isEnabled())
+					_appActivity.admobInterstitialAdView.setEnabled(true);
+				if (_appActivity.admobInterstitialAdView.getVisibility() == 4 )
+					_appActivity.admobInterstitialAdView.setVisibility(View.VISIBLE);	
+			}
+		});
+
+	}
+	
+	public static void showAdmobBannerAd()
 	{
 		_appActivity.runOnUiThread(new Runnable()
 		{
@@ -96,34 +171,62 @@ public class AppActivity extends Cocos2dxActivity {
 			@Override
 			public void run()
 			{	
-				if (!_appActivity.adView.isEnabled())
-					_appActivity.adView.setEnabled(true);
-				if (_appActivity.adView.getVisibility() == 4 )
-					_appActivity.adView.setVisibility(View.VISIBLE);	
+				if( null == _appActivity.admobBannerAdView )
+				{
+					return;
+				}
+				
+				if (!_appActivity.admobBannerAdView.isEnabled())
+					_appActivity.admobBannerAdView.setEnabled(true);
+				if (_appActivity.admobBannerAdView.getVisibility() == 4 )
+					_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
 			}
 		});
 
 	}
 
+
 	@Override
-	protected void onResume() {
+	protected void onResume() 
+	{
 		super.onResume();
-		if (adView != null) {
-			adView.resume();
+		if (admobBannerAdView != null ) 
+		{
+			admobBannerAdView.resume();
+		}
+		if( admobInterstitialAdView != null )
+		{
+			admobInterstitialAdView.resume();
 		}
 	}
 
 	@Override
-	protected void onPause() {
-		if (adView != null) {
-			adView.pause();
+	protected void onPause() 
+	{
+		if (admobBannerAdView != null) 
+		{
+			admobBannerAdView.pause();
 		}
+		if( admobInterstitialAdView != null )
+		{
+			admobInterstitialAdView.pause();
+		}
+		
 		super.onPause();
 	}
 
 	@Override
 	protected void onDestroy() {
-		adView.destroy();
+		if( null != _appActivity.admobBannerAdView )
+		{
+			admobBannerAdView.destroy();
+		}
+		
+		if( null != _appActivity.admobInterstitialAdView )
+		{
+			admobInterstitialAdView.destroy();
+		}
+
 		super.onDestroy();
 	}
 
