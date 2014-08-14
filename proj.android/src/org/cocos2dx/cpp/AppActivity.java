@@ -37,6 +37,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.RelativeLayout;
 
 public class AppActivity extends Cocos2dxActivity {
@@ -44,31 +45,28 @@ public class AppActivity extends Cocos2dxActivity {
 	private static AppActivity _appActivity;
 	private AdView admobBannerAdView;
 	private AdView admobInterstitialAdView;
-	//private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
+	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
 	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);	
-		//setContentView(R.layout.main_layout);
-				
-		//Cocos2dxGLSurfaceView gameView = (Cocos2dxGLSurfaceView) findViewById(R.id.gameView);
-		//View gameView = super.mFrameLayout.getChildAt(1);
+		super.onCreate(savedInstanceState);
+		
+		//Removes the Cocos2dxEditText
+		//super.mFrameLayout.removeViewAt(0);
+		
+		//Update parents layout parameters
+		/*
+		FrameLayout.LayoutParams parentLayout = (LayoutParams) super.mFrameLayout.getLayoutParams();
+		parentLayout.width = FrameLayout.LayoutParams.MATCH_PARENT;
+		parentLayout.height = FrameLayout.LayoutParams.MATCH_PARENT;
+		parentLayout.gravity = Gravity.FILL;
+		super.mFrameLayout.setLayoutParams(parentLayout);
+		*/
+
 		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
 		params.gravity = Gravity.BOTTOM;
-		//params.addRule(RelativeLayout.CENTER_HORIZONTAL);
-		//params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 
-		//super.mFrameLayout.removeAllViews();
-		
-		//addContentView(gameView, params);
-		//view = gameView;
-		//super.mFrameLayout.addView((View) findViewById(R.layout.main_layout));
-		//int numChildren = super.mFrameLayout.getChildCount();
-		
-
-		//admobBannerAdView = (AdView) findViewById(R.id.admobBannerAdView);
-		//admobInterstitialAdView = new AdView(this);
         
 		AdRequest adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
@@ -76,13 +74,13 @@ public class AppActivity extends Cocos2dxActivity {
 		.build();        
 		
 		//Interstitial
-		/*
+		admobInterstitialAdView = new AdView(this);
 		admobInterstitialAdView.setAdSize(AdSize.FULL_BANNER);
 		admobInterstitialAdView.setAdUnitId(AD_UNIT_ID_INTERSTITIAL);		
 		admobInterstitialAdView.setBackgroundColor(Color.BLACK);
 		admobInterstitialAdView.setPadding(0, 0, 0, 0);
 		admobInterstitialAdView.loadAd(adRequest);
-		*/
+        addContentView(admobInterstitialAdView, params);
 		
 		//Banner
 		admobBannerAdView = new AdView(this);
@@ -90,14 +88,9 @@ public class AppActivity extends Cocos2dxActivity {
 		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);		
         admobBannerAdView.setBackgroundColor(Color.BLACK);
         admobBannerAdView.setPadding(0, 0, 0, 0);
-        
         admobBannerAdView.loadAd(adRequest);
-		
-        //addView(admobBannerAdView);
-        
-		addContentView(admobBannerAdView, params);
-        //mFrameLayout.setLayoutParams(params);
-        //super.mFrameLayout.addView(admobBannerAdView);
+
+        addContentView(admobBannerAdView, params);
 		
 		_appActivity = this;
 
