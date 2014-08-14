@@ -87,6 +87,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     //userDefaults->flush();
     
     
+    AdHelper::showAdmobInterstitialAd();
+    
     // create a scene. it's an autorelease object
     auto scene = TitleMenu::createScene();
 

@@ -28,9 +28,11 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -42,9 +44,10 @@ import android.widget.RelativeLayout;
 
 public class AppActivity extends Cocos2dxActivity {
 
+	private static AdRequest _adRequest;
 	private static AppActivity _appActivity;
 	private AdView admobBannerAdView;
-	private AdView admobInterstitialAdView;
+	private InterstitialAd admobInterstitialAdView;
 	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
 	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
 
@@ -55,32 +58,57 @@ public class AppActivity extends Cocos2dxActivity {
 		//Removes the Cocos2dxEditText
 		//super.mFrameLayout.removeViewAt(0);
 		
+		//View parent = (View) super.mFrameLayout.getParent();
+		//parent.setPadding(0, 0, 0, 0);
+		
+		//super.mFrameLayout.setPadding(0, 0, 0, 0);
+		
+		
 		//Update parents layout parameters
-		/*
 		FrameLayout.LayoutParams parentLayout = (LayoutParams) super.mFrameLayout.getLayoutParams();
 		parentLayout.width = FrameLayout.LayoutParams.MATCH_PARENT;
 		parentLayout.height = FrameLayout.LayoutParams.MATCH_PARENT;
 		parentLayout.gravity = Gravity.FILL;
 		super.mFrameLayout.setLayoutParams(parentLayout);
-		*/
+		
 
 		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
 		params.gravity = Gravity.BOTTOM;
 
         
-		AdRequest adRequest = new AdRequest.Builder()
+		_adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
 		.build();        
 		
 		//Interstitial
-		admobInterstitialAdView = new AdView(this);
-		admobInterstitialAdView.setAdSize(AdSize.FULL_BANNER);
-		admobInterstitialAdView.setAdUnitId(AD_UNIT_ID_INTERSTITIAL);		
-		admobInterstitialAdView.setBackgroundColor(Color.BLACK);
-		admobInterstitialAdView.setPadding(0, 0, 0, 0);
-		admobInterstitialAdView.loadAd(adRequest);
-        addContentView(admobInterstitialAdView, params);
+		admobInterstitialAdView = new InterstitialAd(this);
+		admobInterstitialAdView.setAdUnitId(AD_UNIT_ID_INTERSTITIAL);
+	     // Set an AdListener.
+		admobInterstitialAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+            	admobInterstitialAdView.loadAd(_adRequest);
+            }
+            
+            @Override
+            public void onAdClosed(){
+            	admobInterstitialAdView.loadAd(_adRequest);
+            }
+            
+            @Override
+            public void onAdFailedToLoad(int errorCode){
+            	admobInterstitialAdView.loadAd(_adRequest);
+            }
+            
+            @Override
+            public void onAdOpened(){
+            	admobInterstitialAdView.loadAd(_adRequest);
+            }
+            
+        });
+		
+		admobInterstitialAdView.loadAd(_adRequest);
 		
 		//Banner
 		admobBannerAdView = new AdView(this);
@@ -88,7 +116,7 @@ public class AppActivity extends Cocos2dxActivity {
 		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);		
         admobBannerAdView.setBackgroundColor(Color.BLACK);
         admobBannerAdView.setPadding(0, 0, 0, 0);
-        admobBannerAdView.loadAd(adRequest);
+        admobBannerAdView.loadAd(_adRequest);
 
         addContentView(admobBannerAdView, params);
 		
@@ -109,11 +137,6 @@ public class AppActivity extends Cocos2dxActivity {
 				{
 					return;
 				}
-				
-				if (_appActivity.admobInterstitialAdView.isEnabled())
-					_appActivity.admobInterstitialAdView.setEnabled(false);
-				if (_appActivity.admobInterstitialAdView.getVisibility() != 4 )
-					_appActivity.admobInterstitialAdView.setVisibility(View.INVISIBLE);
 			}
 		});
 
@@ -155,10 +178,11 @@ public class AppActivity extends Cocos2dxActivity {
 					return;
 				}
 				
-				if (!_appActivity.admobInterstitialAdView.isEnabled())
-					_appActivity.admobInterstitialAdView.setEnabled(true);
-				if (_appActivity.admobInterstitialAdView.getVisibility() == 4 )
-					_appActivity.admobInterstitialAdView.setVisibility(View.VISIBLE);	
+				if (_appActivity.admobInterstitialAdView.isLoaded())
+				{
+					_appActivity.admobInterstitialAdView.show();
+					_appActivity.admobInterstitialAdView.loadAd(_adRequest);
+				}
 			}
 		});
 
@@ -195,10 +219,6 @@ public class AppActivity extends Cocos2dxActivity {
 		{
 			admobBannerAdView.resume();
 		}
-		if( admobInterstitialAdView != null )
-		{
-			admobInterstitialAdView.resume();
-		}
 	}
 
 	@Override
@@ -208,11 +228,6 @@ public class AppActivity extends Cocos2dxActivity {
 		{
 			admobBannerAdView.pause();
 		}
-		if( admobInterstitialAdView != null )
-		{
-			admobInterstitialAdView.pause();
-		}
-		
 		super.onPause();
 	}
 
@@ -221,11 +236,6 @@ public class AppActivity extends Cocos2dxActivity {
 		if( null != _appActivity.admobBannerAdView )
 		{
 			admobBannerAdView.destroy();
-		}
-		
-		if( null != _appActivity.admobInterstitialAdView )
-		{
-			admobInterstitialAdView.destroy();
 		}
 
 		super.onDestroy();

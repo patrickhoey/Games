@@ -11,6 +11,7 @@
 #include "SimpleAudioEngine.h"
 #include "CCUserDefault.h"
 #include "GameEnd.h"
+#include "AdHelper.h"
 
 Grid::Grid() :
   score_(0)
@@ -285,6 +286,8 @@ void Grid::endGameWithMessage(const std::string& message)
     gameEndPopover->setMessage(message, score_);
     
     this->addChild(gameEndPopover);
+    
+    AdHelper::showAdmobInterstitialAd();
 }
 
 void Grid::move(cocos2d::Vec2 direction)
