@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" />
+<!-- NOT USED  
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -24,5 +25,7 @@
         ads:adUnitId="ca-app-pub-8379829573491079/9220368549"
         ads:adSize="BANNER"
          />
-
+         
 </RelativeLayout>
+-->
+
