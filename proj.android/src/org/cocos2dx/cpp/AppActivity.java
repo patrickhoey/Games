@@ -42,6 +42,8 @@ import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 
 import com.chartboost.sdk.*;
+import com.chartboost.sdk.Libraries.CBLogging.Level;
+import com.chartboost.sdk.Libraries.CBOrientation;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -51,6 +53,8 @@ public class AppActivity extends Cocos2dxActivity {
 	private InterstitialAd admobInterstitialAdView;
 	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
 	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
+	private static final String CB_APP_ID = "53e920941873da4da78745c4";
+	private static final String CB_APP_SIG = "01d9f804b09f736f30c331bec1309c6425488e08";
 	private static Chartboost _cb;
 
 	@Override
@@ -59,9 +63,9 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		// Configure Chartboost
 		_cb = Chartboost.sharedChartboost();
-		String appId = "53e920941873da4da78745c4";
-		String appSignature = "01d9f804b09f736f30c331bec1309c6425488e08";
-		_cb.onCreate(this, appId, appSignature, null);
+		_cb.onCreate(this, CB_APP_ID, CB_APP_SIG, null);
+		CBPreferences.getInstance().setLoggingLevel(Level.ALL);
+		CBPreferences.getInstance().setOrientation(CBOrientation.PORTRAIT);
 		CBPreferences.getInstance().setImpressionsUseActivities(true);
 		
 		//Removes the Cocos2dxEditText
