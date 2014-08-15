@@ -40,7 +40,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
-import android.widget.RelativeLayout;
+
+import com.chartboost.sdk.*;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -50,10 +51,18 @@ public class AppActivity extends Cocos2dxActivity {
 	private InterstitialAd admobInterstitialAdView;
 	private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-8379829573491079/1697101740";
 	private static final String AD_UNIT_ID_BANNER = "ca-app-pub-8379829573491079/9220368549";
+	private static Chartboost _cb;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
+		
+		// Configure Chartboost
+		_cb = Chartboost.sharedChartboost();
+		String appId = "53e920941873da4da78745c4";
+		String appSignature = "01d9f804b09f736f30c331bec1309c6425488e08";
+		_cb.onCreate(this, appId, appSignature, null);
+		CBPreferences.getInstance().setImpressionsUseActivities(true);
 		
 		//Removes the Cocos2dxEditText
 		//super.mFrameLayout.removeViewAt(0);
@@ -123,20 +132,24 @@ public class AppActivity extends Cocos2dxActivity {
 		_appActivity = this;
 
 	}
-
-
-	public static void hideAdmobInterstitialAd()
+	
+	public static void showAdmobBannerAd()
 	{
 		_appActivity.runOnUiThread(new Runnable()
 		{
 
 			@Override
 			public void run()
-			{
-				if( null == _appActivity.admobInterstitialAdView )
+			{	
+				if( null == _appActivity.admobBannerAdView )
 				{
 					return;
 				}
+				
+				if (!_appActivity.admobBannerAdView.isEnabled())
+					_appActivity.admobBannerAdView.setEnabled(true);
+				if (_appActivity.admobBannerAdView.getVisibility() == 4 )
+					_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
 			}
 		});
 
@@ -164,6 +177,42 @@ public class AppActivity extends Cocos2dxActivity {
 
 	}
 
+	public static void showChartboostInterstitualAd()
+	{   
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if( null == _cb )
+				{
+					return;
+				}
+				
+				_cb.showInterstitial();
+			}
+		});
+	}
+	
+	public static void showChartboostMoreAppsAd()
+	{   
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if( null == _cb )
+				{
+					return;
+				}
+				
+				_cb.showMoreApps();
+			}
+		});
+	}
+	
 
 	public static void showAdmobInterstitialAd()
 	{
@@ -187,29 +236,14 @@ public class AppActivity extends Cocos2dxActivity {
 		});
 
 	}
-	
-	public static void showAdmobBannerAd()
-	{
-		_appActivity.runOnUiThread(new Runnable()
-		{
 
-			@Override
-			public void run()
-			{	
-				if( null == _appActivity.admobBannerAdView )
-				{
-					return;
-				}
-				
-				if (!_appActivity.admobBannerAdView.isEnabled())
-					_appActivity.admobBannerAdView.setEnabled(true);
-				if (_appActivity.admobBannerAdView.getVisibility() == 4 )
-					_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
-			}
-		});
-
+	@Override
+	protected void onStart() {
+		super.onStart();
+		
+	    _cb.onStart(this);
+	    _cb.cacheInterstitial();
 	}
-
 
 	@Override
 	protected void onResume() 
@@ -233,12 +267,34 @@ public class AppActivity extends Cocos2dxActivity {
 
 	@Override
 	protected void onDestroy() {
+		if( _cb != null )
+		{
+			_cb.onDestroy(this); 			
+		}
+	        
 		if( null != _appActivity.admobBannerAdView )
 		{
 			admobBannerAdView.destroy();
 		}
 
 		super.onDestroy();
+	}
+	
+	// In onBackPressed()
+	@Override
+	public void onBackPressed() { 
+	    // If an interstitial is on screen, close it. Otherwise continue as normal. 
+	    if (_cb.onBackPressed()) 
+	        return; 
+	    else 
+	        super.onBackPressed(); 
+	}
+	
+	@Override
+	protected void onStop(){
+	    super.onStop(); 
+        
+	    _cb.onStop(this); 	
 	}
 
 }

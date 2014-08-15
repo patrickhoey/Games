@@ -9,7 +9,6 @@
 #include "AdHelper.h"
 #include "cocos2d.h"
 
-bool AdHelper::isAdmobInterstitialShowing = true;
 bool AdHelper::isAdmobBannerShowing = true;
 
 #if( CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
@@ -18,17 +17,17 @@ bool AdHelper::isAdmobBannerShowing = true;
 
 const char* AppActivityClassName = "org/cocos2dx/cpp/AppActivity";
 
-void AdHelper::hideAdmobInterstitialAd()
+void AdHelper::showAdmobBannerAd()
 {
     cocos2d::JniMethodInfo t;
-    CCLOG("hideAdmobInterstitialAd() called");
+    CCLOG("showAdmobBannerAd() called");
     
-    if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "hideAdmobInterstitialAd", "()V"))
+    if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "showAdmobBannerAd", "()V"))
     {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
-        CCLOG("hideAdmobInterstitialAd() JNI called");
-        isAdmobInterstitialShowing = false;
+        CCLOG("showAdmobBannerAd() JNI called");
+        isAdmobBannerShowing = true;
     }
 }
 
@@ -56,36 +55,49 @@ void AdHelper::showAdmobInterstitialAd()
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
         CCLOG("showAdmobInterstitialAd() JNI called");
-        isAdmobInterstitialShowing = true;
     }
 }
 
-void AdHelper::showAdmobBannerAd()
+void AdHelper::showChartboostMoreAppsAd()
 {
     cocos2d::JniMethodInfo t;
-    CCLOG("showAdmobBannerAd() called");
+    CCLOG("showChartboostMoreAppsAd() called");
     
-    if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "showAdmobBannerAd", "()V"))
+    if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "showChartboostMoreAppsAd", "()V"))
     {
         t.env->CallStaticVoidMethod(t.classID, t.methodID);
         t.env->DeleteLocalRef(t.classID);
-        CCLOG("showAdmobBannerAd() JNI called");
-        isAdmobBannerShowing = true;
+        CCLOG("showChartboostMoreAppsAd() JNI called");
     }
 }
 
+void AdHelper::showChartboostInterstitualAd()
+{
+    cocos2d::JniMethodInfo t;
+    CCLOG("showChartboostInterstitualAd() called");
+    
+    if( cocos2d::JniHelper::getStaticMethodInfo(t, AppActivityClassName, "showChartboostInterstitualAd", "()V"))
+    {
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        t.env->DeleteLocalRef(t.classID);
+        CCLOG("showChartboostInterstitualAd() JNI called");
+    }
+}
+
+
 #else
 
-void AdHelper::hideAdmobInterstitialAd()
+void AdHelper::showAdmobBannerAd()
 {
-	CCLOG("hideAd() called");
-	isAdmobInterstitialShowing = false;
-	return; //nothing
+	CCLOG("showAdmobBannerAd() called");
+	isAdmobBannerShowing = true;
+	return; //nothing;
+    
 }
 
 void AdHelper::hideAdmobBannerAd()
 {
-	CCLOG("hideAd() called");
+	CCLOG("hideAdmobBannerAd() called");
 	isAdmobBannerShowing = false;
 	return; //nothing
 }
@@ -93,19 +105,23 @@ void AdHelper::hideAdmobBannerAd()
 
 void AdHelper::showAdmobInterstitialAd()
 {
-	CCLOG("showAd() called");
-	isAdmobInterstitialShowing = true;
+	CCLOG("showAdmobInterstitialAd() called");
 	return; //nothing;
     
 }
 
-void AdHelper::showAdmobBannerAd()
+void AdHelper::showChartboostMoreAppsAd()
 {
-	CCLOG("showAd() called");
-	isAdmobBannerShowing = true;
-	return; //nothing;
-    
+    CCLOG("showChartboostMoreAppsAd() called");
+    return;
 }
+
+void AdHelper::showChartboostInterstitualAd()
+{
+    CCLOG("showChartboostInterstitualAd() called");
+    return;
+}
+
 
 
 #endif

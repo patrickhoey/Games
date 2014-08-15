@@ -119,4 +119,5 @@ void TitleMenu::onSettingClicked(cocos2d::Ref * sender, cocos2d::extension::Cont
 void TitleMenu::onMoregameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     CCLOG("Implement more game here");
+    AdHelper::showChartboostMoreAppsAd();
 }

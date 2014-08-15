@@ -287,7 +287,13 @@ void Grid::endGameWithMessage(const std::string& message)
     
     this->addChild(gameEndPopover);
     
-    AdHelper::showAdmobInterstitialAd();
+    int testNum = rand()%2; //Either 1 or 0
+    
+    if(0 == testNum){
+        AdHelper::showAdmobInterstitialAd();
+    }else{
+        AdHelper::showChartboostInterstitualAd();
+    }
 }
 
 void Grid::move(cocos2d::Vec2 direction)
