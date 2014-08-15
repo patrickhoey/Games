@@ -118,6 +118,11 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
+    txtscore_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
+    scoreLabel_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
+    txthighscore_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
+    highscoreLabel_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
+    
     Size viewSize = Director::getInstance()->getVisibleSize();
     
     if( viewSize.height <= 480)

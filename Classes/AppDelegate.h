@@ -10,8 +10,6 @@
 #define kAppLovin1 "99lggvdEHo00AAq0IrxDZzJdaEG-9s1I0m-gfbwxOxyT5mTObUc9Swn191_Iu0bunZZQATMTOJ6U4fuf9UpbOa"
 #define kRevMob1 "53ce902ad03310d30687811b"
 
-#define COCOS2D_DEBUG 1
-
 /**
 @brief    The cocos2d Application.
 
