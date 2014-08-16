@@ -122,6 +122,7 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     scoreLabel_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
     txthighscore_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
     highscoreLabel_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
+    CCLOG("Current font is %s size %f", txtscore_->getSystemFontName().c_str(), txtscore_->getSystemFontSize());
     
     Size viewSize = Director::getInstance()->getVisibleSize();
     
