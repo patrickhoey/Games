@@ -284,14 +284,17 @@ public class AppActivity extends Cocos2dxActivity {
 		super.onDestroy();
 	}
 	
+	
 	// In onBackPressed()
 	@Override
 	public void onBackPressed() { 
 	    // If an interstitial is on screen, close it. Otherwise continue as normal. 
-	    if (_cb.onBackPressed()) 
+	    if (_cb.onBackPressed()){ 
 	        return; 
-	    else 
-	        super.onBackPressed(); 
+	    }
+	    else{ 
+	        super.onBackPressed();
+	    }
 	}
 	
 	@Override
