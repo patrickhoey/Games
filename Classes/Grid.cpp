@@ -492,6 +492,8 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     otherTile->setValue(newValue);
     otherTile->setIsMergedThisRound(true);
     
+    float tileWidth = (otherTile->getContentSize()).width;
+    
     //CCLOG("MergedTile: %p OtherTile %p", mergedTile, otherTile);
     
     if( otherTile->getValue() == Constants::WIN_TILE)
@@ -538,8 +540,9 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
         return;
     }
     
-    float centerOffset = 30.0f;
+    float centerOffset = tileWidth/2;
     explosionSprite->setPosition(otherTilePosition.x+centerOffset, otherTilePosition.y+centerOffset);
+    explosionSprite->setScale(2.0,2.0);
     
     //CCLOG("Explosion position %f, %f", otherTilePosition.x, otherTilePosition.y);
     
