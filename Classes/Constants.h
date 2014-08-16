@@ -10,9 +10,9 @@
 #define _048RPSPort_Constants_h
 
 namespace Constants {
-    static const char* BACKGROUND_MUSIC = "Castle.mp3";
-    static const char* BACKGROUND_MUSIC2 = "Castle2.mp3";
-    static const char* LOSE_SOUND = "ME_defeat.mp3";
+    static const char* BACKGROUND_MUSIC = "titlemenu.mp3";
+    static const char* BACKGROUND_MUSIC2 = "themeloop.mp3";
+    static const char* LOSE_SOUND = "Death.mp3";
     static const char* WIN_SOUND = "ME_victory.mp3";
     static const char* MERGE_SOUND = "pop.mp3";
     

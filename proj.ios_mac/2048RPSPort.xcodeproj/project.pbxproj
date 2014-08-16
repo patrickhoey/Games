@@ -66,9 +66,6 @@
 		5429A347198ADEA300BA24C6 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429A287198ADEA300BA24C6 /* Settings.png */; };
 		5429A348198ADEA300BA24C6 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429A288198ADEA300BA24C6 /* Settings@2x.png */; };
 		5429A3EC198AF26100BA24C6 /* Published-iOS in Resources */ = {isa = PBXBuildFile; fileRef = 5429A3EB198AF26100BA24C6 /* Published-iOS */; };
-		5429A414198AF99800BA24C6 /* Castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5429A40F198AF99800BA24C6 /* Castle.mp3 */; };
-		5429A415198AF99800BA24C6 /* Castle2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5429A410198AF99800BA24C6 /* Castle2.mp3 */; };
-		5429A416198AF99800BA24C6 /* ME_defeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5429A411198AF99800BA24C6 /* ME_defeat.mp3 */; };
 		5429A417198AF99800BA24C6 /* ME_victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5429A412198AF99800BA24C6 /* ME_victory.mp3 */; };
 		5429A418198AF99800BA24C6 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5429A413198AF99800BA24C6 /* pop.mp3 */; };
 		5429A422198AF9B300BA24C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5429A419198AF9B300BA24C6 /* Default-568h@2x.png */; };
@@ -87,6 +84,9 @@
 		54BE6F1D198DDBD4008E1F67 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F1C198DDBD4008E1F67 /* Tile.cpp */; };
 		54BE6F2E198E8728008E1F67 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54BE6F2D198E8728008E1F67 /* Grid.cpp */; };
 		54D35C92199C105B009D8D38 /* AdHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54D35C91199C105B009D8D38 /* AdHelper.cpp */; };
+		54D8E0AD199FAAF20045BD64 /* Death.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54D8E0AA199FAAF20045BD64 /* Death.mp3 */; };
+		54D8E0AE199FAAF20045BD64 /* themeloop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54D8E0AB199FAAF20045BD64 /* themeloop.mp3 */; };
+		54D8E0AF199FAAF20045BD64 /* titlemenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54D8E0AC199FAAF20045BD64 /* titlemenu.mp3 */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -294,9 +294,6 @@
 		5429A287198ADEA300BA24C6 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
 		5429A288198ADEA300BA24C6 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
 		5429A3EB198AF26100BA24C6 /* Published-iOS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Published-iOS"; sourceTree = "<group>"; };
-		5429A40F198AF99800BA24C6 /* Castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Castle.mp3; sourceTree = "<group>"; };
-		5429A410198AF99800BA24C6 /* Castle2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Castle2.mp3; sourceTree = "<group>"; };
-		5429A411198AF99800BA24C6 /* ME_defeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ME_defeat.mp3; sourceTree = "<group>"; };
 		5429A412198AF99800BA24C6 /* ME_victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ME_victory.mp3; sourceTree = "<group>"; };
 		5429A413198AF99800BA24C6 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
 		5429A419198AF9B300BA24C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -323,6 +320,9 @@
 		54BE6F2D198E8728008E1F67 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Grid.cpp; path = ../Classes/Grid.cpp; sourceTree = "<group>"; };
 		54D35C8E199C101B009D8D38 /* AdHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdHelper.h; path = ../Classes/AdHelper.h; sourceTree = "<group>"; };
 		54D35C91199C105B009D8D38 /* AdHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdHelper.cpp; path = ../Classes/AdHelper.cpp; sourceTree = "<group>"; };
+		54D8E0AA199FAAF20045BD64 /* Death.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Death.mp3; sourceTree = "<group>"; };
+		54D8E0AB199FAAF20045BD64 /* themeloop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = themeloop.mp3; sourceTree = "<group>"; };
+		54D8E0AC199FAAF20045BD64 /* titlemenu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = titlemenu.mp3; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -560,9 +560,9 @@
 		5429A32F198ADEA300BA24C6 /* sound */ = {
 			isa = PBXGroup;
 			children = (
-				5429A40F198AF99800BA24C6 /* Castle.mp3 */,
-				5429A410198AF99800BA24C6 /* Castle2.mp3 */,
-				5429A411198AF99800BA24C6 /* ME_defeat.mp3 */,
+				54D8E0AA199FAAF20045BD64 /* Death.mp3 */,
+				54D8E0AB199FAAF20045BD64 /* themeloop.mp3 */,
+				54D8E0AC199FAAF20045BD64 /* titlemenu.mp3 */,
 				5429A412198AF99800BA24C6 /* ME_victory.mp3 */,
 				5429A413198AF99800BA24C6 /* pop.mp3 */,
 			);
@@ -748,7 +748,6 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
-				5429A416198AF99800BA24C6 /* ME_defeat.mp3 in Resources */,
 				5429A426198AF9B300BA24C6 /* Default@2x.png in Resources */,
 				5429A422198AF9B300BA24C6 /* Default-568h@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
@@ -757,9 +756,10 @@
 				5429A3EC198AF26100BA24C6 /* Published-iOS in Resources */,
 				5429A42A198AF9B300BA24C6 /* effect3-ipad.png in Resources */,
 				5429A425198AF9B300BA24C6 /* Default.png in Resources */,
+				54D8E0AF199FAAF20045BD64 /* titlemenu.mp3 in Resources */,
 				5429A343198ADEA300BA24C6 /* iPhone-old.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
-				5429A414198AF99800BA24C6 /* Castle.mp3 in Resources */,
+				54D8E0AE199FAAF20045BD64 /* themeloop.mp3 in Resources */,
 				5429A427198AF9B300BA24C6 /* effect3-hd.plist in Resources */,
 				5429A345198ADEA300BA24C6 /* iPhone.png in Resources */,
 				5429A342198ADEA300BA24C6 /* iPad@2x.png in Resources */,
@@ -767,7 +767,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5429A346198ADEA300BA24C6 /* iPhone@2x.png in Resources */,
-				5429A415198AF99800BA24C6 /* Castle2.mp3 in Resources */,
+				54D8E0AD199FAAF20045BD64 /* Death.mp3 in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
