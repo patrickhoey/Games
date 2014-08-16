@@ -444,7 +444,7 @@ void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int&
     //CCLOG("AFTER: Copied from tile %p to tile %p", tile4, tile3);
     
     cocos2d::Vec2 newPosition = positionForColumn(toX, toY);
-    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, newPosition);
+    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.1f, newPosition);
 
     tile->runAction(moveTo);
 }
