@@ -3,6 +3,7 @@
 #include "SimpleAudioEngine.h"
 #include "TitleMenu.h"
 #include "MainScene.h"
+#include "Constants.h"
 
 using namespace CocosDenshion;
 
@@ -89,9 +90,14 @@ void OptionMenu::onRestartGameClicked(cocos2d::Ref* sender, cocos2d::extension::
     userDefaults->setBoolForKey("openop", true);
     userDefaults->flush();
     
-    auto scene = MainScene::createScene();
     auto director = Director::getInstance();
-    director->pushScene(scene);
+    auto runningScene = director->getRunningScene();
+    _eventDispatcher->removeCustomEventListeners(Constants::UPDATE_SCORE);
+    runningScene->cleanup();
+    
+    
+    auto scene = MainScene::createScene();
+    director->replaceScene(scene);
 }
 
 void OptionMenu::onResumeClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)

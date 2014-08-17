@@ -16,6 +16,7 @@ MainScene::MainScene() :
 , txthighscore_(NULL)
 , highscoreLabel_(NULL)
 , btoption_(NULL)
+, eventListenerCustom_(NULL)
 {
 }
 
@@ -36,12 +37,17 @@ Scene* MainScene::createScene()
     return scene;
 }
 
+cocos2d::EventListenerCustom* MainScene::getListener()
+{
+    return eventListenerCustom_;
+}
+
 bool MainScene::init()
 {
     //Initializing and binding
     //CCLOG("MainScene::init()");
-    auto listener = EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
-    _eventDispatcher->addEventListenerWithFixedPriority(listener, 1);
+    eventListenerCustom_ = cocos2d::EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
+    _eventDispatcher->addEventListenerWithFixedPriority(eventListenerCustom_, 1);
     
     //cocos2d::Vector<Node*> children = this->getChildren();
     
@@ -63,20 +69,43 @@ bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMe
 
 void MainScene::updateScore(EventCustom* event)
 {
-    if( NULL == scoreLabel_ || false == scoreLabel_->isRunning())
+    //CCLOG("MainScene::updateScore %p", this);
+    if( NULL == scoreLabel_)
     {
-        //CCLOG("MainScene::updateScore:: Score label is NULL");
+        CCLOG("MainScene::updateScore:: Score label is NULL");
         return;
     }
     
-    int* score = static_cast<int*>(event->getUserData());
-    if( NULL != score)
+    if( NULL == event )
     {
-        //CCLOG("*******Got update for score! %d", *score);
-        scoreLabel_->setString(std::to_string(*score));
-    }else{
-        //CCLOG("*******SCORE IS NULL");
+        CCLOG("MainScene::updateScore:: EventCustom is NULL");
+        return;
     }
+    
+    if( false == scoreLabel_->isRunning() )
+    {
+        CCLOG("MainScene::updateScore:: Score label is NOT RUNNING");
+    }
+    
+    int* userData = static_cast<int*>(event->getUserData());
+    
+    if( NULL == userData)
+    {
+        CCLOG("*******UserData Score IS NULL");
+        return;
+    }
+    
+    int score = *userData;
+    
+    //Test bounds
+    if( score < 0 || score > INT_MAX)
+    {
+        CCLOG("*******Score IS INVALID");
+        return;
+    }
+    
+    CCLOG("*******Got update for score! %d", score);
+    scoreLabel_->setString(std::to_string(score));
 }
 
 void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent)

@@ -2,6 +2,7 @@
 #include "CCUserDefault.h"
 #include "SimpleAudioEngine.h"
 #include "MainScene.h"
+#include "Constants.h"
 
 using namespace CocosDenshion;
 
@@ -89,10 +90,14 @@ cocos2d::SEL_CallFuncN GameEnd::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pT
 
 void GameEnd::onNewGameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
+    auto director = Director::getInstance();
+    auto runningScene = director->getRunningScene();
+    _eventDispatcher->removeCustomEventListeners(Constants::UPDATE_SCORE);
+    runningScene->cleanup();
+    
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
-    auto director = Director::getInstance();
-    director->pushScene(scene);
+    director->replaceScene(scene);
 }
 
 cocos2d::extension::Control::Handler GameEnd::onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char* pSelectorName)
