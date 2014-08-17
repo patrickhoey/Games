@@ -4,3 +4,4 @@ declare -x ANDROID_SDK_ROOT="${HOME}/Development/adt-bundle-mac-x86_64-20140702/
 declare -x NDK_ROOT="${HOME}/Development/android-ndk-r9d"
 cocos compile -p android -m debug --ndk-mode NDK_DEBUG=1
 #cocos compile -p android -m release --ndk-mode NDK_DEBUG=0
+#cocos compile -p android -m release --ndk-mode NDK_DEBUG=0 --ap 19
