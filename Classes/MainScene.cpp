@@ -100,7 +100,7 @@ void MainScene::updateScore(EventCustom* event)
         return;
     }
     
-    CCLOG("*******Got update for score! %d from %p", score, this);
+    //CCLOG("*******Got update for score! %d from %p", score, this);
     scoreLabel_->setString(std::to_string(score));
 }
 

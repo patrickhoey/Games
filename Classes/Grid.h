@@ -50,6 +50,7 @@ public:
     void nextRound();
     void lose();
     void win();
+    void updateTileMoveFinished();
     
     void move(cocos2d::Vec2 direction);
     void moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY);
@@ -76,6 +77,7 @@ public:
     const std::array<::Tile*, Constants::TOTAL_GRID_SIZE>& getGridArray();
     
 private:
+    std::atomic_int numTilesProcessingAnimThisRound_;
     int score_;
     float columnWidth_;
     float columnHeight_;

@@ -13,8 +13,11 @@
 #include "GameEnd.h"
 #include "AdHelper.h"
 
+static const float TILE_MOVE_ANIMATION_SPEED = 0.2f;
+
 Grid::Grid() :
   score_(0)
+, numTilesProcessingAnimThisRound_(0)
 , columnWidth_(0.0)
 , columnHeight_(0.0)
 , tileMarginVertical_(0.0)
@@ -100,6 +103,11 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
 
 bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
+    if( 0 != numTilesProcessingAnimThisRound_ ){
+        CCLOG("Touch Receive not ready yet. Throwing out touch event...");
+        return false;
+    }
+    
     startSwipe_ = touch->getLocationInView();
     return true;
 }
@@ -298,12 +306,15 @@ void Grid::endGameWithMessage(const std::string& message)
 
 void Grid::move(cocos2d::Vec2 direction)
 {
+    //Move starts a round
+    numTilesProcessingAnimThisRound_ = 0;
     //Apply negative vector until reaching boundary, this way we get the tile that is furthest away
     int currentX = 0;
     int currentY = 0;
     
     //bottom left corner
     bool movedTilesThisRound = false;
+    //int numTilesMerged = 0;
     
     //1) Move to relevant edge by applying direction until reaching border
     while( true == isIndexValid(direction.x, direction.y))
@@ -384,6 +395,7 @@ void Grid::move(cocos2d::Vec2 direction)
                     //merge tiles
                     mergeTileAtIndex(currentX, currentY, otherTileX, otherTileY);
                     movedTilesThisRound = true;
+                    //numTilesMerged++;
                 }
                 else
                 {
@@ -406,6 +418,7 @@ void Grid::move(cocos2d::Vec2 direction)
                     //CCLOG("Moving Tile %p from %d,%d to %d,%d", tile, currentX, currentY, newX, newY);
                     moveTile(tile, currentX, currentY, newX, newY);
                     movedTilesThisRound = true;
+                    numTilesProcessingAnimThisRound_++;
                 }
             }
             
@@ -419,10 +432,21 @@ void Grid::move(cocos2d::Vec2 direction)
         currentY = initialY;
     }
     
+    //int numTilesMoved = numTilesProcessingAnimThisRound_;
+    //CCLOG("The number of tiles moved this round: %d", numTilesMoved);
+    //CCLOG("The number of tiles merged this round: %d", numTilesMerged);
+    
     if( true == movedTilesThisRound )
     {
         nextRound();
     }
+}
+
+void Grid::updateTileMoveFinished()
+{
+    numTilesProcessingAnimThisRound_--;
+    //int numTilesMoved = numTilesProcessingAnimThisRound_;
+    //CCLOG("Tile move finished. Current tiles to be moved: %d", numTilesMoved);
 }
 
 void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY)
@@ -444,9 +468,14 @@ void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int&
     //CCLOG("AFTER: Copied from tile %p to tile %p", tile4, tile3);
     
     cocos2d::Vec2 newPosition = positionForColumn(toX, toY);
-    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.1f, newPosition);
+    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(TILE_MOVE_ANIMATION_SPEED, newPosition);
+    cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(Grid::updateTileMoveFinished,this));
+    
+    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, NULL);
+    
+    //CCLOG("Grid::moveTile: Tile %d From x %d, y %d TO Tile %d x %d, y %d", fromIndex, fromX, fromY, toIndex, toX, toY);
 
-    tile->runAction(moveTo);
+    tile->runAction(sequence);
 }
 
 void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, const int& toY)
@@ -506,7 +535,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     cocos2d::Vec2 otherTilePosition = positionForColumn(toX, toY);
     //CCLOG("Merge Tile to position %f, %f", otherTilePosition.x, otherTilePosition.y);
     
-    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
+    cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(TILE_MOVE_ANIMATION_SPEED, otherTilePosition);
     cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
     //cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_1(::Tile::updateValueDisplayCB,otherTile));
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
@@ -558,7 +587,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
         spriteFrames.pushBack(spriteFrame);
     }
     
-    //cocos2d::MoveTo* moveAnimTo = cocos2d::MoveTo::create(0.2f, otherTilePosition);
+    //cocos2d::MoveTo* moveAnimTo = cocos2d::MoveTo::create(TILE_MOVE_ANIMATION_SPEED, otherTilePosition);
     cocos2d::Animation* animation = cocos2d::Animation::createWithSpriteFrames(spriteFrames,0.05f);
     cocos2d::Animate* animate = cocos2d::Animate::create(animation);
     cocos2d::RemoveSelf* removeAnim = cocos2d::RemoveSelf::create();
