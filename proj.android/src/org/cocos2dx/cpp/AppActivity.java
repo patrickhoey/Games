@@ -76,13 +76,12 @@ public class AppActivity extends Cocos2dxActivity {
 		
 		//super.mFrameLayout.setPadding(0, 0, 0, 0);
 		
-		
 		//Update parents layout parameters
-		FrameLayout.LayoutParams parentLayout = (LayoutParams) super.mFrameLayout.getLayoutParams();
-		parentLayout.width = FrameLayout.LayoutParams.MATCH_PARENT;
-		parentLayout.height = FrameLayout.LayoutParams.MATCH_PARENT;
-		parentLayout.gravity = Gravity.FILL;
-		super.mFrameLayout.setLayoutParams(parentLayout);
+		//FrameLayout.LayoutParams parentLayout = (LayoutParams) super.mFrameLayout.getLayoutParams();
+		//parentLayout.width = FrameLayout.LayoutParams.MATCH_PARENT;
+		//parentLayout.height = FrameLayout.LayoutParams.MATCH_PARENT;
+		//parentLayout.gravity = Gravity.NO_GRAVITY;
+		//super.mFrameLayout.setLayoutParams(parentLayout);
 		
 
 		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);

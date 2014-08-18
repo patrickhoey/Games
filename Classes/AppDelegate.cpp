@@ -52,7 +52,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     */
     cocos2d::Size size = director->getWinSize();
     //CCLOG("Win Size: x %f, y %f", size.width, size.height);
-    glview->setDesignResolutionSize(320, 480, ResolutionPolicy::SHOW_ALL);
+    
+    glview->setDesignResolutionSize(320, 480, ResolutionPolicy::EXACT_FIT);
     director->setContentScaleFactor(2);
     //CCLOG("Win Size: x %f, y %f", size.width, size.height);
     
