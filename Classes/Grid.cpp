@@ -13,7 +13,7 @@
 #include "GameEnd.h"
 #include "AdHelper.h"
 
-static const float TILE_MOVE_ANIMATION_SPEED = 0.2f;
+static const float TILE_MOVE_ANIMATION_SPEED = 0.15f;
 
 Grid::Grid() :
   score_(0)
