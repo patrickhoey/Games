@@ -9,7 +9,6 @@ USING_NS_CC;
 USING_NS_CC_EXT;
 
 class Grid;
-class EventListenerCustom;
 
 class MainScene:
   public cocos2d::Layer
@@ -41,8 +40,6 @@ public:
     void updateHighScore();
     void updateScore(EventCustom* event);
     
-    cocos2d::EventListenerCustom* getListener();
-    
 private:
     spritebuilder::CCBReader* reader_;
     Sprite* imbg_;
@@ -52,7 +49,6 @@ private:
     Label* txthighscore_;
     Label* highscoreLabel_;
     ControlButton* btoption_;
-    cocos2d::EventListenerCustom* eventListenerCustom_;
 };
 
 

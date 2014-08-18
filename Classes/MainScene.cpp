@@ -16,7 +16,6 @@ MainScene::MainScene() :
 , txthighscore_(NULL)
 , highscoreLabel_(NULL)
 , btoption_(NULL)
-, eventListenerCustom_(NULL)
 {
 }
 
@@ -37,17 +36,12 @@ Scene* MainScene::createScene()
     return scene;
 }
 
-cocos2d::EventListenerCustom* MainScene::getListener()
-{
-    return eventListenerCustom_;
-}
-
 bool MainScene::init()
 {
     //Initializing and binding
     //CCLOG("MainScene::init()");
-    eventListenerCustom_ = cocos2d::EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
-    _eventDispatcher->addEventListenerWithFixedPriority(eventListenerCustom_, 1);
+    auto listener = cocos2d::EventListenerCustom::create( Constants::UPDATE_SCORE, CC_CALLBACK_1(MainScene::updateScore, this) );
+    _eventDispatcher->addEventListenerWithFixedPriority(listener, 1);
     
     //cocos2d::Vector<Node*> children = this->getChildren();
     
@@ -69,22 +63,24 @@ bool MainScene::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMe
 
 void MainScene::updateScore(EventCustom* event)
 {
-    //CCLOG("MainScene::updateScore %p", this);
-    if( NULL == scoreLabel_)
-    {
-        CCLOG("MainScene::updateScore:: Score label is NULL");
-        return;
-    }
-    
     if( NULL == event )
     {
         CCLOG("MainScene::updateScore:: EventCustom is NULL");
         return;
     }
     
-    if( false == scoreLabel_->isRunning() )
+    //CCLOG("MainScene::updateScore %p", this);
+    if( NULL == scoreLabel_ )
     {
-        CCLOG("MainScene::updateScore:: Score label is NOT RUNNING");
+        CCLOG("MainScene::updateScore:: NULL. Removing listeners");
+        _eventDispatcher->removeEventListenersForTarget(this);
+        return;
+    }
+    
+    if( false == this->isRunning() )
+    {
+        CCLOG("MainScene::updateScore:: MainScene is NOT RUNNING. Removing listeners");
+        _eventDispatcher->removeEventListenersForTarget(this);
     }
     
     int* userData = static_cast<int*>(event->getUserData());
@@ -104,7 +100,7 @@ void MainScene::updateScore(EventCustom* event)
         return;
     }
     
-    CCLOG("*******Got update for score! %d", score);
+    CCLOG("*******Got update for score! %d from %p", score, this);
     scoreLabel_->setString(std::to_string(score));
 }
 

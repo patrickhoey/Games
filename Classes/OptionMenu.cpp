@@ -81,6 +81,10 @@ void OptionMenu::onMainMenuClicked(cocos2d::Ref* sender, cocos2d::extension::Con
     userDefaults->flush();
     
     auto director = Director::getInstance();
+    auto runningScene = director->getRunningScene();
+    _eventDispatcher->removeCustomEventListeners(Constants::UPDATE_SCORE);
+    runningScene->cleanup();
+    
     director->popToRootScene();
 }
 
