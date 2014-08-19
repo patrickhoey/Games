@@ -89,6 +89,7 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     
     spawnStartTiles();
     
+    
     auto listener = EventListenerTouchOneByOne::create();
     
     // When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
@@ -105,7 +106,7 @@ bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     if( 0 != numTilesProcessingAnimThisRound_ ){
         CCLOG("Touch Receive not ready yet. Throwing out touch event...");
-        return false;
+        return true;
     }
     
     startSwipe_ = touch->getLocationInView();
@@ -432,8 +433,8 @@ void Grid::move(cocos2d::Vec2 direction)
         currentY = initialY;
     }
     
-    //int numTilesMoved = numTilesProcessingAnimThisRound_;
-    //CCLOG("The number of tiles moved this round: %d", numTilesMoved);
+    int numTilesMoved = numTilesProcessingAnimThisRound_;
+    CCLOG("The number of tiles moved this round: %d", numTilesMoved);
     //CCLOG("The number of tiles merged this round: %d", numTilesMerged);
     
     if( true == movedTilesThisRound )
@@ -445,8 +446,8 @@ void Grid::move(cocos2d::Vec2 direction)
 void Grid::updateTileMoveFinished()
 {
     numTilesProcessingAnimThisRound_--;
-    //int numTilesMoved = numTilesProcessingAnimThisRound_;
-    //CCLOG("Tile move finished. Current tiles to be moved: %d", numTilesMoved);
+    int numTilesMoved = numTilesProcessingAnimThisRound_;
+    CCLOG("Tile move finished. Current tiles to be moved: %d", numTilesMoved);
 }
 
 void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY)

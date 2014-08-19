@@ -146,11 +146,8 @@ public class AppActivity extends Cocos2dxActivity {
 				{
 					return;
 				}
-				
-				if (!_appActivity.admobBannerAdView.isEnabled())
-					_appActivity.admobBannerAdView.setEnabled(true);
-				if (_appActivity.admobBannerAdView.getVisibility() == 4 )
-					_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
+				_appActivity.admobBannerAdView.setEnabled(true);
+				_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
 			}
 		});
 
@@ -167,12 +164,9 @@ public class AppActivity extends Cocos2dxActivity {
 				if( null == _appActivity.admobBannerAdView )
 				{
 					return;
-				}
-				
-				if (_appActivity.admobBannerAdView.isEnabled())
-					_appActivity.admobBannerAdView.setEnabled(false);
-				if (_appActivity.admobBannerAdView.getVisibility() != 4 )
-					_appActivity.admobBannerAdView.setVisibility(View.INVISIBLE);
+				}		
+				_appActivity.admobBannerAdView.setEnabled(false);
+				_appActivity.admobBannerAdView.setVisibility(View.INVISIBLE);
 			}
 		});
 
