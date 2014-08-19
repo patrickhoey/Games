@@ -39,7 +39,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.FrameLayout.LayoutParams;
 
 import com.chartboost.sdk.*;
 import com.chartboost.sdk.Libraries.CBLogging.Level;
@@ -82,12 +81,7 @@ public class AppActivity extends Cocos2dxActivity {
 		//parentLayout.height = FrameLayout.LayoutParams.MATCH_PARENT;
 		//parentLayout.gravity = Gravity.NO_GRAVITY;
 		//super.mFrameLayout.setLayoutParams(parentLayout);
-		
-
-		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-		params.gravity = Gravity.BOTTOM;
-
-        
+		        
 		_adRequest = new AdRequest.Builder()
 		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 		.addTestDevice("HASH_DEVICE_ID")
@@ -121,15 +115,19 @@ public class AppActivity extends Cocos2dxActivity {
         });
 		
 		admobInterstitialAdView.loadAd(_adRequest);
-		
+			
 		//Banner
+		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+		params.gravity = Gravity.BOTTOM;
 		admobBannerAdView = new AdView(this);
+		
 		admobBannerAdView.setAdSize(AdSize.BANNER);
-		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);		
-        admobBannerAdView.setBackgroundColor(Color.BLACK);
-        admobBannerAdView.setPadding(0, 0, 0, 0);
+		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);
+        admobBannerAdView.setBackgroundColor(Color.TRANSPARENT);
+        admobBannerAdView.setPadding(0, 0, 0, 0);        
         admobBannerAdView.loadAd(_adRequest);
-
+        //admobBannerAdView.setScaleX(1.5f);
+        
         addContentView(admobBannerAdView, params);
 		
 		_appActivity = this;
