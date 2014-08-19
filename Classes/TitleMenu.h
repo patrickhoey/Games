@@ -35,6 +35,8 @@ public:
     void onSettingClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     void onMoregameClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     
+    virtual void onEnter();
+    
 private:
     spritebuilder::CCBReader* reader_;
     cocos2d::Sprite* bg11_;

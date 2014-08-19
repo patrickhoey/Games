@@ -293,10 +293,10 @@ void Grid::endGameWithMessage(const std::string& message)
     
     //gameEndPopover->setPosition(cocos2d::Vec2(0, 0));
     gameEndPopover->setLocalZOrder(INT_MAX);
-    
+    gameEndPopover->setNormalizedPosition(cocos2d::Vec2(0.0f, 0.225f));
     gameEndPopover->setMessage(message, score_);
     
-    this->addChild(gameEndPopover);
+    this->getParent()->addChild(gameEndPopover);
     
     int testNum = rand()%2; //Either 1 or 0
     
@@ -463,8 +463,7 @@ void Grid::updateTileMoveFinished()
 }
 
 void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY)
-{
-    
+{  
     int fromIndex = (fromX * Constants::GRID_SIZE) + fromY;
     int toIndex = (toX * Constants::GRID_SIZE) + toY;
     

@@ -33,6 +33,15 @@ void TitleMenu::setCCBReader(spritebuilder::CCBReader* reader)
     reader_ = reader;
 }
 
+void TitleMenu::onEnter()
+{
+    CCLOG("######Entering callback");
+    
+    AdHelper::showAdmobBannerAd();
+    
+    cocos2d::Node::onEnter();
+}
+
 void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {    
     //CCLOG("***Loaded TitleMenu");
@@ -63,8 +72,6 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
 
     userDefaults->setBoolForKey("openop", true);
     userDefaults->flush();
-    
-    AdHelper::showAdmobBannerAd();    
 }
 
 bool TitleMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

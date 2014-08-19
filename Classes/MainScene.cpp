@@ -4,6 +4,7 @@
 #include "Grid.h"
 #include "OptionMenu.h"
 #include "Constants.h"
+#include "AdHelper.h"
 
 using namespace CocosDenshion;
 
@@ -115,7 +116,7 @@ void MainScene::onMenuOptionClicked(cocos2d::Ref* sender, cocos2d::extension::Co
     {
         //dynamic cast is expensive, must be nicer way of accessing base class
         OptionMenu* optionMenu = static_cast<OptionMenu*>(OptionMenu::load());
-        optionMenu->setNormalizedPosition(cocos2d::Vec2(0.5f, 0.5f));
+        optionMenu->setNormalizedPosition(cocos2d::Vec2(.49f, 0.425f));
         optionMenu->setLocalZOrder(INT_MAX-1);
         
         this->addChild(optionMenu);
@@ -141,8 +142,17 @@ void MainScene::setCCBReader(spritebuilder::CCBReader* reader)
     reader_ = reader;
 }
 
-void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
+void MainScene::onEnter()
 {
+    //CCLOG("######Entering callback");
+    AdHelper::hideAdmobBannerAd();
+    cocos2d::Node::onEnter();
+}
+
+
+
+void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
+{    
     txtscore_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
     scoreLabel_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);
     txthighscore_->enableOutline(cocos2d::Color4B::BLACK, 1.0f);

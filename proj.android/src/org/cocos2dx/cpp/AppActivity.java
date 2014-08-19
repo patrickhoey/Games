@@ -46,6 +46,7 @@ import com.chartboost.sdk.Libraries.CBOrientation;
 
 public class AppActivity extends Cocos2dxActivity {
 
+	private static boolean _showAdMobBanner = false;
 	private static AdRequest _adRequest;
 	private static AppActivity _appActivity;
 	private AdView admobBannerAdView;
@@ -121,12 +122,44 @@ public class AppActivity extends Cocos2dxActivity {
 		params.gravity = Gravity.BOTTOM;
 		admobBannerAdView = new AdView(this);
 		
-		admobBannerAdView.setAdSize(AdSize.BANNER);
+		admobBannerAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+           	
+            	if(true == _showAdMobBanner)
+            	{
+            		showAdmobBannerAd();
+            	}
+            		
+            }
+            
+            @Override
+            public void onAdClosed(){
+            	admobBannerAdView.loadAd(_adRequest);
+            	
+            	if(true == _showAdMobBanner)
+            	{
+            		showAdmobBannerAd();
+            	}
+            }
+            
+            @Override
+            public void onAdFailedToLoad(int errorCode){
+            	admobBannerAdView.loadAd(_adRequest);
+            	
+            	if(true == _showAdMobBanner)
+            	{
+            		showAdmobBannerAd();
+            	}
+            }
+            
+        });
+		
+		admobBannerAdView.setAdSize(AdSize.SMART_BANNER);
 		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);
         admobBannerAdView.setBackgroundColor(Color.TRANSPARENT);
         admobBannerAdView.setPadding(0, 0, 0, 0);        
         admobBannerAdView.loadAd(_adRequest);
-        //admobBannerAdView.setScaleX(1.5f);
         
         addContentView(admobBannerAdView, params);
 		
@@ -146,6 +179,7 @@ public class AppActivity extends Cocos2dxActivity {
 				{
 					return;
 				}
+				_showAdMobBanner = true;
 				_appActivity.admobBannerAdView.setEnabled(true);
 				_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
 			}
@@ -164,7 +198,8 @@ public class AppActivity extends Cocos2dxActivity {
 				if( null == _appActivity.admobBannerAdView )
 				{
 					return;
-				}		
+				}
+				_showAdMobBanner = false;
 				_appActivity.admobBannerAdView.setEnabled(false);
 				_appActivity.admobBannerAdView.setVisibility(View.INVISIBLE);
 			}

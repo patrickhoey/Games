@@ -40,6 +40,8 @@ public:
     void updateHighScore();
     void updateScore(EventCustom* event);
     
+    virtual void onEnter();
+    
 private:
     spritebuilder::CCBReader* reader_;
     Sprite* imbg_;
