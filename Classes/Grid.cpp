@@ -24,6 +24,7 @@ Grid::Grid() :
 , tileMarginHorizontal_(0.0)
 , startSwipe_(0,0)
 , endSwipe_(0,0)
+, isReadyToReceiveInput_(true)
 {
 
 }
@@ -104,11 +105,12 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
 
 bool Grid::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    if( 0 != numTilesProcessingAnimThisRound_ ){
+    if( false == isReadyToReceiveInput_ ){
         CCLOG("Touch Receive not ready yet. Throwing out touch event...");
-        return true;
+        return false;
     }
     
+    isReadyToReceiveInput_ = false;
     startSwipe_ = touch->getLocationInView();
     return true;
 }
@@ -136,12 +138,12 @@ void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     {
         if( originVec.x > destVec.x )
         {
-            //CCLOG("Swipe LEFT");
+            CCLOG("Swipe LEFT");
             swipeLeft();
         }
         else
         {
-            //CCLOG("Swipe RIGHT");
+            CCLOG("Swipe RIGHT");
             swipeRight();
         }
     }
@@ -149,12 +151,12 @@ void Grid::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     {
         if( originVec.y > destVec.y )
         {
-            //CCLOG("Swipe UP");
+            CCLOG("Swipe UP");
             swipeUp();
         }
         else
         {
-            //CCLOG("Swipe DOWN");
+            CCLOG("Swipe DOWN");
             swipeDown();
         }
         
@@ -435,6 +437,11 @@ void Grid::move(cocos2d::Vec2 direction)
     
     int numTilesMoved = numTilesProcessingAnimThisRound_;
     CCLOG("The number of tiles moved this round: %d", numTilesMoved);
+    
+    if( numTilesMoved == 0 )
+    {
+        isReadyToReceiveInput_ = true;
+    }
     //CCLOG("The number of tiles merged this round: %d", numTilesMerged);
     
     if( true == movedTilesThisRound )
@@ -448,6 +455,11 @@ void Grid::updateTileMoveFinished()
     numTilesProcessingAnimThisRound_--;
     int numTilesMoved = numTilesProcessingAnimThisRound_;
     CCLOG("Tile move finished. Current tiles to be moved: %d", numTilesMoved);
+    
+    if( numTilesProcessingAnimThisRound_ <= 0 )
+    {
+        isReadyToReceiveInput_ = true;
+    }
 }
 
 void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int& toX, const int& toY)

@@ -86,6 +86,7 @@ private:
     std::array<::Tile*, Constants::TOTAL_GRID_SIZE> gridArray_;
     cocos2d::Vec2 startSwipe_;
     cocos2d::Vec2 endSwipe_;
+    bool isReadyToReceiveInput_;
     
 };
 
