@@ -35,9 +35,26 @@ void TitleMenu::setCCBReader(spritebuilder::CCBReader* reader)
 
 void TitleMenu::onEnter()
 {
-    CCLOG("######Entering callback");
-    
+    //CCLOG("######Entering callback");
     AdHelper::showAdmobBannerAd();
+    
+    auto userDefaults = UserDefault::getInstance();
+    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
+    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
+    
+    //If the mode is sound ON, then make sure it is enabled
+    if(true == soundMode){
+        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
+        
+        if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
+        {
+            SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
+            sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
+        }
+    }
+    
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
     
     cocos2d::Node::onEnter();
 }
@@ -54,24 +71,6 @@ void TitleMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     {
         bg11_->setScale(1,1);
     }
- 
-    auto userDefaults = UserDefault::getInstance();
-    bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
-    //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
-    
-    //If the mode is sound ON, then make sure it is enabled
-    if(true == soundMode){
-        //CCLOG("**Sound ON: %s", soundMode ? "true" : "false");
-        
-        if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC) )
-        {
-            SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
-            sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC, true);
-        }
-    }
-
-    userDefaults->setBoolForKey("openop", true);
-    userDefaults->flush();
 }
 
 bool TitleMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)
