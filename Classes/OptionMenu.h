@@ -35,6 +35,9 @@ public:
     void onRestartGameClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     void onResumeClicked(cocos2d::Ref* sender, cocos2d::extension::Control::EventType pControlEvent);
     
+    virtual void onEnter();
+    virtual void onExit();
+    
 private:
     spritebuilder::CCBReader* reader_;
 };

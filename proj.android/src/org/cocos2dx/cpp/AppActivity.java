@@ -27,6 +27,7 @@ THE SOFTWARE.
 package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+import org.cocos2dx.lib.Cocos2dxHelper;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdSize;
@@ -64,6 +65,7 @@ public class AppActivity extends Cocos2dxActivity {
 		// Configure Chartboost
 		_cb = Chartboost.sharedChartboost();
 		_cb.onCreate(this, CB_APP_ID, CB_APP_SIG, null);
+
 		CBPreferences.getInstance().setLoggingLevel(Level.ALL);
 		CBPreferences.getInstance().setOrientation(CBOrientation.PORTRAIT);
 		CBPreferences.getInstance().setImpressionsUseActivities(true);
@@ -206,24 +208,6 @@ public class AppActivity extends Cocos2dxActivity {
 		});
 
 	}
-
-	public static void showChartboostInterstitualAd()
-	{   
-		_appActivity.runOnUiThread(new Runnable()
-		{
-
-			@Override
-			public void run()
-			{
-				if( null == _cb )
-				{
-					return;
-				}
-				
-				_cb.showInterstitial();
-			}
-		});
-	}
 	
 	public static void showChartboostMoreAppsAd()
 	{   
@@ -239,6 +223,32 @@ public class AppActivity extends Cocos2dxActivity {
 				}
 				
 				_cb.showMoreApps();
+			}
+		});
+	}
+	
+	public static void showChartboostInterstitualAd()
+	{   
+		_appActivity.runOnUiThread(new Runnable()
+		{
+
+			@Override
+			public void run()
+			{
+				if( null == _cb )
+				{
+					return;
+				}
+				if( _cb.hasCachedInterstitial() )
+				{
+					_appActivity.onPause();
+					_cb.showInterstitial();
+				}
+				else
+				{
+					_cb.cacheInterstitial();
+				}
+
 			}
 		});
 	}
@@ -259,6 +269,7 @@ public class AppActivity extends Cocos2dxActivity {
 				
 				if (_appActivity.admobInterstitialAdView.isLoaded())
 				{
+					_appActivity.onPause();
 					_appActivity.admobInterstitialAdView.show();
 					_appActivity.admobInterstitialAdView.loadAd(_adRequest);
 				}
@@ -273,12 +284,15 @@ public class AppActivity extends Cocos2dxActivity {
 		
 	    _cb.onStart(this);
 	    _cb.cacheInterstitial();
+		_cb.cacheMoreApps();
 	}
 
 	@Override
 	protected void onResume() 
 	{
 		super.onResume();
+		Cocos2dxHelper.resumeAllEffects();
+		Cocos2dxHelper.resumeBackgroundMusic();
 		if (admobBannerAdView != null ) 
 		{
 			admobBannerAdView.resume();
@@ -288,11 +302,13 @@ public class AppActivity extends Cocos2dxActivity {
 	@Override
 	protected void onPause() 
 	{
+		super.onPause();
+		Cocos2dxHelper.pauseBackgroundMusic();
+		Cocos2dxHelper.pauseAllEffects();
 		if (admobBannerAdView != null) 
 		{
 			admobBannerAdView.pause();
 		}
-		super.onPause();
 	}
 
 	@Override

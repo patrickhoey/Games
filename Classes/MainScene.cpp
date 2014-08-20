@@ -146,6 +146,7 @@ void MainScene::onEnter()
 {
     //CCLOG("######Entering callback");
     AdHelper::hideAdmobBannerAd();
+    
     cocos2d::Node::onEnter();
 }
 
@@ -184,10 +185,11 @@ void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pN
     //If the mode is sound ON, then make sure it is enabled
     if(true == soundMode){
         //CCLOG("Sound ON: %s", soundMode ? "true" : "false");
+        SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
+        sound->stopAllEffects();
         
         if( true == FileUtils::getInstance()->isFileExist(Constants::BACKGROUND_MUSIC2) )
         {
-            SimpleAudioEngine* sound = SimpleAudioEngine::getInstance();
             sound->playBackgroundMusic(Constants::BACKGROUND_MUSIC2, true);
         }
     }

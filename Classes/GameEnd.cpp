@@ -3,6 +3,7 @@
 #include "SimpleAudioEngine.h"
 #include "MainScene.h"
 #include "Constants.h"
+#include "AdHelper.h"
 
 using namespace CocosDenshion;
 
@@ -36,6 +37,31 @@ Node* GameEnd::load()
     
     return ccbReader->readNodeGraphFromFile("GameEnd.ccbi");
 }
+
+void GameEnd::onEnter()
+{
+    auto director = Director::getInstance();
+    director->pause();
+    
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("openop", false);
+    userDefaults->flush();
+    
+    cocos2d::Node::onEnter();
+}
+
+void GameEnd::onExit()
+{
+    auto director = Director::getInstance();
+    director->resume();
+    
+    auto userDefaults = UserDefault::getInstance();
+    userDefaults->setBoolForKey("openop", true);
+    userDefaults->flush();
+    
+    cocos2d::Node::onExit();
+}
+
 
 void GameEnd::setMessage(const std::string& message, int score)
 {
@@ -90,6 +116,14 @@ cocos2d::SEL_CallFuncN GameEnd::onResolveCCBCCCallFuncSelector(cocos2d::Ref * pT
 
 void GameEnd::onNewGameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
+    int testNum = rand()%2; //Either 1 or 0
+    
+    if(0 == testNum){
+        AdHelper::showAdmobInterstitialAd();
+    }else{
+        AdHelper::showChartboostInterstitualAd();
+    }
+    
     auto director = Director::getInstance();
     auto runningScene = director->getRunningScene();
     _eventDispatcher->removeCustomEventListeners(Constants::UPDATE_SCORE);

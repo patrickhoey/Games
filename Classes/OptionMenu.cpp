@@ -31,6 +31,20 @@ Node* OptionMenu::load()
     return ccbReader->readNodeGraphFromFile("OptionMenu.ccbi");
 }
 
+void OptionMenu::onEnter()
+{
+    auto director = Director::getInstance();
+    director->pause();
+    cocos2d::Node::onEnter();
+}
+
+void OptionMenu::onExit()
+{
+    auto director = Director::getInstance();
+    director->resume();
+    cocos2d::Node::onExit();
+}
+
 void OptionMenu::setCCBReader(spritebuilder::CCBReader* reader)
 {
     reader_ = reader;
@@ -38,7 +52,7 @@ void OptionMenu::setCCBReader(spritebuilder::CCBReader* reader)
 
 void OptionMenu::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {
-    //CCLOG("***Loaded OptionMenu");
+    CCLOG("***Loaded OptionMenu");
 }
 
 bool OptionMenu::onAssignCCBMemberVariable(cocos2d::Ref* pTarget, const char* pMemberVariableName, cocos2d::Node* pNode)

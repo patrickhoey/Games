@@ -35,6 +35,9 @@ public:
     void onNewGameClicked(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void setMessage(const std::string& message, int score);
     
+    virtual void onEnter();
+    virtual void onExit();
+    
 private:
     spritebuilder::CCBReader* reader_;
     cocos2d::Label* messageLabel_;
