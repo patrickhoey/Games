@@ -249,6 +249,8 @@ void Grid::nextRound()
 
 void Grid::win()
 {
+    endGameWithMessage("You win! Congratulations!");
+    
     auto userDefaults = cocos2d::UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
     //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
@@ -263,12 +265,12 @@ void Grid::win()
             sound->playEffect(Constants::WIN_SOUND);
         }
     }
-    
-    endGameWithMessage("You win! Congratulations!");
 }
 
 void Grid::lose()
 {
+    endGameWithMessage("You didn't win. Please play Again!");
+    
     auto userDefaults = cocos2d::UserDefault::getInstance();
     bool soundMode = userDefaults->getBoolForKey("soundmode1", true);
     //CCLOG("**SOUNDMODE: %s", soundMode ? "true" : "false");
@@ -283,12 +285,18 @@ void Grid::lose()
             sound->playEffect(Constants::LOSE_SOUND);
         }
     }
-    
-    endGameWithMessage("You didn't win. Please play Again!");
 }
 
 void Grid::endGameWithMessage(const std::string& message)
 {
+    int testNum = rand()%2; //Either 1 or 0
+    
+    if(0 == testNum){
+        AdHelper::showAdmobInterstitialAd();
+    }else{
+        AdHelper::showChartboostInterstitualAd();
+    }
+    
     GameEnd* gameEndPopover = static_cast<GameEnd*>(GameEnd::load());
     
     //gameEndPopover->setPosition(cocos2d::Vec2(0, 0));
@@ -297,14 +305,6 @@ void Grid::endGameWithMessage(const std::string& message)
     gameEndPopover->setMessage(message, score_);
     
     this->getParent()->addChild(gameEndPopover);
-    
-    int testNum = rand()%2; //Either 1 or 0
-    
-    if(0 == testNum){
-        AdHelper::showAdmobInterstitialAd();
-    }else{
-        AdHelper::showChartboostInterstitualAd();
-    }
 }
 
 void Grid::move(cocos2d::Vec2 direction)
