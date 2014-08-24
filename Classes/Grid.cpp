@@ -25,6 +25,8 @@ Grid::Grid() :
 , startSwipe_(0,0)
 , endSwipe_(0,0)
 , isReadyToReceiveInput_(true)
+, showWinPopup_(false)
+, showLosePopup_(false)
 {
 
 }
@@ -78,6 +80,10 @@ void Grid::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
 {
     //CCLOG("***Loaded Grid");
     setupBackground();
+    
+    showLosePopup_ = false;
+    showWinPopup_ = false;
+    
     
     //For a matrix, to access: (row * numCol) + col
     for(int row = 0; row < Constants::GRID_SIZE; row++){
@@ -284,7 +290,7 @@ void Grid::lose()
         }
     }
     
-    endGameWithMessage("You didn't win. Please play Again!");
+    endGameWithMessage("You didn't win. Play Again!");
 }
 
 void Grid::endGameWithMessage(const std::string& message)

@@ -5,7 +5,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="var" path="HOME/Development/adt-bundle-mac-x86_64-20140702/sdk/extras/android/support/v4/android-support-v4.jar"/>
 	<classpathentry kind="var" path="PROJECT_HOME/proj.android/libs/chartboost.jar"/>
+	<classpathentry kind="var" path="PROJECT_HOME/proj.android/libs/android-support-v4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

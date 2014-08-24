@@ -47,7 +47,6 @@ import com.chartboost.sdk.Libraries.CBOrientation;
 
 public class AppActivity extends Cocos2dxActivity {
 
-	private static boolean _showAdMobBanner = false;
 	private static AdRequest _adRequest;
 	private static AppActivity _appActivity;
 	private AdView admobBannerAdView;
@@ -124,39 +123,6 @@ public class AppActivity extends Cocos2dxActivity {
 		params.gravity = Gravity.BOTTOM;
 		admobBannerAdView = new AdView(this);
 		
-		admobBannerAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-           	
-            	if(true == _showAdMobBanner)
-            	{
-            		showAdmobBannerAd();
-            	}
-            		
-            }
-            
-            @Override
-            public void onAdClosed(){
-            	admobBannerAdView.loadAd(_adRequest);
-            	
-            	if(true == _showAdMobBanner)
-            	{
-            		showAdmobBannerAd();
-            	}
-            }
-            
-            @Override
-            public void onAdFailedToLoad(int errorCode){
-            	admobBannerAdView.loadAd(_adRequest);
-            	
-            	if(true == _showAdMobBanner)
-            	{
-            		showAdmobBannerAd();
-            	}
-            }
-            
-        });
-		
 		admobBannerAdView.setAdSize(AdSize.SMART_BANNER);
 		admobBannerAdView.setAdUnitId(AD_UNIT_ID_BANNER);
         admobBannerAdView.setBackgroundColor(Color.TRANSPARENT);
@@ -181,9 +147,10 @@ public class AppActivity extends Cocos2dxActivity {
 				{
 					return;
 				}
-				_showAdMobBanner = true;
+				
 				_appActivity.admobBannerAdView.setEnabled(true);
 				_appActivity.admobBannerAdView.setVisibility(View.VISIBLE);	
+				_appActivity.admobBannerAdView.loadAd(_adRequest);
 			}
 		});
 
@@ -201,9 +168,10 @@ public class AppActivity extends Cocos2dxActivity {
 				{
 					return;
 				}
-				_showAdMobBanner = false;
+				
 				_appActivity.admobBannerAdView.setEnabled(false);
 				_appActivity.admobBannerAdView.setVisibility(View.INVISIBLE);
+				_appActivity.admobBannerAdView.loadAd(_adRequest);
 			}
 		});
 
@@ -291,24 +259,12 @@ public class AppActivity extends Cocos2dxActivity {
 	protected void onResume() 
 	{
 		super.onResume();
-		Cocos2dxHelper.resumeAllEffects();
-		Cocos2dxHelper.resumeBackgroundMusic();
-		if (admobBannerAdView != null ) 
-		{
-			admobBannerAdView.resume();
-		}
 	}
 
 	@Override
 	protected void onPause() 
 	{
 		super.onPause();
-		Cocos2dxHelper.pauseBackgroundMusic();
-		Cocos2dxHelper.pauseAllEffects();
-		if (admobBannerAdView != null) 
-		{
-			admobBannerAdView.pause();
-		}
 	}
 
 	@Override

@@ -87,6 +87,8 @@ private:
     cocos2d::Vec2 startSwipe_;
     cocos2d::Vec2 endSwipe_;
     bool isReadyToReceiveInput_;
+    bool showWinPopup_;
+    bool showLosePopup_;
     
 };
 

@@ -4,12 +4,6 @@
 #include "cocos2d.h"
 #include "editor-support/SpriteBuilder.h"
 
-//String constants for the ad network session/API keys
-#define ChartBoostID "53ce8f2b89b0bb212c41a197"
-#define ChartBoostSignature "b878fba902e10839c8f88aaa05d8ace63ecfd302"
-#define kAppLovin1 "99lggvdEHo00AAq0IrxDZzJdaEG-9s1I0m-gfbwxOxyT5mTObUc9Swn191_Iu0bunZZQATMTOJ6U4fuf9UpbOa"
-#define kRevMob1 "53ce902ad03310d30687811b"
-
 /**
 @brief    The cocos2d Application.
 
