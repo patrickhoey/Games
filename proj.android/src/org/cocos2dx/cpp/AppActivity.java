@@ -258,12 +258,14 @@ public class AppActivity extends Cocos2dxActivity {
 	@Override
 	protected void onResume() 
 	{
+		admobBannerAdView.resume();
 		super.onResume();
 	}
 
 	@Override
 	protected void onPause() 
 	{
+		admobBannerAdView.pause();
 		super.onPause();
 	}
 

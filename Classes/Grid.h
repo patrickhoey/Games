@@ -14,7 +14,14 @@
 #include "extensions/cocos-ext.h"
 #include "Tile.h"
 #include "Constants.h"
+
 #include <array>
+
+
+static const int TILE_CREATION_ANIMATION = 1;
+static const int TILE_MOVE_ANIMATION = 2;
+static const int TILE_MERGE_ANIMATION = 3;
+static const int TILE_EXPLOSION_ANIMATION = 4;
 
 class Grid:
   public cocos2d::LayerColor
@@ -74,7 +81,11 @@ public:
     
     void showAds();
     
+    void update(float dt);
+    
     const std::array<::Tile*, Constants::TOTAL_GRID_SIZE>& getGridArray();
+    
+    void removeTileAction(::Tile* tile, int actionType);
     
 private:
     std::atomic_int numTilesProcessingAnimThisRound_;
@@ -89,6 +100,7 @@ private:
     bool isReadyToReceiveInput_;
     bool showWinPopup_;
     bool showLosePopup_;
+    std::vector<cocos2d::Action*> allActions_;
     
 };
 

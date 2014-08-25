@@ -15,6 +15,7 @@
 
 static const float TILE_MOVE_ANIMATION_SPEED = 0.10f;
 
+
 Grid::Grid() :
   score_(0)
 , numTilesProcessingAnimThisRound_(0)
@@ -190,6 +191,43 @@ void Grid::swipeUp()
     move(cocos2d::Vec2(0,1));
 }
 
+void Grid::update(float dt)
+{
+    //CCLOG("Grid::Update received %f with actions size %ld", dt, allActions_.size());
+    allActions_.erase(std::remove_if(allActions_.begin(), allActions_.end(), [](Action* action)
+                                     {
+                                         if( action == NULL ){
+                                             CCLOG("Action is NULL");
+                                             return true;
+                                         }
+                                         bool isDone = action->isDone();
+                                         if( true == isDone )
+                                         {
+                                             //we're retaining a ref count so we don't get garbage, make sure to release when done
+                                             action->release();
+                                             return true;
+                                         }
+                                         else{
+                                             
+                                             return false;
+                                         }
+                                     }), allActions_.end());
+    
+    if( 0 == allActions_.size() )
+    {
+        if( true == showWinPopup_ ){
+            isReadyToReceiveInput_ = false;
+            win();
+        }
+        
+        if( true == showLosePopup_ ){
+            isReadyToReceiveInput_ = false;
+            lose();
+        }
+    }
+    
+}
+
 
 bool Grid::movePossible()
 {
@@ -248,7 +286,7 @@ void Grid::nextRound()
     bool isMovePossible = movePossible();
     
     if( false == isMovePossible){
-        lose();
+        showLosePopup_ = true;
     }
     
 }
@@ -485,8 +523,32 @@ void Grid::moveTile(::Tile* tile, const int& fromX, const int& fromY, const int&
     
     //CCLOG("Grid::moveTile: Tile %d From x %d, y %d TO Tile %d x %d, y %d", fromIndex, fromX, fromY, toIndex, toX, toY);
 
-    tile->runAction(sequence);
+    Action* action = tile->runAction(sequence);
+    action->setTag(TILE_MOVE_ANIMATION);
+    action->retain();
+    allActions_.push_back(action);
 }
+
+void Grid::removeTileAction(::Tile* tile, int actionType)
+{
+    allActions_.erase(std::remove_if(allActions_.begin(), allActions_.end(), [tile, actionType](Action* action)
+                                     {
+                                         if( NULL == action ){
+                                             CCLOG("Action is NULL");
+                                             return true;
+                                         }
+                                         
+                                         if( tile == static_cast<::Tile*>(action->getTarget()) )
+                                         {
+                                             CCLOG("We found the original tile!");
+                                             //tile->stopActionByTag(actionType);
+                                             return true;
+                                         }else{
+                                             return false;
+                                         }
+                                     }), allActions_.end());
+}
+
 
 void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, const int& toY)
 {
@@ -537,7 +599,7 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     if( otherTile->getValue() == Constants::WIN_TILE)
     {
-        win();
+        showWinPopup_ = true;
     }
     
     gridArray_[fromIndex] = NULL;
@@ -547,13 +609,20 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     
     cocos2d::MoveTo* moveTo = cocos2d::MoveTo::create(TILE_MOVE_ANIMATION_SPEED, otherTilePosition);
     cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateValueDisplay,otherTile));
-    //cocos2d::CallFuncN* callSelectorAction = cocos2d::CallFuncN::create(CC_CALLBACK_1(::Tile::updateValueDisplayCB,otherTile));
+    cocos2d::CallFuncN* callSelectorAction2 = cocos2d::CallFuncN::create(CC_CALLBACK_0(::Tile::updateTileActions,mergedTile));
     cocos2d::RemoveSelf* remove = cocos2d::RemoveSelf::create();
+    
+    //How the callbacks function
+    //std::function<void(int)> callBack = std::bind(&Grid::removeTileCreateActions, this, std::placeholders::_1);
+    ////callback(2)
 
-    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, remove, NULL);
+    cocos2d::Sequence* sequence = cocos2d::Sequence::create(moveTo, callSelectorAction, callSelectorAction2, remove, NULL);
 
     //CCLOG("BEFORE: MergedTile: %p: ", mergedTile);
-    mergedTile->runAction(sequence);
+    Action* action = mergedTile->runAction(sequence);
+    action->setTag(TILE_MERGE_ANIMATION);
+    action->retain();
+    allActions_.push_back(action);
 
     //CCLOG("AFTER:  MergedTile: %p: ", mergedTile);
 
@@ -603,7 +672,10 @@ void Grid::mergeTileAtIndex(const int& fromX, const int& fromY, const int& toX, 
     cocos2d::RemoveSelf* removeAnim = cocos2d::RemoveSelf::create();
     cocos2d::Sequence* movingSequenceAndOtherStuffAfter = cocos2d::Sequence::create(animate, removeAnim, NULL);
 
-    explosionSprite->runAction(movingSequenceAndOtherStuffAfter);
+    Action* actionExplosion = explosionSprite->runAction(movingSequenceAndOtherStuffAfter);
+    actionExplosion->setTag(TILE_EXPLOSION_ANIMATION);
+    actionExplosion->retain();
+    allActions_.push_back(actionExplosion);
     
 }
 
@@ -698,11 +770,17 @@ void Grid::addTileAtColumn(int row, int column)
     
     //CCLOG("addtileatcolumn: After set position is x%f, y%f, z%f", tile->getPositionX(), tile->getPositionY(), tile->getPositionZ());
     
+    //Issue with delay time, because if you delay too long for the animation, the tile object that was using the animation could be removed
+    //leaving a dangling action sequence that will never complete
     cocos2d::DelayTime* delay = cocos2d::DelayTime::create(0.3f);
     cocos2d::ScaleTo* scaleTo = cocos2d::ScaleTo::create(0.2f, 1.0f);
     cocos2d::Sequence* sequence = cocos2d::Sequence::create(delay, scaleTo, NULL);
     
-    tile->runAction(sequence);
+    Action* action = tile->runAction(sequence);
+    action->setTag(TILE_CREATION_ANIMATION);
+    action->retain();
+    allActions_.push_back(action);
+    
     this->addChild(tile);
     
     /*

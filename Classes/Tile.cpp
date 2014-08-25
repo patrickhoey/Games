@@ -45,6 +45,11 @@ void Tile::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLo
     updateValueDisplay();
 }
 
+void Tile::updateTileActions()
+{
+    static_cast<Grid*>(this->getParent())->removeTileAction(this, TILE_CREATION_ANIMATION);
+}
+
 void Tile::updateValueDisplay()
 {
     //CCLOG("Updating valueDisplay with %p", this);

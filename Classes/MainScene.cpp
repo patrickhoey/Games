@@ -147,10 +147,16 @@ void MainScene::onEnter()
     //CCLOG("######Entering callback");
     AdHelper::hideAdmobBannerAd();
     
+    this->scheduleUpdate();
+    
     cocos2d::Node::onEnter();
 }
 
-
+void MainScene::update(float dt)
+{
+    //CCLOG("MainScene::update %f", dt);
+    grid_->update(dt);
+}
 
 void MainScene::onNodeLoaded(cocos2d::Node* pNode, spritebuilder::NodeLoader* pNodeLoader)
 {    

@@ -41,6 +41,7 @@ public:
     void updateScore(EventCustom* event);
     
     virtual void onEnter();
+    virtual void update(float dt);
     
 private:
     spritebuilder::CCBReader* reader_;

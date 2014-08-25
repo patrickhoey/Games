@@ -42,6 +42,8 @@ public:
     static cocos2d::Node* load();
     void showAds();
     
+    void updateTileActions();
+    
 private:
     int value_;
     bool mergedThisRound_;
